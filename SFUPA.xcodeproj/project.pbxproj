@@ -14,6 +14,27 @@
 		0741D8CA1AA66E0200370808 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0741D8C91AA66E0200370808 /* Images.xcassets */; };
 		0741D8CD1AA66E0200370808 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0741D8CB1AA66E0200370808 /* LaunchScreen.xib */; };
 		0741D8D91AA66E0200370808 /* SFUPATests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0741D8D81AA66E0200370808 /* SFUPATests.m */; };
+		077C0C931AA9088E000449D0 /* acadamic service icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C8C1AA9088E000449D0 /* acadamic service icon.jpg */; };
+		077C0C941AA9088E000449D0 /* ancillary icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C8D1AA9088E000449D0 /* ancillary icon.jpg */; };
+		077C0C951AA9088E000449D0 /* campus information icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C8E1AA9088E000449D0 /* campus information icon.jpg */; };
+		077C0C961AA9088E000449D0 /* information button.png in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C8F1AA9088E000449D0 /* information button.png */; };
+		077C0C971AA9088E000449D0 /* map icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C901AA9088E000449D0 /* map icon.jpg */; };
+		077C0C981AA9088E000449D0 /* news icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C911AA9088E000449D0 /* news icon.jpg */; };
+		077C0C991AA9088E000449D0 /* transit icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C921AA9088E000449D0 /* transit icon.jpg */; };
+		077C0C9C1AA90B5F000449D0 /* GoogleMaps.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0C9A1AA90B5F000449D0 /* GoogleMaps.bundle */; };
+		077C0C9D1AA90B5F000449D0 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0C9B1AA90B5F000449D0 /* GoogleMaps.framework */; };
+		077C0C9F1AA90BFD000449D0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0C9E1AA90BFD000449D0 /* SystemConfiguration.framework */; };
+		077C0CA11AA90C06000449D0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0CA01AA90C06000449D0 /* QuartzCore.framework */; };
+		077C0CA31AA90C10000449D0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0CA21AA90C10000449D0 /* OpenGLES.framework */; };
+		077C0CA51AA90C19000449D0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0CA41AA90C19000449D0 /* libz.dylib */; };
+		077C0CA71AA90C22000449D0 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0CA61AA90C22000449D0 /* libicucore.dylib */; };
+		077C0CA91AA90C32000449D0 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0CA81AA90C32000449D0 /* libc++.dylib */; };
+		077C0CAB1AA90C3B000449D0 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0CAA1AA90C3B000449D0 /* ImageIO.framework */; };
+		077C0CAD1AA90C42000449D0 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0CAC1AA90C42000449D0 /* GLKit.framework */; };
+		077C0CAF1AA90C4D000449D0 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0CAE1AA90C4D000449D0 /* CoreText.framework */; };
+		077C0CB11AA90C55000449D0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0CB01AA90C55000449D0 /* CoreLocation.framework */; };
+		077C0CB31AA90C5E000449D0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0CB21AA90C5E000449D0 /* CoreData.framework */; };
+		077C0CB51AA90C66000449D0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0CB41AA90C66000449D0 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +61,27 @@
 		0741D8D21AA66E0200370808 /* SFUPATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFUPATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0741D8D71AA66E0200370808 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0741D8D81AA66E0200370808 /* SFUPATests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFUPATests.m; sourceTree = "<group>"; };
+		077C0C8C1AA9088E000449D0 /* acadamic service icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "acadamic service icon.jpg"; sourceTree = "<group>"; };
+		077C0C8D1AA9088E000449D0 /* ancillary icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ancillary icon.jpg"; sourceTree = "<group>"; };
+		077C0C8E1AA9088E000449D0 /* campus information icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "campus information icon.jpg"; sourceTree = "<group>"; };
+		077C0C8F1AA9088E000449D0 /* information button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "information button.png"; sourceTree = "<group>"; };
+		077C0C901AA9088E000449D0 /* map icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "map icon.jpg"; sourceTree = "<group>"; };
+		077C0C911AA9088E000449D0 /* news icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "news icon.jpg"; sourceTree = "<group>"; };
+		077C0C921AA9088E000449D0 /* transit icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "transit icon.jpg"; sourceTree = "<group>"; };
+		077C0C9A1AA90B5F000449D0 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "../../Downloads/mav map/map-2/GoogleMaps.bundle"; sourceTree = "<group>"; };
+		077C0C9B1AA90B5F000449D0 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = "../../Downloads/mav map/map-2/GoogleMaps.framework"; sourceTree = "<group>"; };
+		077C0C9E1AA90BFD000449D0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		077C0CA01AA90C06000449D0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		077C0CA21AA90C10000449D0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		077C0CA41AA90C19000449D0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		077C0CA61AA90C22000449D0 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		077C0CA81AA90C32000449D0 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		077C0CAA1AA90C3B000449D0 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		077C0CAC1AA90C42000449D0 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		077C0CAE1AA90C4D000449D0 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		077C0CB01AA90C55000449D0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		077C0CB21AA90C5E000449D0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		077C0CB41AA90C66000449D0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +89,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				077C0CB51AA90C66000449D0 /* AVFoundation.framework in Frameworks */,
+				077C0CB31AA90C5E000449D0 /* CoreData.framework in Frameworks */,
+				077C0CB11AA90C55000449D0 /* CoreLocation.framework in Frameworks */,
+				077C0CAF1AA90C4D000449D0 /* CoreText.framework in Frameworks */,
+				077C0CAD1AA90C42000449D0 /* GLKit.framework in Frameworks */,
+				077C0CAB1AA90C3B000449D0 /* ImageIO.framework in Frameworks */,
+				077C0CA91AA90C32000449D0 /* libc++.dylib in Frameworks */,
+				077C0CA71AA90C22000449D0 /* libicucore.dylib in Frameworks */,
+				077C0CA51AA90C19000449D0 /* libz.dylib in Frameworks */,
+				077C0CA31AA90C10000449D0 /* OpenGLES.framework in Frameworks */,
+				077C0CA11AA90C06000449D0 /* QuartzCore.framework in Frameworks */,
+				077C0C9F1AA90BFD000449D0 /* SystemConfiguration.framework in Frameworks */,
+				077C0C9C1AA90B5F000449D0 /* GoogleMaps.bundle in Frameworks */,
+				077C0C9D1AA90B5F000449D0 /* GoogleMaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +119,7 @@
 		0741D8B01AA66E0200370808 = {
 			isa = PBXGroup;
 			children = (
+				077C0CB61AA90C81000449D0 /* Frameworks */,
 				0741D8BB1AA66E0200370808 /* SFUPA */,
 				0741D8D51AA66E0200370808 /* SFUPATests */,
 				0741D8BA1AA66E0200370808 /* Products */,
@@ -96,6 +153,7 @@
 		0741D8BC1AA66E0200370808 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				077C0C8B1AA9088E000449D0 /* Images */,
 				0741D8BD1AA66E0200370808 /* Info.plist */,
 				0741D8BE1AA66E0200370808 /* main.m */,
 			);
@@ -117,6 +175,41 @@
 				0741D8D71AA66E0200370808 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		077C0C8B1AA9088E000449D0 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				077C0C8C1AA9088E000449D0 /* acadamic service icon.jpg */,
+				077C0C8D1AA9088E000449D0 /* ancillary icon.jpg */,
+				077C0C8E1AA9088E000449D0 /* campus information icon.jpg */,
+				077C0C8F1AA9088E000449D0 /* information button.png */,
+				077C0C901AA9088E000449D0 /* map icon.jpg */,
+				077C0C911AA9088E000449D0 /* news icon.jpg */,
+				077C0C921AA9088E000449D0 /* transit icon.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		077C0CB61AA90C81000449D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				077C0CB41AA90C66000449D0 /* AVFoundation.framework */,
+				077C0CB21AA90C5E000449D0 /* CoreData.framework */,
+				077C0CB01AA90C55000449D0 /* CoreLocation.framework */,
+				077C0CAE1AA90C4D000449D0 /* CoreText.framework */,
+				077C0CAC1AA90C42000449D0 /* GLKit.framework */,
+				077C0CAA1AA90C3B000449D0 /* ImageIO.framework */,
+				077C0CA81AA90C32000449D0 /* libc++.dylib */,
+				077C0CA61AA90C22000449D0 /* libicucore.dylib */,
+				077C0CA41AA90C19000449D0 /* libz.dylib */,
+				077C0CA21AA90C10000449D0 /* OpenGLES.framework */,
+				077C0CA01AA90C06000449D0 /* QuartzCore.framework */,
+				077C0C9E1AA90BFD000449D0 /* SystemConfiguration.framework */,
+				077C0C9A1AA90B5F000449D0 /* GoogleMaps.bundle */,
+				077C0C9B1AA90B5F000449D0 /* GoogleMaps.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +293,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0741D8C81AA66E0200370808 /* Main.storyboard in Resources */,
+				077C0C991AA9088E000449D0 /* transit icon.jpg in Resources */,
+				077C0C931AA9088E000449D0 /* acadamic service icon.jpg in Resources */,
+				077C0C971AA9088E000449D0 /* map icon.jpg in Resources */,
+				077C0C951AA9088E000449D0 /* campus information icon.jpg in Resources */,
+				077C0C941AA9088E000449D0 /* ancillary icon.jpg in Resources */,
+				077C0C981AA9088E000449D0 /* news icon.jpg in Resources */,
 				0741D8CD1AA66E0200370808 /* LaunchScreen.xib in Resources */,
+				077C0C961AA9088E000449D0 /* information button.png in Resources */,
 				0741D8CA1AA66E0200370808 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +445,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Aman/Downloads/mav,
+					"map/map-2",
+				);
 				INFOPLIST_FILE = SFUPA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -355,6 +460,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Aman/Downloads/mav,
+					"map/map-2",
+				);
 				INFOPLIST_FILE = SFUPA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,6 +524,7 @@
 				0741D8DE1AA66E0200370808 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0741D8DF1AA66E0200370808 /* Build configuration list for PBXNativeTarget "SFUPATests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +533,7 @@
 				0741D8E11AA66E0200370808 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
