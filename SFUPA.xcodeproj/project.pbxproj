@@ -14,6 +14,7 @@
 		0741D8CA1AA66E0200370808 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0741D8C91AA66E0200370808 /* Images.xcassets */; };
 		0741D8CD1AA66E0200370808 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0741D8CB1AA66E0200370808 /* LaunchScreen.xib */; };
 		0741D8D91AA66E0200370808 /* SFUPATests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0741D8D81AA66E0200370808 /* SFUPATests.m */; };
+		07655F191AA9135A003BB634 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07655F181AA9135A003BB634 /* GoogleMaps.framework */; };
 		077C0C931AA9088E000449D0 /* acadamic service icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C8C1AA9088E000449D0 /* acadamic service icon.jpg */; };
 		077C0C941AA9088E000449D0 /* ancillary icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C8D1AA9088E000449D0 /* ancillary icon.jpg */; };
 		077C0C951AA9088E000449D0 /* campus information icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C8E1AA9088E000449D0 /* campus information icon.jpg */; };
@@ -22,7 +23,6 @@
 		077C0C981AA9088E000449D0 /* news icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C911AA9088E000449D0 /* news icon.jpg */; };
 		077C0C991AA9088E000449D0 /* transit icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C921AA9088E000449D0 /* transit icon.jpg */; };
 		077C0C9C1AA90B5F000449D0 /* GoogleMaps.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0C9A1AA90B5F000449D0 /* GoogleMaps.bundle */; };
-		077C0C9D1AA90B5F000449D0 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0C9B1AA90B5F000449D0 /* GoogleMaps.framework */; };
 		077C0C9F1AA90BFD000449D0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0C9E1AA90BFD000449D0 /* SystemConfiguration.framework */; };
 		077C0CA11AA90C06000449D0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0CA01AA90C06000449D0 /* QuartzCore.framework */; };
 		077C0CA31AA90C10000449D0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0CA21AA90C10000449D0 /* OpenGLES.framework */; };
@@ -61,6 +61,7 @@
 		0741D8D21AA66E0200370808 /* SFUPATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFUPATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0741D8D71AA66E0200370808 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0741D8D81AA66E0200370808 /* SFUPATests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFUPATests.m; sourceTree = "<group>"; };
+		07655F181AA9135A003BB634 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		077C0C8C1AA9088E000449D0 /* acadamic service icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "acadamic service icon.jpg"; sourceTree = "<group>"; };
 		077C0C8D1AA9088E000449D0 /* ancillary icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ancillary icon.jpg"; sourceTree = "<group>"; };
 		077C0C8E1AA9088E000449D0 /* campus information icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "campus information icon.jpg"; sourceTree = "<group>"; };
@@ -69,7 +70,6 @@
 		077C0C911AA9088E000449D0 /* news icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "news icon.jpg"; sourceTree = "<group>"; };
 		077C0C921AA9088E000449D0 /* transit icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "transit icon.jpg"; sourceTree = "<group>"; };
 		077C0C9A1AA90B5F000449D0 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "../../Downloads/mav map/map-2/GoogleMaps.bundle"; sourceTree = "<group>"; };
-		077C0C9B1AA90B5F000449D0 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = "../../Downloads/mav map/map-2/GoogleMaps.framework"; sourceTree = "<group>"; };
 		077C0C9E1AA90BFD000449D0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		077C0CA01AA90C06000449D0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		077C0CA21AA90C10000449D0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -97,12 +97,12 @@
 				077C0CAB1AA90C3B000449D0 /* ImageIO.framework in Frameworks */,
 				077C0CA91AA90C32000449D0 /* libc++.dylib in Frameworks */,
 				077C0CA71AA90C22000449D0 /* libicucore.dylib in Frameworks */,
+				07655F191AA9135A003BB634 /* GoogleMaps.framework in Frameworks */,
 				077C0CA51AA90C19000449D0 /* libz.dylib in Frameworks */,
 				077C0CA31AA90C10000449D0 /* OpenGLES.framework in Frameworks */,
 				077C0CA11AA90C06000449D0 /* QuartzCore.framework in Frameworks */,
 				077C0C9F1AA90BFD000449D0 /* SystemConfiguration.framework in Frameworks */,
 				077C0C9C1AA90B5F000449D0 /* GoogleMaps.bundle in Frameworks */,
-				077C0C9D1AA90B5F000449D0 /* GoogleMaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +194,7 @@
 		077C0CB61AA90C81000449D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07655F181AA9135A003BB634 /* GoogleMaps.framework */,
 				077C0CB41AA90C66000449D0 /* AVFoundation.framework */,
 				077C0CB21AA90C5E000449D0 /* CoreData.framework */,
 				077C0CB01AA90C55000449D0 /* CoreLocation.framework */,
@@ -207,7 +208,6 @@
 				077C0CA01AA90C06000449D0 /* QuartzCore.framework */,
 				077C0C9E1AA90BFD000449D0 /* SystemConfiguration.framework */,
 				077C0C9A1AA90B5F000449D0 /* GoogleMaps.bundle */,
-				077C0C9B1AA90B5F000449D0 /* GoogleMaps.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -449,6 +449,7 @@
 					"$(inherited)",
 					/Users/Aman/Downloads/mav,
 					"map/map-2",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SFUPA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -464,6 +465,7 @@
 					"$(inherited)",
 					/Users/Aman/Downloads/mav,
 					"map/map-2",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SFUPA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
