@@ -43,7 +43,7 @@
     NSInteger count = 0;
     while(index<1000)
     {
-        //[test setText:[NSString stringWithFormat:@"%f", num[index]]];
+        //[test setText:[NSString stringWithFormat:@"%f", index]];
         if (num[index] == temp){
             count=index;
             //[test setText:[NSString stringWithFormat:@"%f", num[index]]];
@@ -171,7 +171,7 @@
     //marker.position = CLLocationCoordinate2DMake(49.279937, -122.919956);
     
     //read file
-    NSString *contents = [NSString stringWithContentsOfFile:@"/Users/Aman/Desktop/SFUPA/SFUPA/AQ.txt" encoding:NSUTF8StringEncoding error:NULL];
+    NSString *contents = [NSString stringWithContentsOfFile:@"/Users/a11/Desktop/cmpt275/2015-1-cmpt_275_team_07/SFUPA/AQ.txt" encoding:NSUTF8StringEncoding error:NULL];
     NSArray *lines = [contents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     //double number[1000];
     NSInteger index = 0;
@@ -181,7 +181,6 @@
         num[index]=nse;
         index++;
     }
-    
     
 }
 

@@ -38,6 +38,10 @@
 		077C0CB11AA90C55000449D0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0CB01AA90C55000449D0 /* CoreLocation.framework */; };
 		077C0CB31AA90C5E000449D0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0CB21AA90C5E000449D0 /* CoreData.framework */; };
 		077C0CB51AA90C66000449D0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0CB41AA90C66000449D0 /* AVFoundation.framework */; };
+		0FF7F3031AAA2F8F004CF1F6 /* arrow-down-01-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F2FF1AAA2F8F004CF1F6 /* arrow-down-01-128.png */; };
+		0FF7F3041AAA2F8F004CF1F6 /* arrow-left-01-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F3001AAA2F8F004CF1F6 /* arrow-left-01-128.png */; };
+		0FF7F3051AAA2F8F004CF1F6 /* arrow-up-01-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F3011AAA2F8F004CF1F6 /* arrow-up-01-128.png */; };
+		0FF7F3061AAA2F8F004CF1F6 /* refresh-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F3021AAA2F8F004CF1F6 /* refresh-128.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +92,10 @@
 		077C0CB01AA90C55000449D0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		077C0CB21AA90C5E000449D0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		077C0CB41AA90C66000449D0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0FF7F2FF1AAA2F8F004CF1F6 /* arrow-down-01-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-down-01-128.png"; sourceTree = "<group>"; };
+		0FF7F3001AAA2F8F004CF1F6 /* arrow-left-01-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-left-01-128.png"; sourceTree = "<group>"; };
+		0FF7F3011AAA2F8F004CF1F6 /* arrow-up-01-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-up-01-128.png"; sourceTree = "<group>"; };
+		0FF7F3021AAA2F8F004CF1F6 /* refresh-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh-128.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +194,10 @@
 		077C0C8B1AA9088E000449D0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0FF7F2FF1AAA2F8F004CF1F6 /* arrow-down-01-128.png */,
+				0FF7F3001AAA2F8F004CF1F6 /* arrow-left-01-128.png */,
+				0FF7F3011AAA2F8F004CF1F6 /* arrow-up-01-128.png */,
+				0FF7F3021AAA2F8F004CF1F6 /* refresh-128.png */,
 				07655F201AA9351F003BB634 /* background.jpg */,
 				07655F1C1AA91B36003BB634 /* ic_refresh_48px-128.png */,
 				077C0C8C1AA9088E000449D0 /* acadamic service icon.jpg */,
@@ -301,16 +313,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				07655F1F1AA92C64003BB634 /* AQ.txt in Resources */,
+				0FF7F3041AAA2F8F004CF1F6 /* arrow-left-01-128.png in Resources */,
 				0741D8C81AA66E0200370808 /* Main.storyboard in Resources */,
 				07655F1B1AA91430003BB634 /* GoogleMaps.bundle in Resources */,
 				077C0C991AA9088E000449D0 /* transit icon.jpg in Resources */,
 				07655F1D1AA91B36003BB634 /* ic_refresh_48px-128.png in Resources */,
 				077C0C931AA9088E000449D0 /* acadamic service icon.jpg in Resources */,
+				0FF7F3031AAA2F8F004CF1F6 /* arrow-down-01-128.png in Resources */,
 				077C0C971AA9088E000449D0 /* map icon.jpg in Resources */,
 				077C0C951AA9088E000449D0 /* campus information icon.jpg in Resources */,
 				077C0C941AA9088E000449D0 /* ancillary icon.jpg in Resources */,
 				07655F211AA9351F003BB634 /* background.jpg in Resources */,
 				077C0C981AA9088E000449D0 /* news icon.jpg in Resources */,
+				0FF7F3061AAA2F8F004CF1F6 /* refresh-128.png in Resources */,
+				0FF7F3051AAA2F8F004CF1F6 /* arrow-up-01-128.png in Resources */,
 				0741D8CD1AA66E0200370808 /* LaunchScreen.xib in Resources */,
 				077C0C961AA9088E000449D0 /* information button.png in Resources */,
 				0741D8CA1AA66E0200370808 /* Images.xcassets in Resources */,
