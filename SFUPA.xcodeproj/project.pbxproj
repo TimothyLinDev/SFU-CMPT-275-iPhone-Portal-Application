@@ -16,6 +16,7 @@
 		0741D8D91AA66E0200370808 /* SFUPATests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0741D8D81AA66E0200370808 /* SFUPATests.m */; };
 		07655F191AA9135A003BB634 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07655F181AA9135A003BB634 /* GoogleMaps.framework */; };
 		07655F1B1AA91430003BB634 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 07655F1A1AA91430003BB634 /* GoogleMaps.bundle */; };
+		07655F1D1AA91B36003BB634 /* ic_refresh_48px-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 07655F1C1AA91B36003BB634 /* ic_refresh_48px-128.png */; };
 		077C0C931AA9088E000449D0 /* acadamic service icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C8C1AA9088E000449D0 /* acadamic service icon.jpg */; };
 		077C0C941AA9088E000449D0 /* ancillary icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C8D1AA9088E000449D0 /* ancillary icon.jpg */; };
 		077C0C951AA9088E000449D0 /* campus information icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C8E1AA9088E000449D0 /* campus information icon.jpg */; };
@@ -63,6 +64,7 @@
 		0741D8D81AA66E0200370808 /* SFUPATests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFUPATests.m; sourceTree = "<group>"; };
 		07655F181AA9135A003BB634 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		07655F1A1AA91430003BB634 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
+		07655F1C1AA91B36003BB634 /* ic_refresh_48px-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_refresh_48px-128.png"; sourceTree = "<group>"; };
 		077C0C8C1AA9088E000449D0 /* acadamic service icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "acadamic service icon.jpg"; sourceTree = "<group>"; };
 		077C0C8D1AA9088E000449D0 /* ancillary icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ancillary icon.jpg"; sourceTree = "<group>"; };
 		077C0C8E1AA9088E000449D0 /* campus information icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "campus information icon.jpg"; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		077C0C8B1AA9088E000449D0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				07655F1C1AA91B36003BB634 /* ic_refresh_48px-128.png */,
 				077C0C8C1AA9088E000449D0 /* acadamic service icon.jpg */,
 				077C0C8D1AA9088E000449D0 /* ancillary icon.jpg */,
 				077C0C8E1AA9088E000449D0 /* campus information icon.jpg */,
@@ -294,6 +297,7 @@
 				0741D8C81AA66E0200370808 /* Main.storyboard in Resources */,
 				07655F1B1AA91430003BB634 /* GoogleMaps.bundle in Resources */,
 				077C0C991AA9088E000449D0 /* transit icon.jpg in Resources */,
+				07655F1D1AA91B36003BB634 /* ic_refresh_48px-128.png in Resources */,
 				077C0C931AA9088E000449D0 /* acadamic service icon.jpg in Resources */,
 				077C0C971AA9088E000449D0 /* map icon.jpg in Resources */,
 				077C0C951AA9088E000449D0 /* campus information icon.jpg in Resources */,
@@ -400,6 +404,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
