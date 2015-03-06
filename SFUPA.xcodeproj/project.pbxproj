@@ -18,6 +18,7 @@
 		07655F1B1AA91430003BB634 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 07655F1A1AA91430003BB634 /* GoogleMaps.bundle */; };
 		07655F1D1AA91B36003BB634 /* ic_refresh_48px-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 07655F1C1AA91B36003BB634 /* ic_refresh_48px-128.png */; };
 		07655F1F1AA92C64003BB634 /* AQ.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07655F1E1AA92C64003BB634 /* AQ.txt */; };
+		07655F211AA9351F003BB634 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07655F201AA9351F003BB634 /* background.jpg */; };
 		077C0C931AA9088E000449D0 /* acadamic service icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C8C1AA9088E000449D0 /* acadamic service icon.jpg */; };
 		077C0C941AA9088E000449D0 /* ancillary icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C8D1AA9088E000449D0 /* ancillary icon.jpg */; };
 		077C0C951AA9088E000449D0 /* campus information icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C8E1AA9088E000449D0 /* campus information icon.jpg */; };
@@ -67,6 +68,7 @@
 		07655F1A1AA91430003BB634 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
 		07655F1C1AA91B36003BB634 /* ic_refresh_48px-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_refresh_48px-128.png"; sourceTree = "<group>"; };
 		07655F1E1AA92C64003BB634 /* AQ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AQ.txt; sourceTree = "<group>"; };
+		07655F201AA9351F003BB634 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		077C0C8C1AA9088E000449D0 /* acadamic service icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "acadamic service icon.jpg"; sourceTree = "<group>"; };
 		077C0C8D1AA9088E000449D0 /* ancillary icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ancillary icon.jpg"; sourceTree = "<group>"; };
 		077C0C8E1AA9088E000449D0 /* campus information icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "campus information icon.jpg"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 		077C0C8B1AA9088E000449D0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				07655F201AA9351F003BB634 /* background.jpg */,
 				07655F1C1AA91B36003BB634 /* ic_refresh_48px-128.png */,
 				077C0C8C1AA9088E000449D0 /* acadamic service icon.jpg */,
 				077C0C8D1AA9088E000449D0 /* ancillary icon.jpg */,
@@ -306,6 +309,7 @@
 				077C0C971AA9088E000449D0 /* map icon.jpg in Resources */,
 				077C0C951AA9088E000449D0 /* campus information icon.jpg in Resources */,
 				077C0C941AA9088E000449D0 /* ancillary icon.jpg in Resources */,
+				07655F211AA9351F003BB634 /* background.jpg in Resources */,
 				077C0C981AA9088E000449D0 /* news icon.jpg in Resources */,
 				0741D8CD1AA66E0200370808 /* LaunchScreen.xib in Resources */,
 				077C0C961AA9088E000449D0 /* information button.png in Resources */,
