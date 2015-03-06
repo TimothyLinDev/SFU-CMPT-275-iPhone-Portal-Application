@@ -11,9 +11,8 @@
 
 @interface ViewController : UIViewController <GMSMapViewDelegate>{
     __weak IBOutlet UIButton *search;
-    __weak IBOutlet UIButton *down;
-    __weak IBOutlet UIButton *up;
     __weak IBOutlet UIView *slide;
+    __weak IBOutlet UIButton *down;
     __weak IBOutlet UIButton *remove;
 }
 

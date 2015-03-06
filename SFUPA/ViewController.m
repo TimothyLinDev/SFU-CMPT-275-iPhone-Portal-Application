@@ -18,8 +18,8 @@
     CGFloat endLat;
     CGFloat endLong;
     IBOutlet GMSMapView *mapView;
-    __weak IBOutlet UITextField *sroom;
     __weak IBOutlet UITextField *room;
+    __weak IBOutlet UITextField *sroom;
 }
 
 @end
@@ -43,8 +43,10 @@
     NSInteger count = 0;
     while(index<1000)
     {
+        //[test setText:[NSString stringWithFormat:@"%f", num[index]]];
         if (num[index] == temp){
             count=index;
+            //[test setText:[NSString stringWithFormat:@"%f", num[index]]];
             exist=YES;
         }
         index++;
@@ -56,7 +58,7 @@
         endLong = longtitude;
         camera = [GMSCameraPosition cameraWithLatitude:latitude
                                              longitude:longtitude
-                                                  zoom:18];
+                                                  zoom:20];
         [mapView animateToCameraPosition:camera];
         //marker
         CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(latitude, longtitude);
@@ -94,6 +96,7 @@
         if (num[index] == temp){
             count=index;
             exist=YES;
+        
         }
         index++;
     }
@@ -114,7 +117,7 @@
         GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
         camera = [GMSCameraPosition cameraWithLatitude:latitude
                                              longitude:longtitude
-                                                  zoom:18];
+                                                  zoom:20];
         [mapView animateToCameraPosition:camera];
         //marker
         CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(latitude, longtitude);
@@ -168,7 +171,7 @@
     //marker.position = CLLocationCoordinate2DMake(49.279937, -122.919956);
     
     //read file
-    NSString *contents = [NSString stringWithContentsOfFile:@"/Users/victor/Desktop/mav\ map/map-2/map/AQ.txt" encoding:NSUTF8StringEncoding error:NULL];
+    NSString *contents = [NSString stringWithContentsOfFile:@"/Users/Aman/Desktop/SFUPA/SFUPA/AQ.txt" encoding:NSUTF8StringEncoding error:NULL];
     NSArray *lines = [contents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     //double number[1000];
     NSInteger index = 0;
