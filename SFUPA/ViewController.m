@@ -143,11 +143,11 @@
 }
 
 -(IBAction)downward:(id)sender{
-    slide.center = CGPointMake(159, 90);
+    slide.center = CGPointMake(160, 90);
 }
 
 -(IBAction)upward:(id)sender{
-    slide.center = CGPointMake(159, 55);
+    slide.center = CGPointMake(160, 55);
 }
 
 - (void)viewDidLoad {
