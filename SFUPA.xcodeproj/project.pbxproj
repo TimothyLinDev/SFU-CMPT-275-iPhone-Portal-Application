@@ -43,6 +43,8 @@
 		0FF7F3051AAA2F8F004CF1F6 /* arrow-up-01-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F3011AAA2F8F004CF1F6 /* arrow-up-01-128.png */; };
 		0FF7F3061AAA2F8F004CF1F6 /* refresh-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F3021AAA2F8F004CF1F6 /* refresh-128.png */; };
 		CEC5AF4F1AAB234E0068B400 /* login button.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC5AF4E1AAB234E0068B400 /* login button.png */; };
+		CEC5AF5D1AAB34800068B400 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC5AF5A1AAB34800068B400 /* LoginManager.m */; };
+		CEC5AF5E1AAB34800068B400 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC5AF5C1AAB34800068B400 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,10 @@
 		0FF7F3011AAA2F8F004CF1F6 /* arrow-up-01-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-up-01-128.png"; sourceTree = "<group>"; };
 		0FF7F3021AAA2F8F004CF1F6 /* refresh-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh-128.png"; sourceTree = "<group>"; };
 		CEC5AF4E1AAB234E0068B400 /* login button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login button.png"; path = "Images/login button.png"; sourceTree = "<group>"; };
+		CEC5AF591AAB34800068B400 /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
+		CEC5AF5A1AAB34800068B400 /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
+		CEC5AF5B1AAB34800068B400 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		CEC5AF5C1AAB34800068B400 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +159,7 @@
 		0741D8BB1AA66E0200370808 /* SFUPA */ = {
 			isa = PBXGroup;
 			children = (
+				CEC5AF581AAB34800068B400 /* login */,
 				0741D8C01AA66E0200370808 /* AppDelegate.h */,
 				0741D8C11AA66E0200370808 /* AppDelegate.m */,
 				0741D8C31AA66E0200370808 /* ViewController.h */,
@@ -233,6 +240,17 @@
 				077C0C9E1AA90BFD000449D0 /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEC5AF581AAB34800068B400 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				CEC5AF591AAB34800068B400 /* LoginManager.h */,
+				CEC5AF5A1AAB34800068B400 /* LoginManager.m */,
+				CEC5AF5B1AAB34800068B400 /* LoginViewController.h */,
+				CEC5AF5C1AAB34800068B400 /* LoginViewController.m */,
+			);
+			path = login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,8 +370,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0741D8C51AA66E0200370808 /* ViewController.m in Sources */,
+				CEC5AF5D1AAB34800068B400 /* LoginManager.m in Sources */,
 				0741D8C21AA66E0200370808 /* AppDelegate.m in Sources */,
 				0741D8BF1AA66E0200370808 /* main.m in Sources */,
+				CEC5AF5E1AAB34800068B400 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
