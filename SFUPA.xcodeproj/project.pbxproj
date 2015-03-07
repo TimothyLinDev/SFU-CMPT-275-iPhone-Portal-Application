@@ -42,6 +42,7 @@
 		0FF7F3041AAA2F8F004CF1F6 /* arrow-left-01-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F3001AAA2F8F004CF1F6 /* arrow-left-01-128.png */; };
 		0FF7F3051AAA2F8F004CF1F6 /* arrow-up-01-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F3011AAA2F8F004CF1F6 /* arrow-up-01-128.png */; };
 		0FF7F3061AAA2F8F004CF1F6 /* refresh-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F3021AAA2F8F004CF1F6 /* refresh-128.png */; };
+		CEC5AF4F1AAB234E0068B400 /* login button.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC5AF4E1AAB234E0068B400 /* login button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		0FF7F3001AAA2F8F004CF1F6 /* arrow-left-01-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-left-01-128.png"; sourceTree = "<group>"; };
 		0FF7F3011AAA2F8F004CF1F6 /* arrow-up-01-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-up-01-128.png"; sourceTree = "<group>"; };
 		0FF7F3021AAA2F8F004CF1F6 /* refresh-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh-128.png"; sourceTree = "<group>"; };
+		CEC5AF4E1AAB234E0068B400 /* login button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login button.png"; path = "Images/login button.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				0741D8C31AA66E0200370808 /* ViewController.h */,
 				0741D8C41AA66E0200370808 /* ViewController.m */,
 				0741D8C61AA66E0200370808 /* Main.storyboard */,
+				CEC5AF4E1AAB234E0068B400 /* login button.png */,
 				0741D8C91AA66E0200370808 /* Images.xcassets */,
 				0741D8CB1AA66E0200370808 /* LaunchScreen.xib */,
 				0741D8BC1AA66E0200370808 /* Supporting Files */,
@@ -326,6 +329,7 @@
 				07655F211AA9351F003BB634 /* background.jpg in Resources */,
 				077C0C981AA9088E000449D0 /* news icon.jpg in Resources */,
 				0FF7F3061AAA2F8F004CF1F6 /* refresh-128.png in Resources */,
+				CEC5AF4F1AAB234E0068B400 /* login button.png in Resources */,
 				0FF7F3051AAA2F8F004CF1F6 /* arrow-up-01-128.png in Resources */,
 				0741D8CD1AA66E0200370808 /* LaunchScreen.xib in Resources */,
 				077C0C961AA9088E000449D0 /* information button.png in Resources */,
