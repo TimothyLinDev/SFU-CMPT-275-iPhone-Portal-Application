@@ -37,7 +37,7 @@
     else if([segue.identifier isEqualToString:@"CoursysScreen"])
     {
         WebViewScreen *controller = (WebViewScreen *)segue.destinationViewController;
-        controller.segueData = @"Coursys";
+        controller.segueData = @"CourSys";
     }
     if([segue.identifier isEqualToString:@"ConnectScreen"])
     {
@@ -52,7 +52,7 @@
     else if([segue.identifier isEqualToString:@"SimplicityScreen"])
     {
         WebViewScreen *controller = (WebViewScreen *)segue.destinationViewController;
-        controller.segueData = @"Simplicity";
+        controller.segueData = @"Symplicity";
     }
     
 }
