@@ -50,6 +50,9 @@
 		CEC5AF4F1AAB234E0068B400 /* login button.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC5AF4E1AAB234E0068B400 /* login button.png */; };
 		CEC5AF5D1AAB34800068B400 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC5AF5A1AAB34800068B400 /* LoginManager.m */; };
 		CEC5AF5E1AAB34800068B400 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC5AF5C1AAB34800068B400 /* LoginViewController.m */; };
+		EDD2DD5A1AAC55880045A485 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD2DD591AAC55880045A485 /* iCarousel.m */; };
+		EDD2DD601AAC56010045A485 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD2DD5F1AAC56010045A485 /* ViewController.m */; };
+		EDD2DD621AAC58000045A485 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDD2DD611AAC58000045A485 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +120,11 @@
 		CEC5AF5A1AAB34800068B400 /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
 		CEC5AF5B1AAB34800068B400 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		CEC5AF5C1AAB34800068B400 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		EDD2DD581AAC55880045A485 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		EDD2DD591AAC55880045A485 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		EDD2DD5E1AAC56010045A485 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EDD2DD5F1AAC56010045A485 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EDD2DD611AAC58000045A485 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,12 +200,15 @@
 		0741D8BB1AA66E0200370808 /* SFUPA */ = {
 			isa = PBXGroup;
 			children = (
+				EDD2DD571AAC55880045A485 /* iCarousel */,
 				072126241AAC06F70036CEFA /* Academic Services */,
 				0721261F1AABF7520036CEFA /* Map */,
 				CEC5AF581AAB34800068B400 /* Login */,
 				0741D8C01AA66E0200370808 /* AppDelegate.h */,
 				0741D8C11AA66E0200370808 /* AppDelegate.m */,
 				0741D8C61AA66E0200370808 /* Main.storyboard */,
+				EDD2DD5E1AAC56010045A485 /* ViewController.h */,
+				EDD2DD5F1AAC56010045A485 /* ViewController.m */,
 				0741D8C91AA66E0200370808 /* Images.xcassets */,
 				0741D8CB1AA66E0200370808 /* LaunchScreen.xib */,
 				0741D8BC1AA66E0200370808 /* Supporting Files */,
@@ -210,6 +221,7 @@
 		0741D8BC1AA66E0200370808 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EDD2DD611AAC58000045A485 /* Default-568h@2x.png */,
 				07655F1E1AA92C64003BB634 /* AQ.txt */,
 				077C0C8B1AA9088E000449D0 /* Images */,
 				0741D8BD1AA66E0200370808 /* Info.plist */,
@@ -289,6 +301,15 @@
 			);
 			name = Login;
 			path = login;
+			sourceTree = "<group>";
+		};
+		EDD2DD571AAC55880045A485 /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2DD581AAC55880045A485 /* iCarousel.h */,
+				EDD2DD591AAC55880045A485 /* iCarousel.m */,
+			);
+			path = iCarousel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,6 +397,7 @@
 				0741D8C81AA66E0200370808 /* Main.storyboard in Resources */,
 				07655F1B1AA91430003BB634 /* GoogleMaps.bundle in Resources */,
 				077C0C991AA9088E000449D0 /* transit icon.jpg in Resources */,
+				EDD2DD621AAC58000045A485 /* Default-568h@2x.png in Resources */,
 				07655F1D1AA91B36003BB634 /* ic_refresh_48px-128.png in Resources */,
 				077C0C931AA9088E000449D0 /* acadamic service icon.jpg in Resources */,
 				0FF7F3031AAA2F8F004CF1F6 /* arrow-down-01-128.png in Resources */,
@@ -409,12 +431,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD2DD601AAC56010045A485 /* ViewController.m in Sources */,
 				0721261E1AABF7400036CEFA /* OnlineServices.m in Sources */,
 				072126221AABFAC70036CEFA /* WebViewScreen.m in Sources */,
 				CE2936281AAC4AB900E6011A /* ViewController.m in Sources */,
 				0741D8C51AA66E0200370808 /* MapViewController.m in Sources */,
 				CEC5AF5D1AAB34800068B400 /* LoginManager.m in Sources */,
 				0741D8C21AA66E0200370808 /* AppDelegate.m in Sources */,
+				EDD2DD5A1AAC55880045A485 /* iCarousel.m in Sources */,
 				0741D8BF1AA66E0200370808 /* main.m in Sources */,
 				CEC5AF5E1AAB34800068B400 /* LoginViewController.m in Sources */,
 			);

@@ -2,15 +2,16 @@
 //  ViewController.h
 //  SFUPA
 //
-//  Created by Rylan on 2015-03-08.
-//
 //
 
 #import <UIKit/UIKit.h>
+#import "iCarousel.h"
 
-@interface ViewController : UIViewController
 
+@interface ViewController : UIViewController <iCarouselDataSource, iCarouselDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *mainScreenLoginButton; // also the logout button
 - (IBAction)pressedMainScreenLoginButton:(id)sender;
+
+@property (nonatomic, strong) IBOutlet iCarousel *carousel;
 
 @end
