@@ -45,6 +45,11 @@
 		0FF7F3051AAA2F8F004CF1F6 /* arrow-up-01-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F3011AAA2F8F004CF1F6 /* arrow-up-01-128.png */; };
 		0FF7F3061AAA2F8F004CF1F6 /* refresh-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F3021AAA2F8F004CF1F6 /* refresh-128.png */; };
 		0FF7F3081AAC22AC004CF1F6 /* Background - Red.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F3071AAC22AC004CF1F6 /* Background - Red.png */; };
+		0FF7F30A1AACF590004CF1F6 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F3091AACF590004CF1F6 /* refresh.png */; };
+		0FF7F3141AACF989004CF1F6 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F3111AACF989004CF1F6 /* cancel.png */; };
+		0FF7F3191AACFADA004CF1F6 /* forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F3171AACFADA004CF1F6 /* forward.png */; };
+		0FF7F31A1AACFADA004CF1F6 /* previous.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F3181AACFADA004CF1F6 /* previous.png */; };
+		0FF7F31C1AACFE60004CF1F6 /* online.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F31B1AACFE60004CF1F6 /* online.png */; };
 		CE278B3A1AAC6D2A00B62E83 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD2DD5F1AAC56010045A485 /* ViewController.m */; };
 		CE29362A1AAC508000E6011A /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2936291AAC508000E6011A /* logout.png */; };
 		CEC5AF4F1AAB234E0068B400 /* login button.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC5AF4E1AAB234E0068B400 /* login button.png */; };
@@ -111,6 +116,11 @@
 		0FF7F3011AAA2F8F004CF1F6 /* arrow-up-01-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-up-01-128.png"; sourceTree = "<group>"; };
 		0FF7F3021AAA2F8F004CF1F6 /* refresh-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh-128.png"; sourceTree = "<group>"; };
 		0FF7F3071AAC22AC004CF1F6 /* Background - Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background - Red.png"; sourceTree = "<group>"; };
+		0FF7F3091AACF590004CF1F6 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
+		0FF7F3111AACF989004CF1F6 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
+		0FF7F3171AACFADA004CF1F6 /* forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forward.png; sourceTree = "<group>"; };
+		0FF7F3181AACFADA004CF1F6 /* previous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = previous.png; sourceTree = "<group>"; };
+		0FF7F31B1AACFE60004CF1F6 /* online.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = online.png; sourceTree = "<group>"; };
 		CE2936291AAC508000E6011A /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
 		CEC5AF4E1AAB234E0068B400 /* login button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login button.png"; sourceTree = "<group>"; };
 		CEC5AF591AAB34800068B400 /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
@@ -245,6 +255,11 @@
 		077C0C8B1AA9088E000449D0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0FF7F31B1AACFE60004CF1F6 /* online.png */,
+				0FF7F3171AACFADA004CF1F6 /* forward.png */,
+				0FF7F3181AACFADA004CF1F6 /* previous.png */,
+				0FF7F3111AACF989004CF1F6 /* cancel.png */,
+				0FF7F3091AACF590004CF1F6 /* refresh.png */,
 				CE2936291AAC508000E6011A /* logout.png */,
 				0FF7F3071AAC22AC004CF1F6 /* Background - Red.png */,
 				CEC5AF4E1AAB234E0068B400 /* login button.png */,
@@ -390,6 +405,8 @@
 				07655F1F1AA92C64003BB634 /* AQ.txt in Resources */,
 				0FF7F3041AAA2F8F004CF1F6 /* arrow-left-01-128.png in Resources */,
 				0741D8C81AA66E0200370808 /* Main.storyboard in Resources */,
+				0FF7F3141AACF989004CF1F6 /* cancel.png in Resources */,
+				0FF7F31A1AACFADA004CF1F6 /* previous.png in Resources */,
 				07655F1B1AA91430003BB634 /* GoogleMaps.bundle in Resources */,
 				077C0C991AA9088E000449D0 /* transit icon.jpg in Resources */,
 				EDD2DD621AAC58000045A485 /* Default-568h@2x.png in Resources */,
@@ -409,6 +426,9 @@
 				0741D8CD1AA66E0200370808 /* LaunchScreen.xib in Resources */,
 				077C0C961AA9088E000449D0 /* information button.png in Resources */,
 				0741D8CA1AA66E0200370808 /* Images.xcassets in Resources */,
+				0FF7F30A1AACF590004CF1F6 /* refresh.png in Resources */,
+				0FF7F3191AACFADA004CF1F6 /* forward.png in Resources */,
+				0FF7F31C1AACFE60004CF1F6 /* online.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
