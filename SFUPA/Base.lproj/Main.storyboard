@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -80,6 +80,12 @@
                                     <segue destination="ADK-ra-iqE" kind="presentation" modalTransitionStyle="flipHorizontal" id="qr7-lA-gZT"/>
                                 </connections>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eFI-22-hLh">
+                                <rect key="frame" x="16" y="113" width="288" height="176"/>
+                                <connections>
+                                    <segue destination="H46-cT-XjJ" kind="embed" id="l3q-PX-VOX"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -525,6 +531,32 @@
             </objects>
             <point key="canvasLocation" x="893" y="302"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="D9A-fI-t4N">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="H46-cT-XjJ" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4CU-2t-VlE"/>
+                        <viewControllerLayoutGuide type="bottom" id="aBM-jY-7JP"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FKm-MY-5bb" userLabel="iCarousel" customClass="iCarousel">
+                        <rect key="frame" x="0.0" y="0.0" width="288" height="176"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="H46-cT-XjJ" id="B6p-L0-e96"/>
+                            <outlet property="delegate" destination="H46-cT-XjJ" id="BH8-wc-Exa"/>
+                        </connections>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="carousel" destination="FKm-MY-5bb" id="EB8-aX-aXf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hfe-nI-tVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-58" y="131"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Background - Red.png" width="256" height="256"/>
@@ -543,8 +575,8 @@
         <image name="transit icon.jpg" width="118" height="161"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="rXa-hB-y8k"/>
         <segue reference="Fih-RG-VNF"/>
-        <segue reference="qgr-T0-9Td"/>
         <segue reference="d7S-35-fiM"/>
     </inferredMetricsTieBreakers>
 </document>
