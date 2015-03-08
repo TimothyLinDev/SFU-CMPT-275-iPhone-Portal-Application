@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -229,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XuL-zc-Wql" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-55" y="1645"/>
+            <point key="canvasLocation" x="-138" y="1104"/>
         </scene>
         <!--Web View Screen-->
         <scene sceneID="Qse-zp-BmL">
@@ -270,8 +270,8 @@
                                             <segue destination="AIX-hT-9w7" kind="modal" modalTransitionStyle="crossDissolve" id="qgr-T0-9Td"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYM-2O-lwV">
-                                        <rect key="frame" x="133" y="16" width="54" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYM-2O-lwV">
+                                        <rect key="frame" x="107" y="16" width="106" height="21"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -284,6 +284,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="lblNavBar" destination="rYM-2O-lwV" id="e8Q-2Q-RUP"/>
                         <outlet property="webView" destination="K8G-Qr-gAO" id="AP5-9p-5S8"/>
                     </connections>
                 </viewController>
@@ -338,16 +339,6 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.98039221759999995" green="0.0078431377190000002" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWC-7U-9M4">
-                                <rect key="frame" x="255" y="28" width="49" height="30"/>
-                                <state key="normal" title="Logout">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressedLogoutButton:" destination="ADK-ra-iqE" eventType="touchUpInside" id="rvf-me-A0e"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJy-jc-0JN">
                                 <rect key="frame" x="16" y="250" width="84" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -552,8 +543,8 @@
         <image name="transit icon.jpg" width="118" height="161"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Fih-RG-VNF"/>
         <segue reference="qgr-T0-9Td"/>
-        <segue reference="wMs-5g-Vkg"/>
-        <segue reference="D8H-H1-bHq"/>
+        <segue reference="d7S-35-fiM"/>
     </inferredMetricsTieBreakers>
 </document>

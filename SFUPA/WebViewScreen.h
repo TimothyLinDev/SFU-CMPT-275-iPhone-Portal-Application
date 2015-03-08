@@ -11,4 +11,6 @@
 @interface WebViewScreen : UIViewController
 @property (retain, nonatomic) NSString *segueData;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UILabel *lblNavBar;
+
 @end
