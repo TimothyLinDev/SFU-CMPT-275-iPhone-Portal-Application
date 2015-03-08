@@ -16,19 +16,6 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-    NSString *imageName;
-    if ([LoginManager loggedIn]) {
-        imageName = @"logout.png";
-    } else {
-        imageName = @"login button.png";
-    }
-    [_mainScreenLoginButton setImage:[UIImage imageNamed:imageName]
-                            forState:UIControlStateNormal];
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -88,7 +75,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
+    // configure login/logout button
+    NSString *imageName;
+    if ([LoginManager loggedIn]) {
+        imageName = @"logout.png";
+    } else {
+        imageName = @"login button.png";
+    }
+    [_mainScreenLoginButton setImage:[UIImage imageNamed:imageName]
+                            forState:UIControlStateNormal];
+
     //configure carousel
     carousel.type = iCarouselTypeCoverFlow2;
 }

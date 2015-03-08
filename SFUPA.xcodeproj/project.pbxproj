@@ -45,13 +45,12 @@
 		0FF7F3051AAA2F8F004CF1F6 /* arrow-up-01-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F3011AAA2F8F004CF1F6 /* arrow-up-01-128.png */; };
 		0FF7F3061AAA2F8F004CF1F6 /* refresh-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F3021AAA2F8F004CF1F6 /* refresh-128.png */; };
 		0FF7F3081AAC22AC004CF1F6 /* Background - Red.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F3071AAC22AC004CF1F6 /* Background - Red.png */; };
-		CE2936281AAC4AB900E6011A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2936271AAC4AB900E6011A /* ViewController.m */; };
+		CE278B3A1AAC6D2A00B62E83 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD2DD5F1AAC56010045A485 /* ViewController.m */; };
 		CE29362A1AAC508000E6011A /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2936291AAC508000E6011A /* logout.png */; };
 		CEC5AF4F1AAB234E0068B400 /* login button.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC5AF4E1AAB234E0068B400 /* login button.png */; };
 		CEC5AF5D1AAB34800068B400 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC5AF5A1AAB34800068B400 /* LoginManager.m */; };
 		CEC5AF5E1AAB34800068B400 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC5AF5C1AAB34800068B400 /* LoginViewController.m */; };
 		EDD2DD5A1AAC55880045A485 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD2DD591AAC55880045A485 /* iCarousel.m */; };
-		EDD2DD601AAC56010045A485 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD2DD5F1AAC56010045A485 /* ViewController.m */; };
 		EDD2DD621AAC58000045A485 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDD2DD611AAC58000045A485 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -112,8 +111,6 @@
 		0FF7F3011AAA2F8F004CF1F6 /* arrow-up-01-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-up-01-128.png"; sourceTree = "<group>"; };
 		0FF7F3021AAA2F8F004CF1F6 /* refresh-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh-128.png"; sourceTree = "<group>"; };
 		0FF7F3071AAC22AC004CF1F6 /* Background - Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background - Red.png"; sourceTree = "<group>"; };
-		CE2936261AAC4AB900E6011A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CE2936271AAC4AB900E6011A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CE2936291AAC508000E6011A /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
 		CEC5AF4E1AAB234E0068B400 /* login button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login button.png"; sourceTree = "<group>"; };
 		CEC5AF591AAB34800068B400 /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
@@ -212,8 +209,6 @@
 				0741D8C91AA66E0200370808 /* Images.xcassets */,
 				0741D8CB1AA66E0200370808 /* LaunchScreen.xib */,
 				0741D8BC1AA66E0200370808 /* Supporting Files */,
-				CE2936261AAC4AB900E6011A /* ViewController.h */,
-				CE2936271AAC4AB900E6011A /* ViewController.m */,
 			);
 			path = SFUPA;
 			sourceTree = "<group>";
@@ -431,10 +426,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDD2DD601AAC56010045A485 /* ViewController.m in Sources */,
+				CE278B3A1AAC6D2A00B62E83 /* ViewController.m in Sources */,
 				0721261E1AABF7400036CEFA /* OnlineServices.m in Sources */,
 				072126221AABFAC70036CEFA /* WebViewScreen.m in Sources */,
-				CE2936281AAC4AB900E6011A /* ViewController.m in Sources */,
 				0741D8C51AA66E0200370808 /* MapViewController.m in Sources */,
 				CEC5AF5D1AAB34800068B400 /* LoginManager.m in Sources */,
 				0741D8C21AA66E0200370808 /* AppDelegate.m in Sources */,
