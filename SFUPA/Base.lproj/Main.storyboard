@@ -30,6 +30,9 @@
                                 <state key="normal" image="acadamic service icon.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="AIX-hT-9w7" kind="modal" id="rXa-hB-y8k"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2f-uT-ApQ">
                                 <rect key="frame" x="209" y="303" width="95" height="124"/>
@@ -84,6 +87,133 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="380" y="302"/>
+        </scene>
+        <!--Online Services-->
+        <scene sceneID="S9u-ei-zNj">
+            <objects>
+                <viewController id="AIX-hT-9w7" customClass="OnlineServices" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mhl-RA-nkV"/>
+                        <viewControllerLayoutGuide type="bottom" id="XlK-RL-I1k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UqG-cz-Vkc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1T-o4-5aS">
+                                <rect key="frame" x="137" y="85" width="52" height="30"/>
+                                <state key="normal" title="Canvas">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCanvas:" destination="AIX-hT-9w7" eventType="touchUpInside" id="fdi-2C-Tw6"/>
+                                    <segue destination="jWg-ak-em3" kind="modal" identifier="CanvasScreen" modalTransitionStyle="flipHorizontal" id="wMs-5g-Vkg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDs-EN-c6n">
+                                <rect key="frame" x="134" y="216" width="59" height="30"/>
+                                <state key="normal" title="Connect">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnConnect:" destination="AIX-hT-9w7" eventType="touchUpInside" id="6vr-sU-NNN"/>
+                                    <segue destination="jWg-ak-em3" kind="modal" identifier="ConnectScreen" modalTransitionStyle="flipHorizontal" id="Vry-Q6-Ptt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdD-DX-efh">
+                                <rect key="frame" x="140" y="269" width="48" height="30"/>
+                                <state key="normal" title="goSFU">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btngoSFU:" destination="AIX-hT-9w7" eventType="touchUpInside" id="RJf-kB-FgO"/>
+                                    <segue destination="jWg-ak-em3" kind="modal" identifier="goSFUScreen" modalTransitionStyle="flipHorizontal" id="h7E-1S-d3k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7S-Xz-LYq">
+                                <rect key="frame" x="130" y="319" width="67" height="30"/>
+                                <state key="normal" title="Simplicity">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSimplicity:" destination="AIX-hT-9w7" eventType="touchUpInside" id="bsd-gh-jxE"/>
+                                    <segue destination="jWg-ak-em3" kind="modal" identifier="SimplicityScreen" modalTransitionStyle="flipHorizontal" id="b0w-1T-Mr9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NgU-fX-7JY">
+                                <rect key="frame" x="117" y="374" width="86" height="30"/>
+                                <state key="normal" title="Course View">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDv-lv-Zhg">
+                                <rect key="frame" x="141" y="426" width="38" height="30"/>
+                                <state key="normal" title="Sakai">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3E-x9-7oh">
+                                <rect key="frame" x="132" y="155" width="57" height="30"/>
+                                <state key="normal" title="Coursys">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCoursys:" destination="AIX-hT-9w7" eventType="touchUpInside" id="9rJ-XP-vyv"/>
+                                    <segue destination="jWg-ak-em3" kind="modal" identifier="CoursysScreen" modalTransitionStyle="flipHorizontal" id="d7S-35-fiM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XuL-zc-Wql" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="1077"/>
+        </scene>
+        <!--Web View Screen-->
+        <scene sceneID="Qse-zp-BmL">
+            <objects>
+                <viewController id="jWg-ak-em3" customClass="WebViewScreen" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="myo-P9-5us"/>
+                        <viewControllerLayoutGuide type="bottom" id="jp0-N4-gIy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D9S-lP-NLf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K8G-Qr-gAO">
+                                <rect key="frame" x="0.0" y="38" width="320" height="486"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qs2-UO-0ja">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Previous" id="jyy-rs-ui1"/>
+                                    <barButtonItem title="Forward" id="T6F-Hi-5aR"/>
+                                    <barButtonItem title="Refresh" id="vqT-1C-7h7"/>
+                                    <barButtonItem title="Cancel" id="QuD-s7-lbu"/>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vpa-YJ-cmf">
+                                <rect key="frame" x="0.0" y="13" width="35" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="webView" destination="K8G-Qr-gAO" id="AP5-9p-5S8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w9l-fR-Yx0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908" y="1077"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="6Gy-cu-G7D">
@@ -151,7 +281,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HkK-Gy-wME" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="818" y="-475"/>
+            <point key="canvasLocation" x="820" y="-409"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ISt-zD-78j">
@@ -299,7 +429,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="44O-7U-ZcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="832" y="230"/>
+            <point key="canvasLocation" x="893" y="302"/>
         </scene>
     </scenes>
     <resources>
@@ -317,4 +447,7 @@
         <image name="refresh-128.png" width="128" height="128"/>
         <image name="transit icon.jpg" width="118" height="161"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="b0w-1T-Mr9"/>
+    </inferredMetricsTieBreakers>
 </document>
