@@ -1,5 +1,5 @@
 //
-//  ViewController.m
+//  MapViewController.m
 //  SFUPA
 //
 //  Created by Aman on 3/3/15.
@@ -7,9 +7,9 @@
 //
 
 
-#import "ViewController.h"
+#import "MapViewController.h"
 
-@interface ViewController (){
+@interface MapViewController (){
     double num[1000];
     GMSMarker *marker;
     GMSCameraPosition *camera;
@@ -24,7 +24,7 @@
 
 @end
 
-@implementation ViewController
+@implementation MapViewController
 
 -(IBAction)clean:(id)sender{
     [mapView clear];

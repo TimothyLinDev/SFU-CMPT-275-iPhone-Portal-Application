@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MapViewController.h
 //  SFUPA
 //
 //  Created by Aman on 3/3/15.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GoogleMaps/GoogleMaps.h"
 
-@interface ViewController : UIViewController <GMSMapViewDelegate>{
+@interface MapViewController : UIViewController <GMSMapViewDelegate>{
     __weak IBOutlet UIButton *search;
     __weak IBOutlet UIView *slide;
     __weak IBOutlet UIButton *down;

@@ -11,7 +11,7 @@
 		072126221AABFAC70036CEFA /* WebViewScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 072126211AABFAC70036CEFA /* WebViewScreen.m */; };
 		0741D8BF1AA66E0200370808 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0741D8BE1AA66E0200370808 /* main.m */; };
 		0741D8C21AA66E0200370808 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0741D8C11AA66E0200370808 /* AppDelegate.m */; };
-		0741D8C51AA66E0200370808 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0741D8C41AA66E0200370808 /* ViewController.m */; };
+		0741D8C51AA66E0200370808 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0741D8C41AA66E0200370808 /* MapViewController.m */; };
 		0741D8C81AA66E0200370808 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0741D8C61AA66E0200370808 /* Main.storyboard */; };
 		0741D8CA1AA66E0200370808 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0741D8C91AA66E0200370808 /* Images.xcassets */; };
 		0741D8CD1AA66E0200370808 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0741D8CB1AA66E0200370808 /* LaunchScreen.xib */; };
@@ -70,8 +70,8 @@
 		0741D8BE1AA66E0200370808 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0741D8C01AA66E0200370808 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0741D8C11AA66E0200370808 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0741D8C31AA66E0200370808 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0741D8C41AA66E0200370808 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0741D8C31AA66E0200370808 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		0741D8C41AA66E0200370808 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		0741D8C71AA66E0200370808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0741D8C91AA66E0200370808 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0741D8CC1AA66E0200370808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -148,8 +148,8 @@
 		0721261F1AABF7520036CEFA /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				0741D8C31AA66E0200370808 /* ViewController.h */,
-				0741D8C41AA66E0200370808 /* ViewController.m */,
+				0741D8C31AA66E0200370808 /* MapViewController.h */,
+				0741D8C41AA66E0200370808 /* MapViewController.m */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -402,7 +402,7 @@
 			files = (
 				0721261E1AABF7400036CEFA /* OnlineServices.m in Sources */,
 				072126221AABFAC70036CEFA /* WebViewScreen.m in Sources */,
-				0741D8C51AA66E0200370808 /* ViewController.m in Sources */,
+				0741D8C51AA66E0200370808 /* MapViewController.m in Sources */,
 				CEC5AF5D1AAB34800068B400 /* LoginManager.m in Sources */,
 				0741D8C21AA66E0200370808 /* AppDelegate.m in Sources */,
 				0741D8BF1AA66E0200370808 /* main.m in Sources */,
