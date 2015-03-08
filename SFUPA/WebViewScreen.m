@@ -26,7 +26,7 @@
     {
         if ([self.segueData isEqualToString:@"Canvas"])
         {
-            NSURL *URL = [NSURL URLWithString:@"https://cas.sfu.ca/cas/login?service=https%3A%2F%2Fcanvas.sfu.ca%2Flogin%2Fcas"];
+            NSURL *URL = [NSURL URLWithString:@"https://canvas.sfu.ca/"];
             NSURLRequest *request = [NSURLRequest requestWithURL:URL];
             [_webView loadRequest:request];
             self.lblNavBar.text = @"Canvas";
@@ -41,24 +41,24 @@
         }
         else if([self.segueData isEqualToString:@"Connect"])
         {
-            NSURL *URL = [NSURL URLWithString:@"https://cas.sfu.ca/cas/login?app=SFU+Connect&allow=sfu,zimbra&service=https%3A%2F%2Fconnect.sfu.ca%2Fzimbra%2Fpublic%2Fpreauth.jsp"];
+            NSURL *URL = [NSURL URLWithString:@"https://connect.sfu.ca/"];
             NSURLRequest *request = [NSURLRequest requestWithURL:URL];
             [_webView loadRequest:request];
             self.lblNavBar.text = @"Connect";
         }
         else if([self.segueData isEqualToString:@"goSFU"])
         {
-            NSURL *URL = [NSURL URLWithString:@"https://go.sfu.ca/psp/paprd/EMPLOYEE/EMPL/h/?tab=PAPP_GUEST"];
+            NSURL *URL = [NSURL URLWithString:@"https://go.sfu.ca/"];
             NSURLRequest *request = [NSURLRequest requestWithURL:URL];
             [_webView loadRequest:request];
             self.lblNavBar.text = @"goSFU";
         }
         else if([self.segueData isEqualToString:@"Simplicity"])
         {
-            NSURL *URL = [NSURL URLWithString:@"https://cas.sfu.ca/cas/login?service=http%3A%2F%2Fsfu-csm.symplicity.com%2Fsso%2Fstudents%2Flogin&PHPSESSID=c5bcc201d19543f7d737776fd5b13251"];
+            NSURL *URL = [NSURL URLWithString:@"https://sfu-csm.symplicity.com/sso/students"];
             NSURLRequest *request = [NSURLRequest requestWithURL:URL];
             [_webView loadRequest:request];
-            self.lblNavBar.text = @"Simplicity";
+            self.lblNavBar.text = @"Symplicity";
         }
         self.segueData = nil;
     }
