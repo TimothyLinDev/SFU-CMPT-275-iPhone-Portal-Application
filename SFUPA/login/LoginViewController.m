@@ -38,18 +38,15 @@
 
     switch (status) {
         case LOGIN_SUCCESS:
-            NSLog(@"LOGIN_SUCCESS");
             [_usernameField setText:@""];
             title = @"Login Successful";
             message = @"✓";
             break;
         case LOGIN_INVALID:
-            NSLog(@"LOGIN_INVALID");
             title = @"Invalid Login";
             message = @"✗";
             break;
         case LOGIN_NO_CONNECTION:
-            NSLog(@"LOGIN_NO_CONNECTION");
             title = @"No Internet Connection";
             message = @"⚠";
             break;
