@@ -32,15 +32,6 @@
                       delegate:self];
 }
 
-- (IBAction)pressedLogoutButton:(id)sender {
-    [LoginManager logOut];
-    [[[UIAlertView alloc] initWithTitle:@"Logout Successful"
-                                message:@"✓"
-                               delegate:nil
-                      cancelButtonTitle:@"OK"
-                      otherButtonTitles:nil] show];
-}
-
 - (void)didReceiveLoginAttemptStatus:(LoginAttemptStatus)status {
     NSString *title;
     NSString *message;

@@ -15,6 +15,5 @@
 
 - (IBAction)pressedLoginButton:(id)sender;
 - (void)didReceiveLoginAttemptStatus:(LoginAttemptStatus)status;
-- (IBAction)pressedLogoutButton:(id)sender;
 
 @end
