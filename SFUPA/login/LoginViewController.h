@@ -12,6 +12,7 @@
 //  Assignment 3:
 //  Edited by: | What was done?
 //  Rylan      | Created
+//  Rylan      | Linking to storyboard
 
 #import <UIKit/UIKit.h>
 #import "LoginManager.h"

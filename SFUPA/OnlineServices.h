@@ -6,12 +6,14 @@
 //  Copyright (c) 2015 7thHeaven. All rights reserved.
 //
 //  Known Bugs:
+//  If user isn't yet logged in, user can access the web service. But requires login in the web view
 //
 //  Contributors: Amandeep Saini
 //
 //  Assignment 3:
 //  Edited by: | What was done?
 //  Amandeep   | Created
+//  Amandeep   | Linking to storyboard
 
 #import <UIKit/UIKit.h>
 

@@ -12,6 +12,7 @@
 //  Assignment 3:
 //  Edited by: | What was done?
 //  Amandeep   | Created
+//  Amandeep   | Linking to storyboard
 
 #import <UIKit/UIKit.h>
 

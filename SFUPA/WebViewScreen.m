@@ -12,6 +12,7 @@
 //  Assignment 3:
 //  Edited by: | What was done?
 //  Amandeep   | Created and redirect to URL
+//  Amandeep   | Linking to storyboard
 //  Rylan      | Refactored Academic Services code
 //  Rylan      | Accessing an academic service without Internet makes an error message appear
 
