@@ -5,6 +5,13 @@
 //  Created by Timothy Lin on 3/7/2015
 //  Copyright (c) 2015 7thHeaven. All rights reserved.
 //
+//  Known Bugs:
+//
+//
+//  Assignment 3:
+//  Edited by: | What was done?
+//  Timothy    | Changed carousel to have hard coded temporary images
+//
 
 #import "ViewController.h"
 #import "LoginManager.h"
