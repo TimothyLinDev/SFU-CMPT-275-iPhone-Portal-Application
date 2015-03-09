@@ -58,8 +58,7 @@
 @synthesize carousel;
 @synthesize items;
 
-- (void)awakeFromNib
-{
+- (void)awakeFromNib{
     //set up data
     //your carousel should always be driven by an array of
     //data of some kind - don't store data in your item views
@@ -72,8 +71,7 @@
     }
 }
 
-- (void)dealloc
-{
+- (void)dealloc{
     //it's a good idea to set these to nil here to avoid
     //sending messages to a deallocated viewcontroller
     carousel.delegate = nil;
@@ -83,8 +81,7 @@
 #pragma mark -
 #pragma mark View lifecycle
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
 
     // configure login/logout button
@@ -101,24 +98,21 @@
     carousel.type = iCarouselTypeCoverFlow2;
 }
 
-- (void)viewDidUnload
-{
+- (void)viewDidUnload{
     [super viewDidUnload];
     
     //free up memory by releasing subviews
     self.carousel = nil;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
     return YES;
 }
 
 #pragma mark -
 #pragma mark iCarousel methods
 
-- (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel
-{
+- (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel{
     //return the total number of items in the carousel
     return [items count];
 }
@@ -144,8 +138,7 @@
         temp.tag = 1;
         [view addSubview:temp];
     }
-    else
-    {
+    else{
         temp = (UILabel *)[view viewWithTag:1];
     }
     
