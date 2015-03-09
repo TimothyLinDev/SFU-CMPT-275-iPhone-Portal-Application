@@ -38,7 +38,6 @@
     CGFloat latitude=0;
     CGFloat longtitude=0;
     bool exist = NO;
-    //long temp;
     to=[room.text integerValue];
     
     //read file
