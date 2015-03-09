@@ -64,7 +64,7 @@
     //or the recycling mechanism will destroy your data once
     //your item views move off-screen
     self.items = [NSMutableArray array];
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 4; i++)
     {
         [items addObject:@(i)];
     }
@@ -123,37 +123,30 @@
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view
 {
-
+    UILabel *temp = nil;
     
     //create new view if no view is available for recycling
     if (view == nil)
     {
         view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 240.0f, 190.0f)];
-       
         view.contentMode = UIViewContentModeScaleAspectFit;
-
-    }
-    //hard coded for temporary images as placeholders
-    if(index == 0)
-    {
-            ((UIImageView *)view).image = [UIImage imageNamed:@"aman.JPG"];
-    }
-    else if (index == 1)
-    {
-        ((UIImageView *)view).image = [UIImage imageNamed:@"mavis.jpg"];
-    }
-    else if (index == 2)
-    {
-        ((UIImageView *)view).image = [UIImage imageNamed:@"rylan.png"];
-    }
-    else if (index == 3)
-    {
-        ((UIImageView *)view).image = [UIImage imageNamed:@"tim.jpg"];
+        temp = [[UILabel alloc] initWithFrame:view.bounds];
+        temp.backgroundColor = [UIColor clearColor];
+        temp.textAlignment = NSTextAlignmentCenter;
+        temp.font = [temp.font fontWithSize:30];
+        temp.textColor = [UIColor redColor];
+        temp.tag = 1;
+        [view addSubview:temp];
     }
     else
     {
-        ((UIImageView *)view).image = [UIImage imageNamed:@"victorY.jpg"];
+        temp = (UILabel *)[view viewWithTag:1];
     }
+    
+    //hard coded for temporary images as placeholders
+
+    ((UIImageView *)view).image = [UIImage imageNamed:@"cute-cat.jpg"];
+    temp.text = @"Placeholder";
     
     return view;
 }
