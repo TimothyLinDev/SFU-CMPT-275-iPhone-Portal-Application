@@ -125,13 +125,17 @@
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view
 {
+    //temporary label
     UILabel *temp = nil;
     
     //create new view if no view is available for recycling
     if (view == nil)
     {
+        //creates a view
         view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 240.0f, 190.0f)];
         view.contentMode = UIViewContentModeScaleAspectFit;
+        
+        //editing temporary label
         temp = [[UILabel alloc] initWithFrame:view.bounds];
         temp.backgroundColor = [UIColor clearColor];
         temp.textAlignment = NSTextAlignmentCenter;
