@@ -237,6 +237,9 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="jWg-ak-em3" kind="modal" identifier="SakaiScreen" modalTransitionStyle="crossDissolve" id="kQy-1K-I7u"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="online.png" translatesAutoresizingMaskIntoConstraints="NO" id="Igb-n8-Snl">
                                         <rect key="frame" x="260" y="0.0" width="60" height="60"/>
@@ -614,8 +617,8 @@
         <image name="transit icon.jpg" width="118" height="161"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="D8H-H1-bHq"/>
         <segue reference="qgr-T0-9Td"/>
-        <segue reference="d7S-35-fiM"/>
-        <segue reference="TQA-CP-wxU"/>
+        <segue reference="kQy-1K-I7u"/>
     </inferredMetricsTieBreakers>
 </document>

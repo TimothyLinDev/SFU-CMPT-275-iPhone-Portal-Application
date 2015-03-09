@@ -15,6 +15,7 @@
 //  Amandeep   | Linking to storyboard
 //  Rylan      | Refactored Academic Services code
 //  Rylan      | Accessing an academic service without Internet makes an error message appear
+//  Amandeep   | Added Sakai
 
 #import "WebViewScreen.h"
 
@@ -49,6 +50,9 @@
     }
     else if([self.segueData isEqualToString:@"Symplicity"]){
         URL = [NSURL URLWithString:@"https://sfu-csm.symplicity.com/sso/students"];
+    }
+    else if([self.segueData isEqualToString:@"Sakai"]){
+        URL = [NSURL URLWithString:@"http://sakai.sfu.ca/portal"];
     }
     _webView.delegate = self;
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];

@@ -13,6 +13,7 @@
 //  Edited by: | What was done?
 //  Amandeep   | Created and assign and send value
 //  Amandeep   | Linking to storyboard
+//  Amandeep   | Added Sakai
 
 #import "OnlineServices.h"
 #import "WebViewScreen.h"
@@ -57,6 +58,10 @@
     else if([segue.identifier isEqualToString:@"SimplicityScreen"]){
         WebViewScreen *controller = (WebViewScreen *)segue.destinationViewController;
         controller.segueData = @"Symplicity";
+    }
+    else if([segue.identifier isEqualToString:@"SakaiScreen"]){
+        WebViewScreen *controller = (WebViewScreen *)segue.destinationViewController;
+        controller.segueData = @"Sakai";
     }
     
 }
