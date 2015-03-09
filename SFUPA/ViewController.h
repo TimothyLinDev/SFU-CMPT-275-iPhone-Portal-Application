@@ -8,19 +8,20 @@
 //  Known Bugs:
 //
 //
-//  Contributors: Timothy Lin,
+//  Contributors: Timothy Lin, Rylan Lim
 //
 //  Assignment 3:
 //  Edited by: | What was done?
 //  Timothy    | Created
+//  Rylan      | Implemented main screen login/logout button
 
 #import <UIKit/UIKit.h>
 #import "iCarousel.h"
 
 
 @interface ViewController : UIViewController <iCarouselDataSource, iCarouselDelegate>
-@property (weak, nonatomic) IBOutlet UIButton *mainScreenLoginButton; // also the logout button
-- (IBAction)pressedMainScreenLoginButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *btnMainScreenLogin; // also the logout button
+- (IBAction)pressedBtnMainScreenLogin:(id)sender;
 
 @property (nonatomic, strong) IBOutlet iCarousel *carousel;
 

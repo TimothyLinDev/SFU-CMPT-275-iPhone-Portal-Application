@@ -12,6 +12,7 @@
 //
 //  Assignment 3:
 //  Edited by: | What was done?
+//  Rylan      | Implemented main screen login/logout button
 //  Timothy    | Changed carousel to have hard coded temporary images
 //  Timothy    | Created from iCarousel's Storyboard Example
 
@@ -32,7 +33,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)pressedMainScreenLoginButton:(id)sender {
+- (IBAction)pressedBtnMainScreenLogin:(id)sender {
     if (![LoginManager loggedIn]) {
         return;
     }
@@ -42,7 +43,7 @@
                                delegate:nil
                       cancelButtonTitle:@"OK"
                       otherButtonTitles:nil] show];
-    [_mainScreenLoginButton setImage:[UIImage imageNamed:@"login button.png"]
+    [_btnMainScreenLogin setImage:[UIImage imageNamed:@"login button.png"]
                             forState:UIControlStateNormal];
 }
 
@@ -89,7 +90,7 @@
     } else {
         imageName = @"login button.png";
     }
-    [_mainScreenLoginButton setImage:[UIImage imageNamed:imageName]
+    [_btnMainScreenLogin setImage:[UIImage imageNamed:imageName]
                             forState:UIControlStateNormal];
 
     //configure carousel

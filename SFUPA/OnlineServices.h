@@ -19,11 +19,11 @@
 
 @interface OnlineServices : UIViewController
 
-- (IBAction)btnCanvas:(id)sender;
-- (IBAction)btnCoursys:(id)sender;
-- (IBAction)btnConnect:(id)sender;
-- (IBAction)btngoSFU:(id)sender;
-- (IBAction)btnSimplicity:(id)sender;
+- (IBAction)pressedBtnCanvas:(id)sender;
+- (IBAction)pressedBtnCourSys:(id)sender;
+- (IBAction)pressedBtnConnect:(id)sender;
+- (IBAction)pressedBtnGoSFU:(id)sender;
+- (IBAction)pressedBtnSymplicity:(id)sender;
 
 
 
