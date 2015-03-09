@@ -1,7 +1,9 @@
 //
 //  ViewController.m
 //  SFUPA
-//
+//  Team 07
+//  Created by Timothy Lin on 3/7/2015
+//  Copyright (c) 2015 7thHeaven. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -55,7 +57,7 @@
     //or the recycling mechanism will destroy your data once
     //your item views move off-screen
     self.items = [NSMutableArray array];
-    for (int i = 0; i < 1000; i++)
+    for (int i = 0; i < 5; i++)
     {
         [items addObject:@(i)];
     }
@@ -114,33 +116,37 @@
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view
 {
-    UILabel *label = nil;
+
     
     //create new view if no view is available for recycling
     if (view == nil)
     {
-        view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200.0f, 200.0f)];
-        ((UIImageView *)view).image = [UIImage imageNamed:@"page.png"];
-        view.contentMode = UIViewContentModeCenter;
-        label = [[UILabel alloc] initWithFrame:view.bounds];
-        label.backgroundColor = [UIColor blueColor];
-        label.textAlignment = NSTextAlignmentCenter;
-        label.font = [label.font fontWithSize:40];
-        label.tag = 1;
-        [view addSubview:label];
+        view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 240.0f, 190.0f)];
+       
+        view.contentMode = UIViewContentModeScaleAspectFit;
+
+    }
+    //hard coded for temporary images as placeholders
+    if(index == 0)
+    {
+            ((UIImageView *)view).image = [UIImage imageNamed:@"aman.JPG"];
+    }
+    else if (index == 1)
+    {
+        ((UIImageView *)view).image = [UIImage imageNamed:@"mavis.jpg"];
+    }
+    else if (index == 2)
+    {
+        ((UIImageView *)view).image = [UIImage imageNamed:@"rylan.png"];
+    }
+    else if (index == 3)
+    {
+        ((UIImageView *)view).image = [UIImage imageNamed:@"tim.jpg"];
     }
     else
     {
-        //get a reference to the label in the recycled view
-        label = (UILabel *)[view viewWithTag:1];
+        ((UIImageView *)view).image = [UIImage imageNamed:@"victorY.jpg"];
     }
-    
-    //set item label
-    //remember to always set any properties of your carousel item
-    //views outside of the `if (view == nil) {...}` check otherwise
-    //you'll get weird issues with carousel item content appearing
-    //in the wrong place in the carousel
-    label.text = [items[index] stringValue];
     
     return view;
 }

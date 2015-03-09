@@ -1,7 +1,9 @@
 //
 //  ViewController.h
+//  Team 07
 //  SFUPA
-//
+//  Created by Timothy Lin on 3/7/2015
+//  Copyright (c) 2015 7thHeaven. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
