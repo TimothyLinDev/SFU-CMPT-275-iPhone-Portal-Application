@@ -8,7 +8,7 @@
 //  Known Bugs:
 //  occassionally cause signal SIGABRT to appear when app exited
 //
-//  Contributors: Timothy Lin,
+//  Contributors: Timothy Lin, Rylan Lim
 //
 //  Assignment 3:
 //  Edited by: | What was done?
@@ -78,8 +78,7 @@
     carousel.dataSource = nil;
 }
 
-#pragma mark -
-#pragma mark View lifecycle
+
 
 - (void)viewDidLoad{
     [super viewDidLoad];
@@ -109,8 +108,7 @@
     return YES;
 }
 
-#pragma mark -
-#pragma mark iCarousel methods
+
 
 - (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel{
     //return the total number of items in the carousel
