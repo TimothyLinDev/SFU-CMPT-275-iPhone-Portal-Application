@@ -306,7 +306,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="AIX-hT-9w7" kind="modal" modalTransitionStyle="crossDissolve" id="qgr-T0-9Td"/>
+                                            <segue destination="AIX-hT-9w7" kind="modal" identifier="webViewToAcademic" modalTransitionStyle="crossDissolve" id="qgr-T0-9Td"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYM-2O-lwV">

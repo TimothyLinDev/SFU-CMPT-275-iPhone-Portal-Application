@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WebViewScreen : UIViewController
+@interface WebViewScreen : UIViewController <UIWebViewDelegate>
 @property (retain, nonatomic) NSString *segueData;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UILabel *lblNavBar;
