@@ -443,7 +443,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="upward:" destination="ScU-Za-XOT" eventType="touchDown" id="o1Q-zm-1Av"/>
+                                                    <action selector="btnUpward:" destination="ScU-Za-XOT" eventType="touchDown" id="X7w-jC-hVe"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="From:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZC-XP-yDC">
@@ -485,7 +485,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="selfmarker:" destination="ScU-Za-XOT" eventType="touchDown" id="bw1-d2-Ro7"/>
+                                                    <action selector="btnSelfMarker:" destination="ScU-Za-XOT" eventType="touchDown" id="c2s-Bx-Pkn"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9U-rS-ShP">
@@ -496,7 +496,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="marker:" destination="ScU-Za-XOT" eventType="touchDown" id="K9D-Kk-bgu"/>
+                                                    <action selector="btnMarker:" destination="ScU-Za-XOT" eventType="touchDown" id="rHc-bM-fT3"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBM-hv-uUe">
@@ -506,7 +506,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="downward:" destination="ScU-Za-XOT" eventType="touchDown" id="mVe-zw-e0N"/>
+                                                    <action selector="btnDownward:" destination="ScU-Za-XOT" eventType="touchDown" id="sHg-Tl-dfv"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -532,7 +532,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="clean:" destination="ScU-Za-XOT" eventType="touchDown" id="cZ4-du-Wph"/>
+                                                    <action selector="btnClean:" destination="ScU-Za-XOT" eventType="touchDown" id="IJu-jE-1TN"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Maps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93r-U3-c8j">
@@ -554,11 +554,11 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="down" destination="WBM-hv-uUe" id="X3P-Es-LYU"/>
+                        <outlet property="btnDown" destination="WBM-hv-uUe" id="fA9-ag-UKU"/>
                         <outlet property="mapView" destination="ZOI-4z-kyR" id="tBO-rb-Wti"/>
                         <outlet property="room" destination="cB5-ja-OVG" id="OAa-Vz-Bqe"/>
-                        <outlet property="slide" destination="lHE-hw-ZSx" id="tB0-JA-iVD"/>
                         <outlet property="sroom" destination="nTM-Z2-qN2" id="cHb-lB-gkl"/>
+                        <outlet property="viewSlide" destination="lHE-hw-ZSx" id="Kwa-Ff-sqU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="44O-7U-ZcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
