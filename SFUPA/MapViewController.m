@@ -166,9 +166,8 @@
     mapView.settings.myLocationButton = YES;
     //Sets the view controller to be the GMSMapView delegate
     mapView.delegate = self; //- See more at: http://vikrambahl.com/google-maps-ios-xcode-storyboards/#sthash.i08dW8lG.dpuf
-    //self.view = mapView;
-    //GMSMarker *marker = [[GMSMarker alloc] init];
-    //marker.position = CLLocationCoordinate2DMake(49.279937, -122.919956);
+    room.placeholder = @"Room#:";
+    sroom.placeholder = @"Room#:";
     
     //read file
     NSString *contents = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"AQ" ofType:@"txt"] encoding:NSUTF8StringEncoding error:NULL];
