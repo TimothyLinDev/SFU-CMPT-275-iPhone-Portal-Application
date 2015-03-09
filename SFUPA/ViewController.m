@@ -6,12 +6,14 @@
 //  Copyright (c) 2015 7thHeaven. All rights reserved.
 //
 //  Known Bugs:
+//  occassionally cause signal SIGABRT to appear when app exited
 //
+//  Contributors: Timothy Lin,
 //
 //  Assignment 3:
 //  Edited by: | What was done?
 //  Timothy    | Changed carousel to have hard coded temporary images
-//
+//  Timothy    | Created from iCarousel's Storyboard Example
 
 #import "ViewController.h"
 #import "LoginManager.h"

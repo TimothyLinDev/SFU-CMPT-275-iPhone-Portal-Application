@@ -8,9 +8,11 @@
 //  Known Bugs:
 //
 //
+//  Contributors: Timothy Lin,
+//
 //  Assignment 3:
 //  Edited by: | What was done?
-//  Timothy    | Imported iCarousel header and created carousel property
+//  Timothy    | Created
 
 #import <UIKit/UIKit.h>
 #import "iCarousel.h"
