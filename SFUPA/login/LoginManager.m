@@ -11,8 +11,7 @@
 //
 //  Assignment 3:
 //  Edited by: | What was done?
-//  Rylan      | Created and set up log in
-//  Rylan      | Linking to storyboard
+//  Rylan      | Created and set up login
 
 #import "LoginManager.h"
 #import "LoginViewController.h"

@@ -77,7 +77,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pressedMainScreenLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vxH-UI-KDJ"/>
+                                    <action selector="pressedBtnMainScreenLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NpR-op-5zO"/>
                                     <segue destination="ADK-ra-iqE" kind="presentation" identifier="mainToLogin" modalTransitionStyle="flipHorizontal" id="qr7-lA-gZT"/>
                                 </connections>
                             </button>
@@ -92,7 +92,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="mainScreenLoginButton" destination="FRD-p7-lgF" id="Pgb-d0-PSL"/>
+                        <outlet property="btnMainScreenLogin" destination="FRD-p7-lgF" id="uo6-hU-6c3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
