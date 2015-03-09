@@ -6,9 +6,11 @@
 //  Copyright (c) 2015 7thHeaven. All rights reserved.
 //
 //  Known Bugs:
+//  User should change floor by themselves
+//  Markers only works for the 2nd floor and 3rd floor
 //  Wayfinding only works if the "To" room number is bigger than "From"
-//  Wayfinding only working for most of 2nd floor
-//  Wayfinding path not appearing for 3rd floor
+//  Wayfinding only working for most of the 2nd floor
+//  Wayfinding path not appearing for the 3rd floor
 //
 //  Contributors: Mavis and Victor
 //
@@ -175,11 +177,6 @@
     }
 }
 
-
--(IBAction)remove:(id)sender{
-    [mapView clear];
-}
-
 -(IBAction)downward:(id)sender{
     slide.center = CGPointMake(160, 90);
 }
@@ -203,6 +200,10 @@
     mapView.settings.compassButton = YES;
     mapView.settings.myLocationButton = YES;
     mapView.delegate = self;
+    
+    //UiTextField
+    room.placeholder=@"Room#:";
+    sroom.placeholder=@"Room#:";
 
     
     //read file for room location coordinates

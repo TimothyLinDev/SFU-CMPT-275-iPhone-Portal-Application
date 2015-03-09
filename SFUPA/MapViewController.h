@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 7thHeaven. All rights reserved.
 //
 //  Known Bugs:
+//  User should change floor by themselves
+//  Markers only works for the 2nd floor and 3rd floor
 //  Wayfinding only works if the "To" room number is bigger than "From"
 //  Wayfinding only working for most of 2nd floor
 //  Wayfinding path not appearing for 3rd floor
@@ -33,7 +35,6 @@
 -(IBAction)clean:(id)sender;
 -(IBAction)selfmarker:(id)sender;
 -(IBAction)marker:(id)sender;
--(IBAction)remove:(id)sender;
 -(IBAction)downward:(id)sender;
 -(IBAction)upward:(id)sender;
 
