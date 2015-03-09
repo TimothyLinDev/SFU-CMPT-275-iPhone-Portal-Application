@@ -130,12 +130,12 @@
 		CEC5AF5A1AAB34800068B400 /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
 		CEC5AF5B1AAB34800068B400 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		CEC5AF5C1AAB34800068B400 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		ED40EB5E1AAD6636007B0494 /* cute-cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cute-cat.jpg"; sourceTree = "<group>"; };
+		ED40EB5E1AAD6636007B0494 /* cute-cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "cute-cat.jpg"; path = "../cute-cat.jpg"; sourceTree = "<group>"; };
 		EDD2DD581AAC55880045A485 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		EDD2DD591AAC55880045A485 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		EDD2DD5E1AAC56010045A485 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		EDD2DD5F1AAC56010045A485 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		EDD2DD611AAC58000045A485 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		EDD2DD611AAC58000045A485 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,8 +231,6 @@
 			isa = PBXGroup;
 			children = (
 				57F7E1861AAD72E300264795 /* wayfind.txt */,
-				ED40EB5E1AAD6636007B0494 /* cute-cat.jpg */,
-				EDD2DD611AAC58000045A485 /* Default-568h@2x.png */,
 				07655F1E1AA92C64003BB634 /* AQ.txt */,
 				077C0C8B1AA9088E000449D0 /* Images */,
 				0741D8BD1AA66E0200370808 /* Info.plist */,
@@ -261,6 +259,8 @@
 		077C0C8B1AA9088E000449D0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EDD2DD611AAC58000045A485 /* Default-568h@2x.png */,
+				ED40EB5E1AAD6636007B0494 /* cute-cat.jpg */,
 				0FF7F31B1AACFE60004CF1F6 /* online.png */,
 				0FF7F3171AACFADA004CF1F6 /* forward.png */,
 				0FF7F3181AACFADA004CF1F6 /* previous.png */,
