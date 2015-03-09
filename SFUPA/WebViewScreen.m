@@ -44,11 +44,26 @@
     {
         URL = [NSURL URLWithString:@"https://sfu-csm.symplicity.com/sso/students"];
     }
+    _webView.delegate = self;
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     [_webView loadRequest:request];
     self.lblNavBar.text = self.segueData;
 
     self.segueData = nil;
+}
+
+- (void)webView:webView
+didFailLoadWithError:error {
+    [[[UIAlertView alloc] initWithTitle:@"No Internet Connection"
+                                message:@"⚠"
+                               delegate:self
+                      cancelButtonTitle:@"OK"
+                      otherButtonTitles:nil] show];
+}
+
+- (void)alertView:(UIAlertView *)alertView
+clickedButtonAtIndex:(NSInteger)buttonIndex {
+    [self performSegueWithIdentifier:@"webViewToAcademic" sender:self];
 }
 
 - (void)didReceiveMemoryWarning {

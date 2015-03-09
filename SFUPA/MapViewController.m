@@ -67,8 +67,8 @@
         marker.map =mapView;
     }
     else{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No such Room"
-                                                        message:@"Please Try Again."
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No such room"
+                                                        message:@"⚠"
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
