@@ -65,8 +65,7 @@
     //or the recycling mechanism will destroy your data once
     //your item views move off-screen
     self.items = [NSMutableArray array];
-    for (int i = 0; i < 4; i++)
-    {
+    for (int i = 0; i < 4; i++){
         [items addObject:@(i)];
     }
 }
@@ -117,15 +116,11 @@
     return [items count];
 }
 
-- (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view
-{
-    //temporary label
+- (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view{
     UILabel *temp = nil;
     
     //create new view if no view is available for recycling
-    if (view == nil)
-    {
-        //creates a view
+    if (view == nil){
         view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 240.0f, 190.0f)];
         view.contentMode = UIViewContentModeScaleAspectFit;
         
@@ -137,8 +132,7 @@
         temp.textColor = [UIColor redColor];
         temp.tag = 1;
         [view addSubview:temp];
-    }
-    else{
+    } else{
         temp = (UILabel *)[view viewWithTag:1];
     }
     
