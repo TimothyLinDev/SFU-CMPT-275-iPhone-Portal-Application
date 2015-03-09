@@ -42,11 +42,11 @@
 
 @implementation MapViewController
 
--(IBAction)btnClean:(id)sender{
+-(IBAction)pressedBtnClean:(id)sender{
     [mapView clear];
 }
 
--(IBAction)btnMarker:(id)sender{
+-(IBAction)pressedBtnMarker:(id)sender{
     CGFloat latitude=0;
     CGFloat longtitude=0;
     bool exist = NO;
@@ -102,7 +102,7 @@
     }
 }
 
--(IBAction)btnSelfMarker:(id)sender{
+-(IBAction)pressedBtnSelfMarker:(id)sender{
   
     GMSMutablePath *path = [GMSMutablePath path];
     CGFloat latitude=0;
@@ -170,15 +170,15 @@
 }
 
 
--(IBAction)btnRemove:(id)sender{
+-(IBAction)pressedBtnRemove:(id)sender{
     [mapView clear];
 }
 
--(IBAction)btnDownward:(id)sender{
+-(IBAction)pressedBtnDownward:(id)sender{
     viewSlide.center = CGPointMake(160, 90);
 }
 
--(IBAction)btnUpward:(id)sender{
+-(IBAction)pressedBtnUpward:(id)sender{
     viewSlide.center = CGPointMake(160, 55);
 }
 

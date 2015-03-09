@@ -61,15 +61,15 @@
     
 }
 
-- (IBAction)btnCanvas:(id)sender{
+- (IBAction)pressedBtnCanvas:(id)sender{
 }
-- (IBAction)btnCoursys:(id)sender{
+- (IBAction)pressedBtnCourSys:(id)sender{
 }
-- (IBAction)btnConnect:(id)sender{
+- (IBAction)pressedBtnConnect:(id)sender{
 }
-- (IBAction)btngoSFU:(id)sender{
+- (IBAction)pressedBtnGoSFU:(id)sender{
 }
-- (IBAction)btnSimplicity:(id)sender{
+- (IBAction)pressedBtnSymplicity:(id)sender{
 }
 @end
 

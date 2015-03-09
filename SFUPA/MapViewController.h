@@ -30,12 +30,12 @@
     __weak IBOutlet UIButton *btnRemove;
 }
 
--(IBAction)btnClean:(id)sender;
--(IBAction)btnSelfMarker:(id)sender;
--(IBAction)btnMarker:(id)sender;
--(IBAction)btnRemove:(id)sender;
--(IBAction)btnDownward:(id)sender;
--(IBAction)btnUpward:(id)sender;
+-(IBAction)pressedBtnClean:(id)sender;
+-(IBAction)pressedBtnSelfMarker:(id)sender;
+-(IBAction)pressedBtnMarker:(id)sender;
+-(IBAction)pressedBtnRemove:(id)sender;
+-(IBAction)pressedBtnDownward:(id)sender;
+-(IBAction)pressedBtnUpward:(id)sender;
 
 @end
 
