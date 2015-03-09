@@ -13,7 +13,9 @@
 
 @end
 
-@implementation LoginViewController
+@implementation LoginViewController {
+    LoginAttemptStatus loginAttemptStatus;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,6 +38,7 @@
     NSString *title;
     NSString *message;
 
+    loginAttemptStatus = status;
     switch (status) {
         case LOGIN_SUCCESS:
             [_usernameField setText:@""];
@@ -54,9 +57,16 @@
     [_passwordField setText:@""];
     [[[UIAlertView alloc] initWithTitle:title
                                 message:message
-                               delegate:nil
+                               delegate:self
                       cancelButtonTitle:@"OK"
                       otherButtonTitles:nil] show];
+}
+
+- (void)alertView:(UIAlertView *)alertView
+clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (loginAttemptStatus == LOGIN_SUCCESS) {
+        [self performSegueWithIdentifier:@"loginToMain" sender:self];
+    }
 }
 
 @end

@@ -366,7 +366,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="crossDissolve" id="Fih-RG-VNF"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="loginToMain" modalTransitionStyle="crossDissolve" id="Fih-RG-VNF"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpu-z2-BOH">
@@ -614,8 +614,8 @@
         <image name="transit icon.jpg" width="118" height="161"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="D8H-H1-bHq"/>
+        <segue reference="Fih-RG-VNF"/>
         <segue reference="qgr-T0-9Td"/>
-        <segue reference="h7E-1S-d3k"/>
+        <segue reference="d7S-35-fiM"/>
     </inferredMetricsTieBreakers>
 </document>
