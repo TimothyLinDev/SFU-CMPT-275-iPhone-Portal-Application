@@ -14,6 +14,7 @@
 //  Edited by: | What was done?
 //  Timothy    | Changed carousel to have hard coded temporary images
 //  Timothy    | Created from iCarousel's Storyboard Example
+//
 
 #import "ViewController.h"
 #import "LoginManager.h"
