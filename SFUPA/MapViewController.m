@@ -19,6 +19,7 @@
 // Mavis | Linking to storyboard
 // Mavis | Reading file with coordinates
 // Victor | Implementing wayfinding
+// test
 
 #import "MapViewController.h"
 
