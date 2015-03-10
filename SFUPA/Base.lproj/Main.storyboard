@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -20,41 +20,43 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PoZ-X3-PcY">
-                                <rect key="frame" x="16" y="303" width="96" height="124"/>
-                                <state key="normal" image="news icon.jpg">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <rect key="frame" x="27" y="306" width="104" height="50"/>
+                                <color key="backgroundColor" red="0.73074776785714279" green="0.0044486062138620027" blue="0.075942361871836256" alpha="0.35000000000000003" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="News"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1P-nZ-OX6">
-                                <rect key="frame" x="112" y="303" width="97" height="124"/>
-                                <state key="normal" image="acadamic service icon.jpg">
+                                <rect key="frame" x="131" y="306" width="162" height="100"/>
+                                <color key="backgroundColor" red="0.38012197066326525" green="0.0023140857011124741" blue="0.039503863742473486" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Academic Services">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="AIX-hT-9w7" kind="modal" modalTransitionStyle="flipHorizontal" id="rXa-hB-y8k"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2f-uT-ApQ">
-                                <rect key="frame" x="209" y="303" width="95" height="124"/>
-                                <state key="normal" image="campus information icon.jpg">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPg-Fl-91L">
-                                <rect key="frame" x="16" y="427" width="96" height="121"/>
-                                <state key="normal" image="transit icon.jpg">
+                                <rect key="frame" x="27" y="406" width="104" height="50"/>
+                                <color key="backgroundColor" red="0.69738520410000004" green="0.0042455034260000003" blue="0.072475184819999997" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Ancillary">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCT-2J-1gz">
-                                <rect key="frame" x="112" y="427" width="97" height="121"/>
-                                <state key="normal" image="ancillary icon.jpg">
+                                <rect key="frame" x="27" y="456" width="104" height="50"/>
+                                <color key="backgroundColor" red="0.69738520410000004" green="0.0042455034260000003" blue="0.072475184819999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Transit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBo-a0-qbB">
-                                <rect key="frame" x="209" y="427" width="95" height="121"/>
-                                <state key="normal" image="map icon.jpg">
+                                <rect key="frame" x="131" y="406" width="162" height="100"/>
+                                <color key="backgroundColor" red="0.38012197069999998" green="0.0023140857009999998" blue="0.039503863739999999" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Maps">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -87,6 +89,15 @@
                                     <segue destination="H46-cT-XjJ" kind="embed" id="l3q-PX-VOX"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2f-uT-ApQ">
+                                <rect key="frame" x="27" y="356" width="104" height="50"/>
+                                <color key="backgroundColor" red="0.69738520410000004" green="0.0042455034260000003" blue="0.072475184819999997" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Security">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -124,17 +135,17 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Academic Services" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cM-TB-m2U">
-                                        <rect key="frame" x="86" y="15" width="187" height="22"/>
+                                        <rect key="frame" x="72" y="15" width="187" height="22"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.99215692280000001" green="0.0" blue="0.11372549830000001" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.7978515625" green="0.19981203760955232" blue="0.17460876543788761" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1T-o4-5aS">
                                 <rect key="frame" x="25" y="142" width="288" height="36"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Canvas                                       ">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -146,7 +157,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDs-EN-c6n">
                                 <rect key="frame" x="25" y="263" width="276" height="36"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Connect                                   ">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -158,7 +169,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7S-Xz-LYq">
                                 <rect key="frame" x="25" y="382" width="288" height="36"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Symplicity                                  ">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -172,8 +183,8 @@
                                 <rect key="frame" x="0.0" y="68" width="320" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NgU-fX-7JY">
-                                        <rect key="frame" x="26" y="14" width="287" height="36"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        <rect key="frame" x="24" y="14" width="287" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <state key="normal" title="Course View                              ">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -190,7 +201,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3E-x9-7oh">
                                         <rect key="frame" x="26" y="14" width="281" height="36"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <state key="normal" title="CourSys                                    ">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -211,7 +222,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdD-DX-efh">
                                         <rect key="frame" x="25" y="12" width="281" height="36"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <state key="normal" title="goSFU                                       ">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -232,7 +243,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDv-lv-Zhg">
                                         <rect key="frame" x="24" y="13" width="270" height="36"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <state key="normal" title="Sakai                                       ">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -316,7 +327,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.99215692280000001" green="0.0" blue="0.11372549830000001" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.84263392859999997" green="0.21102722630000001" blue="0.18440932739999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -376,7 +387,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.99215692281723022" green="0.0" blue="0.11372549831867218" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.84263392859999997" green="0.21102722630000001" blue="0.18440932739999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJy-jc-0JN">
                                 <rect key="frame" x="16" y="250" width="84" height="21"/>
@@ -430,11 +441,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOI-4z-kyR" customClass="GMSMapView">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="476"/>
+                                        <rect key="frame" x="0.0" y="104" width="320" height="464"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lHE-hw-ZSx">
-                                        <rect key="frame" x="0.0" y="20" width="320" height="76"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="76"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcp-5Q-vDX">
                                                 <rect key="frame" x="3" y="0.0" width="35" height="35"/>
@@ -513,10 +524,10 @@
                                         <color key="backgroundColor" red="0.85882352939999995" green="0.0" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8xr-Cl-52b">
-                                        <rect key="frame" x="0.0" y="16" width="320" height="40"/>
+                                        <rect key="frame" x="0.0" y="16" width="320" height="52"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9k-zD-gyr">
-                                                <rect key="frame" x="3" y="5" width="35" height="35"/>
+                                                <rect key="frame" x="3" y="9" width="35" height="35"/>
                                                 <state key="normal" title="Back" image="arrow-left-01-128.png">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -526,7 +537,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="305-sz-8eG">
-                                                <rect key="frame" x="274" y="5" width="35" height="35"/>
+                                                <rect key="frame" x="274" y="8" width="35" height="35"/>
                                                 <state key="normal" image="refresh-128.png">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -536,13 +547,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Maps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93r-U3-c8j">
-                                                <rect key="frame" x="136" y="9" width="48" height="22"/>
+                                                <rect key="frame" x="136" y="16" width="48" height="22"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.99215692280000001" green="0.0" blue="0.11372549830000001" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.84263392859999997" green="0.21102722630000001" blue="0.18440932739999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -594,28 +605,22 @@
     </scenes>
     <resources>
         <image name="Background - Red.png" width="256" height="256"/>
-        <image name="acadamic service icon.jpg" width="118" height="161"/>
-        <image name="ancillary icon.jpg" width="118" height="161"/>
         <image name="arrow-down-01-128.png" width="128" height="128"/>
         <image name="arrow-left-01-128.png" width="128" height="128"/>
         <image name="arrow-up-01-128.png" width="128" height="128"/>
         <image name="background.jpg" width="371" height="657"/>
-        <image name="campus information icon.jpg" width="116" height="161"/>
         <image name="cancel.png" width="33" height="33"/>
         <image name="forward.png" width="32" height="33"/>
         <image name="information button.png" width="52" height="81"/>
         <image name="login button.png" width="99" height="79"/>
-        <image name="map icon.jpg" width="116" height="160"/>
-        <image name="news icon.jpg" width="118" height="161"/>
         <image name="online.png" width="128" height="128"/>
         <image name="previous.png" width="34" height="34"/>
         <image name="refresh-128.png" width="128" height="128"/>
         <image name="refresh.png" width="31" height="34"/>
-        <image name="transit icon.jpg" width="118" height="161"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="TQA-CP-wxU"/>
         <segue reference="qgr-T0-9Td"/>
         <segue reference="d7S-35-fiM"/>
-        <segue reference="TQA-CP-wxU"/>
     </inferredMetricsTieBreakers>
 </document>

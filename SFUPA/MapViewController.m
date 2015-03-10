@@ -172,7 +172,7 @@
 }
 
 -(IBAction)downward:(id)sender{
-    slide.center = CGPointMake(160, 90);
+    slide.center = CGPointMake(160, 105);
 }
 
 -(IBAction)upward:(id)sender{
