@@ -172,8 +172,8 @@
     }
 }
 
--(IBAction)downward:(id)sender{
-    slide.center = CGPointMake(160, 105);
+-(IBAction)pressedBtnDownward:(id)sender{
+    viewSlide.center = CGPointMake(160, 90);
 }
 
 -(IBAction)pressedBtnUpward:(id)sender{
