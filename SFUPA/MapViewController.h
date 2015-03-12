@@ -26,10 +26,10 @@
 #import "GoogleMaps/GoogleMaps.h"
 
 @interface MapViewController : UIViewController <GMSMapViewDelegate>{
-    __weak IBOutlet UIButton *search;
-    __weak IBOutlet UIView *slide;
-    __weak IBOutlet UIButton *down;
-    __weak IBOutlet UIButton *remove;
+    __weak IBOutlet UIButton *btnSearch;
+    __weak IBOutlet UIView *viewSlide;
+    __weak IBOutlet UIButton *btnDown;
+    __weak IBOutlet UIButton *btnRemove;
 }
 
 -(IBAction)clean:(id)sender;

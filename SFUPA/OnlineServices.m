@@ -13,6 +13,7 @@
 //  Edited by: | What was done?
 //  Amandeep   | Created and assign and send value
 //  Amandeep   | Linking to storyboard
+//  Amandeep   | Added Sakai
 
 #import "OnlineServices.h"
 #import "WebViewScreen.h"
@@ -58,18 +59,22 @@
         WebViewScreen *controller = (WebViewScreen *)segue.destinationViewController;
         controller.segueData = @"Symplicity";
     }
+    else if([segue.identifier isEqualToString:@"SakaiScreen"]){
+        WebViewScreen *controller = (WebViewScreen *)segue.destinationViewController;
+        controller.segueData = @"Sakai";
+    }
     
 }
 
-- (IBAction)btnCanvas:(id)sender{
+- (IBAction)pressedBtnCanvas:(id)sender{
 }
-- (IBAction)btnCoursys:(id)sender{
+- (IBAction)pressedBtnCourSys:(id)sender{
 }
-- (IBAction)btnConnect:(id)sender{
+- (IBAction)pressedBtnConnect:(id)sender{
 }
-- (IBAction)btngoSFU:(id)sender{
+- (IBAction)pressedBtnGoSFU:(id)sender{
 }
-- (IBAction)btnSimplicity:(id)sender{
+- (IBAction)pressedBtnSymplicity:(id)sender{
 }
 @end
 

@@ -8,10 +8,11 @@
 //  Known Bugs:
 //  occassionally cause signal SIGABRT to appear when app exited
 //
-//  Contributors: Timothy Lin,
+//  Contributors: Timothy Lin, Rylan Lim
 //
 //  Assignment 3:
 //  Edited by: | What was done?
+//  Rylan      | Implemented main screen login/logout button
 //  Timothy    | Changed carousel to have hard coded temporary images
 //  Timothy    | Created from iCarousel's Storyboard Example
 //
@@ -33,7 +34,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)pressedMainScreenLoginButton:(id)sender {
+- (IBAction)pressedBtnMainScreenLogin:(id)sender {
     if (![LoginManager loggedIn]) {
         return;
     }
@@ -43,7 +44,7 @@
                                delegate:nil
                       cancelButtonTitle:@"OK"
                       otherButtonTitles:nil] show];
-    [_mainScreenLoginButton setImage:[UIImage imageNamed:@"login button.png"]
+    [_btnMainScreenLogin setImage:[UIImage imageNamed:@"login button.png"]
                             forState:UIControlStateNormal];
 }
 
@@ -66,8 +67,7 @@
     //or the recycling mechanism will destroy your data once
     //your item views move off-screen
     self.items = [NSMutableArray array];
-    for (int i = 0; i < 4; i++)
-    {
+    for (int i = 0; i < 4; i++){
         [items addObject:@(i)];
     }
 }
@@ -79,8 +79,7 @@
     carousel.dataSource = nil;
 }
 
-#pragma mark -
-#pragma mark View lifecycle
+
 
 - (void)viewDidLoad{
     [super viewDidLoad];
@@ -92,7 +91,7 @@
     } else {
         imageName = @"login button.png";
     }
-    [_mainScreenLoginButton setImage:[UIImage imageNamed:imageName]
+    [_btnMainScreenLogin setImage:[UIImage imageNamed:imageName]
                             forState:UIControlStateNormal];
 
     //configure carousel
@@ -110,8 +109,7 @@
     return YES;
 }
 
-#pragma mark -
-#pragma mark iCarousel methods
+
 
 - (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel{
     //return the total number of items in the carousel
@@ -125,6 +123,8 @@
     if (view == nil){
         view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 240.0f, 190.0f)];
         view.contentMode = UIViewContentModeScaleAspectFit;
+        
+        //editing temporary label
         temp = [[UILabel alloc] initWithFrame:view.bounds];
         temp.backgroundColor = [UIColor clearColor];
         temp.textAlignment = NSTextAlignmentCenter;
@@ -132,8 +132,7 @@
         temp.textColor = [UIColor redColor];
         temp.tag = 1;
         [view addSubview:temp];
-    }
-    else{
+    } else{
         temp = (UILabel *)[view viewWithTag:1];
     }
     

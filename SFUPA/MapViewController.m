@@ -21,6 +21,7 @@
 // Mavis | Linking to storyboard
 // Mavis | Reading file with coordinates
 // Victor | Implementing wayfinding
+// test
 
 #import "MapViewController.h"
 
@@ -44,11 +45,11 @@
 
 @implementation MapViewController
 
--(IBAction)clean:(id)sender{
+-(IBAction)pressedBtnClean:(id)sender{
     [mapView clear];
 }
 
--(IBAction)marker:(id)sender{
+-(IBAction)pressedBtnMarker:(id)sender{
     CGFloat latitude=0;
     CGFloat longtitude=0;
     bool exist = NO;
@@ -104,7 +105,7 @@
     }
 }
 
--(IBAction)selfmarker:(id)sender{
+-(IBAction)pressedBtnSelfMarker:(id)sender{
   
     GMSMutablePath *path = [GMSMutablePath path];
     CGFloat latitude=0;
@@ -175,8 +176,8 @@
     slide.center = CGPointMake(160, 105);
 }
 
--(IBAction)upward:(id)sender{
-    slide.center = CGPointMake(160, 55);
+-(IBAction)pressedBtnUpward:(id)sender{
+    viewSlide.center = CGPointMake(160, 55);
 }
 
 - (void)viewDidLoad {

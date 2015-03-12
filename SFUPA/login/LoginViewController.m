@@ -35,7 +35,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)pressedLoginButton:(id)sender {
+- (IBAction)pressedBtnLogin:(id)sender {
     LoginManager *manager = [[LoginManager alloc] init];
     [manager logInWithUsername:[_usernameField text]
                       password:[_passwordField text]

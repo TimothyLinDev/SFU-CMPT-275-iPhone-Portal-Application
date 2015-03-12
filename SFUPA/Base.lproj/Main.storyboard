@@ -79,7 +79,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pressedMainScreenLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vxH-UI-KDJ"/>
+                                    <action selector="pressedBtnMainScreenLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NpR-op-5zO"/>
                                     <segue destination="ADK-ra-iqE" kind="presentation" identifier="mainToLogin" modalTransitionStyle="flipHorizontal" id="qr7-lA-gZT"/>
                                 </connections>
                             </button>
@@ -103,7 +103,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="mainScreenLoginButton" destination="FRD-p7-lgF" id="Pgb-d0-PSL"/>
+                        <outlet property="btnMainScreenLogin" destination="FRD-p7-lgF" id="uo6-hU-6c3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -151,7 +151,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnCanvas:" destination="AIX-hT-9w7" eventType="touchUpInside" id="fdi-2C-Tw6"/>
+                                    <action selector="pressedBtnCanvas:" destination="AIX-hT-9w7" eventType="touchUpInside" id="4A4-2a-mJx"/>
                                     <segue destination="jWg-ak-em3" kind="modal" identifier="CanvasScreen" modalTransitionStyle="crossDissolve" id="wMs-5g-Vkg"/>
                                 </connections>
                             </button>
@@ -163,7 +163,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnConnect:" destination="AIX-hT-9w7" eventType="touchUpInside" id="6vr-sU-NNN"/>
+                                    <action selector="pressedBtnConnect:" destination="AIX-hT-9w7" eventType="touchUpInside" id="TrE-vY-PdH"/>
                                     <segue destination="jWg-ak-em3" kind="modal" identifier="ConnectScreen" modalTransitionStyle="crossDissolve" id="Vry-Q6-Ptt"/>
                                 </connections>
                             </button>
@@ -175,7 +175,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnSimplicity:" destination="AIX-hT-9w7" eventType="touchUpInside" id="bsd-gh-jxE"/>
+                                    <action selector="pressedBtnSymplicity:" destination="AIX-hT-9w7" eventType="touchUpInside" id="2dE-fy-lLY"/>
                                     <segue destination="jWg-ak-em3" kind="modal" identifier="SimplicityScreen" modalTransitionStyle="crossDissolve" id="b0w-1T-Mr9"/>
                                 </connections>
                             </button>
@@ -207,7 +207,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="btnCoursys:" destination="AIX-hT-9w7" eventType="touchUpInside" id="9rJ-XP-vyv"/>
+                                            <action selector="pressedBtnCourSys:" destination="AIX-hT-9w7" eventType="touchUpInside" id="Fok-7O-Ija"/>
                                             <segue destination="jWg-ak-em3" kind="modal" identifier="CoursysScreen" modalTransitionStyle="crossDissolve" id="d7S-35-fiM"/>
                                         </connections>
                                     </button>
@@ -228,7 +228,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="btngoSFU:" destination="AIX-hT-9w7" eventType="touchUpInside" id="RJf-kB-FgO"/>
+                                            <action selector="pressedBtnGoSFU:" destination="AIX-hT-9w7" eventType="touchUpInside" id="bxa-dg-qbn"/>
                                             <segue destination="jWg-ak-em3" kind="modal" identifier="goSFUScreen" modalTransitionStyle="crossDissolve" id="h7E-1S-d3k"/>
                                         </connections>
                                     </button>
@@ -248,6 +248,9 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="jWg-ak-em3" kind="modal" identifier="SakaiScreen" modalTransitionStyle="crossDissolve" id="kQy-1K-I7u"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="online.png" translatesAutoresizingMaskIntoConstraints="NO" id="Igb-n8-Snl">
                                         <rect key="frame" x="260" y="0.0" width="60" height="60"/>
@@ -409,7 +412,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pressedLoginButton:" destination="ADK-ra-iqE" eventType="touchUpInside" id="rhT-nd-jlL"/>
+                                    <action selector="pressedBtnLogin:" destination="ADK-ra-iqE" eventType="touchUpInside" id="NkP-3o-jVI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -454,7 +457,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="upward:" destination="ScU-Za-XOT" eventType="touchDown" id="o1Q-zm-1Av"/>
+                                                    <action selector="pressedBtnUpward:" destination="ScU-Za-XOT" eventType="touchDown" id="iz8-xV-eib"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="From:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZC-XP-yDC">
@@ -496,7 +499,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="selfmarker:" destination="ScU-Za-XOT" eventType="touchDown" id="bw1-d2-Ro7"/>
+                                                    <action selector="pressedBtnSelfMarker:" destination="ScU-Za-XOT" eventType="touchDown" id="RuM-nG-fxh"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9U-rS-ShP">
@@ -507,7 +510,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="marker:" destination="ScU-Za-XOT" eventType="touchDown" id="K9D-Kk-bgu"/>
+                                                    <action selector="pressedBtnMarker:" destination="ScU-Za-XOT" eventType="touchDown" id="VE5-Zs-yJ5"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBM-hv-uUe">
@@ -517,7 +520,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="downward:" destination="ScU-Za-XOT" eventType="touchDown" id="mVe-zw-e0N"/>
+                                                    <action selector="pressedBtnDownward:" destination="ScU-Za-XOT" eventType="touchDown" id="gOU-OZ-qeh"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -543,7 +546,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="clean:" destination="ScU-Za-XOT" eventType="touchDown" id="cZ4-du-Wph"/>
+                                                    <action selector="pressedBtnClean:" destination="ScU-Za-XOT" eventType="touchDown" id="M29-ES-V0H"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Maps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93r-U3-c8j">
@@ -565,11 +568,11 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="down" destination="WBM-hv-uUe" id="X3P-Es-LYU"/>
+                        <outlet property="btnDown" destination="WBM-hv-uUe" id="fA9-ag-UKU"/>
                         <outlet property="mapView" destination="ZOI-4z-kyR" id="tBO-rb-Wti"/>
                         <outlet property="room" destination="cB5-ja-OVG" id="OAa-Vz-Bqe"/>
-                        <outlet property="slide" destination="lHE-hw-ZSx" id="tB0-JA-iVD"/>
                         <outlet property="sroom" destination="nTM-Z2-qN2" id="cHb-lB-gkl"/>
+                        <outlet property="viewSlide" destination="lHE-hw-ZSx" id="Kwa-Ff-sqU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="44O-7U-ZcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
