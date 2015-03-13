@@ -64,8 +64,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykn-xp-ybP">
-                                <rect key="frame" x="137" y="20" width="47" height="71"/>
-                                <state key="normal" image="information button.png">
+                                <rect key="frame" x="147" y="20" width="47" height="71"/>
+                                <state key="normal" image="info-2.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -73,16 +73,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRD-p7-lgF">
-                                <rect key="frame" x="192" y="20" width="154" height="79"/>
-                                <state key="normal" image="login button.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressedBtnMainScreenLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NpR-op-5zO"/>
-                                    <segue destination="ADK-ra-iqE" kind="presentation" identifier="mainToLogin" modalTransitionStyle="flipHorizontal" id="qr7-lA-gZT"/>
-                                </connections>
-                            </button>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eFI-22-hLh">
                                 <rect key="frame" x="16" y="113" width="288" height="176"/>
                                 <connections>
@@ -97,6 +87,17 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRD-p7-lgF">
+                                <rect key="frame" x="218" y="20" width="81" height="71"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Login" backgroundImage="Login background.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedBtnMainScreenLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NpR-op-5zO"/>
+                                    <segue destination="ADK-ra-iqE" kind="presentation" identifier="mainToLogin" modalTransitionStyle="flipHorizontal" id="qr7-lA-gZT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -330,7 +331,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.84263392859999997" green="0.21102722630000001" blue="0.18440932739999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -607,14 +608,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Login background.png" width="97" height="117"/>
         <image name="arrow-down-01-128.png" width="128" height="128"/>
         <image name="arrow-left-01-128.png" width="128" height="128"/>
         <image name="arrow-up-01-128.png" width="128" height="128"/>
         <image name="background.png" width="373" height="658"/>
         <image name="cancel.png" width="33" height="33"/>
         <image name="forward.png" width="32" height="33"/>
-        <image name="information button.png" width="52" height="81"/>
-        <image name="login button.png" width="99" height="79"/>
+        <image name="info-2.png" width="50" height="80"/>
         <image name="online.png" width="128" height="128"/>
         <image name="previous.png" width="34" height="34"/>
         <image name="refresh-128.png" width="128" height="128"/>
@@ -622,7 +623,7 @@
         <image name="thumb-button.png" width="150" height="75"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Fih-RG-VNF"/>
+        <segue reference="TQA-CP-wxU"/>
         <segue reference="qgr-T0-9Td"/>
         <segue reference="kQy-1K-I7u"/>
     </inferredMetricsTieBreakers>
