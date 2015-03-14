@@ -20,6 +20,9 @@
 #import "ViewController.h"
 #import "LoginManager.h"
 
+static NSString *const loginTitle = @"Login";
+static NSString *const logoutTitle = @"Logout";
+
 @interface ViewController ()
 
 @property (nonatomic, strong) NSMutableArray *items;
@@ -44,8 +47,8 @@
                                delegate:nil
                       cancelButtonTitle:@"OK"
                       otherButtonTitles:nil] show];
-    [_btnMainScreenLogin setImage:[UIImage imageNamed:@"login button.png"]
-                            forState:UIControlStateNormal];
+    [_btnMainScreenLogin setTitle:loginTitle
+                         forState:UIControlStateNormal];
 }
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier
@@ -85,14 +88,14 @@
     [super viewDidLoad];
 
     // configure login/logout button
-    NSString *imageName;
+    NSString *buttonTitle;
     if ([LoginManager loggedIn]) {
-        imageName = @"logout.png";
+        buttonTitle = logoutTitle;
     } else {
-        imageName = @"login button.png";
+        buttonTitle = loginTitle;
     }
-    [_btnMainScreenLogin setImage:[UIImage imageNamed:imageName]
-                            forState:UIControlStateNormal];
+    [_btnMainScreenLogin setTitle:buttonTitle
+                         forState:UIControlStateNormal];
 
     //configure carousel
     carousel.type = iCarouselTypeCoverFlow2;
