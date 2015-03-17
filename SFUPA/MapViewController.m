@@ -158,6 +158,8 @@
         marker = [GMSMarker markerWithPosition:positon];
         marker.title = @"Begin";
         marker.map =mapView;
+        polyline.strokeWidth = 5;
+        polyline.strokeColor = [UIColor greenColor];
         polyline.map = mapView;
     }
     
