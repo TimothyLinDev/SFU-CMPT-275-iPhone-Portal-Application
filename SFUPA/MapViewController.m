@@ -143,12 +143,23 @@
     if (exist == YES){
         latitude=num[count+1];
         longtitude=num[count+2];
-        while(readLat != endLat && readLong != endLong){
+        if (to > from){
+            while(readLat != endLat && readLong != endLong){
             readLat = wayfind[wfIndex + 1];
             readLong = wayfind[wfIndex + 2];
             [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
             wfIndex = wfIndex + 3;
+            }
         }
+        if (from > to){
+            while(readLat != endLat && readLong != endLong){
+                readLat = wayfind[wfIndex +1];
+                readLong = wayfind[wfIndex +2];
+                [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                wfIndex = wfIndex - 3;
+            }
+        }
+
         GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
         camera = [GMSCameraPosition cameraWithLatitude:latitude
                                              longitude:longtitude
