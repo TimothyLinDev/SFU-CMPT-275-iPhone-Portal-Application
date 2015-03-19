@@ -186,11 +186,11 @@
 }
 
 -(IBAction)pressedBtnDownward:(id)sender{
-    viewSlide.center = CGPointMake(160, 90);
+    viewSlide.center = CGPointMake(160, 100);
 }
 
 -(IBAction)pressedBtnUpward:(id)sender{
-    viewSlide.center = CGPointMake(160, 55);
+    viewSlide.center = CGPointMake(160, 67);
 }
 
 - (void)viewDidLoad {
