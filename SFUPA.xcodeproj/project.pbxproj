@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0721261E1AABF7400036CEFA /* OnlineServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 0721261D1AABF7400036CEFA /* OnlineServices.m */; };
 		072126221AABFAC70036CEFA /* WebViewScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 072126211AABFAC70036CEFA /* WebViewScreen.m */; };
+		07329FE91ABBC9200069B235 /* AncillaryServicesHomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 07329FE81ABBC9200069B235 /* AncillaryServicesHomePage.m */; };
+		07329FED1ABBCCFD0069B235 /* LibraryHomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 07329FEC1ABBCCFD0069B235 /* LibraryHomePage.m */; };
 		0741D8BF1AA66E0200370808 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0741D8BE1AA66E0200370808 /* main.m */; };
 		0741D8C21AA66E0200370808 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0741D8C11AA66E0200370808 /* AppDelegate.m */; };
 		0741D8C51AA66E0200370808 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0741D8C41AA66E0200370808 /* MapViewController.m */; };
@@ -39,6 +41,9 @@
 		077C0CB11AA90C55000449D0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0CB01AA90C55000449D0 /* CoreLocation.framework */; };
 		077C0CB31AA90C5E000449D0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0CB21AA90C5E000449D0 /* CoreData.framework */; };
 		077C0CB51AA90C66000449D0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0CB41AA90C66000449D0 /* AVFoundation.framework */; };
+		079FF3711ABBD57B0010912F /* AvailableLaptop.m in Sources */ = {isa = PBXBuildFile; fileRef = 079FF3701ABBD57B0010912F /* AvailableLaptop.m */; };
+		079FF3741ABBF6560010912F /* LibraryWebsite.m in Sources */ = {isa = PBXBuildFile; fileRef = 079FF3731ABBF6560010912F /* LibraryWebsite.m */; };
+		079FF3771ABBFE1A0010912F /* LibraryHours.m in Sources */ = {isa = PBXBuildFile; fileRef = 079FF3761ABBFE1A0010912F /* LibraryHours.m */; };
 		0F7D97D71AB355C700681B5F /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F7D97D61AB355C700681B5F /* background.png */; };
 		0F7D97D91AB3560D00681B5F /* thumb-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F7D97D81AB3560D00681B5F /* thumb-button.png */; };
 		0F7D97DC1AB35B2200681B5F /* info-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F7D97DA1AB35B2200681B5F /* info-2.png */; };
@@ -77,6 +82,10 @@
 		072126201AABF7760036CEFA /* OnlineServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineServices.h; sourceTree = "<group>"; };
 		072126211AABFAC70036CEFA /* WebViewScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewScreen.m; sourceTree = "<group>"; };
 		072126231AABFAD60036CEFA /* WebViewScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewScreen.h; sourceTree = "<group>"; };
+		07329FE81ABBC9200069B235 /* AncillaryServicesHomePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AncillaryServicesHomePage.m; sourceTree = "<group>"; };
+		07329FEA1ABBC9350069B235 /* AncillaryServicesHomePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AncillaryServicesHomePage.h; sourceTree = "<group>"; };
+		07329FEC1ABBCCFD0069B235 /* LibraryHomePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryHomePage.m; sourceTree = "<group>"; };
+		07329FEE1ABBCD070069B235 /* LibraryHomePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryHomePage.h; sourceTree = "<group>"; };
 		0741D8B91AA66E0200370808 /* SFUPA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFUPA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0741D8BD1AA66E0200370808 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0741D8BE1AA66E0200370808 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -113,6 +122,12 @@
 		077C0CB01AA90C55000449D0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		077C0CB21AA90C5E000449D0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		077C0CB41AA90C66000449D0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		079FF3701ABBD57B0010912F /* AvailableLaptop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvailableLaptop.m; sourceTree = "<group>"; };
+		079FF3721ABBD5840010912F /* AvailableLaptop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvailableLaptop.h; sourceTree = "<group>"; };
+		079FF3731ABBF6560010912F /* LibraryWebsite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryWebsite.m; sourceTree = "<group>"; };
+		079FF3751ABBF6670010912F /* LibraryWebsite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryWebsite.h; sourceTree = "<group>"; };
+		079FF3761ABBFE1A0010912F /* LibraryHours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryHours.m; sourceTree = "<group>"; };
+		079FF3781ABBFE230010912F /* LibraryHours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryHours.h; sourceTree = "<group>"; };
 		0F7D97D61AB355C700681B5F /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		0F7D97D81AB3560D00681B5F /* thumb-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumb-button.png"; sourceTree = "<group>"; };
 		0F7D97DA1AB35B2200681B5F /* info-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-2.png"; sourceTree = "<group>"; };
@@ -191,6 +206,31 @@
 			name = "Academic Services";
 			sourceTree = "<group>";
 		};
+		07329FEB1ABBC93A0069B235 /* Ancillary Services */ = {
+			isa = PBXGroup;
+			children = (
+				07329FE81ABBC9200069B235 /* AncillaryServicesHomePage.m */,
+				07329FEA1ABBC9350069B235 /* AncillaryServicesHomePage.h */,
+				07329FEF1ABBCD0F0069B235 /* Library */,
+			);
+			name = "Ancillary Services";
+			sourceTree = "<group>";
+		};
+		07329FEF1ABBCD0F0069B235 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				07329FEC1ABBCCFD0069B235 /* LibraryHomePage.m */,
+				07329FEE1ABBCD070069B235 /* LibraryHomePage.h */,
+				079FF3701ABBD57B0010912F /* AvailableLaptop.m */,
+				079FF3721ABBD5840010912F /* AvailableLaptop.h */,
+				079FF3731ABBF6560010912F /* LibraryWebsite.m */,
+				079FF3751ABBF6670010912F /* LibraryWebsite.h */,
+				079FF3761ABBFE1A0010912F /* LibraryHours.m */,
+				079FF3781ABBFE230010912F /* LibraryHours.h */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
 		0741D8B01AA66E0200370808 = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +257,7 @@
 				072126241AAC06F70036CEFA /* Academic Services */,
 				0721261F1AABF7520036CEFA /* Map */,
 				CEC5AF581AAB34800068B400 /* Login */,
+				07329FEB1ABBC93A0069B235 /* Ancillary Services */,
 				0741D8C01AA66E0200370808 /* AppDelegate.h */,
 				0741D8C11AA66E0200370808 /* AppDelegate.m */,
 				0741D8C61AA66E0200370808 /* Main.storyboard */,
@@ -459,14 +500,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE278B3A1AAC6D2A00B62E83 /* ViewController.m in Sources */,
+				079FF3771ABBFE1A0010912F /* LibraryHours.m in Sources */,
+				079FF3711ABBD57B0010912F /* AvailableLaptop.m in Sources */,
 				0721261E1AABF7400036CEFA /* OnlineServices.m in Sources */,
 				072126221AABFAC70036CEFA /* WebViewScreen.m in Sources */,
 				0741D8C51AA66E0200370808 /* MapViewController.m in Sources */,
+				07329FED1ABBCCFD0069B235 /* LibraryHomePage.m in Sources */,
+				079FF3741ABBF6560010912F /* LibraryWebsite.m in Sources */,
 				CEC5AF5D1AAB34800068B400 /* LoginManager.m in Sources */,
 				0741D8C21AA66E0200370808 /* AppDelegate.m in Sources */,
 				EDD2DD5A1AAC55880045A485 /* iCarousel.m in Sources */,
 				0741D8BF1AA66E0200370808 /* main.m in Sources */,
 				CEC5AF5E1AAB34800068B400 /* LoginViewController.m in Sources */,
+				07329FE91ABBC9200069B235 /* AncillaryServicesHomePage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

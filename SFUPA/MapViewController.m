@@ -69,6 +69,7 @@
         index++;
     }
     
+    
     //compare user input in "To" search bar with wayfinding path coordinates
     while(wfIndex < 1000){
         if (wayfind[wfIndex] == to){
