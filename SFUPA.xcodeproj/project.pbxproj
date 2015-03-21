@@ -58,6 +58,8 @@
 		0FF7F31A1AACFADA004CF1F6 /* previous.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F3181AACFADA004CF1F6 /* previous.png */; };
 		0FF7F31C1AACFE60004CF1F6 /* online.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F31B1AACFE60004CF1F6 /* online.png */; };
 		57F7E1871AAD72E300264795 /* wayfind.txt in Resources */ = {isa = PBXBuildFile; fileRef = 57F7E1861AAD72E300264795 /* wayfind.txt */; };
+		CE1CD6EC1ABD3B7D0075FD1C /* CourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CD6EB1ABD3B7D0075FD1C /* CourseViewController.m */; };
+		CE1CD6EF1ABD3BF40075FD1C /* CourseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CD6EE1ABD3BF40075FD1C /* CourseManager.m */; };
 		CE278B3A1AAC6D2A00B62E83 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD2DD5F1AAC56010045A485 /* ViewController.m */; };
 		CE29362A1AAC508000E6011A /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2936291AAC508000E6011A /* logout.png */; };
 		CEC5AF5D1AAB34800068B400 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC5AF5A1AAB34800068B400 /* LoginManager.m */; };
@@ -142,6 +144,10 @@
 		0FF7F3181AACFADA004CF1F6 /* previous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = previous.png; sourceTree = "<group>"; };
 		0FF7F31B1AACFE60004CF1F6 /* online.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = online.png; sourceTree = "<group>"; };
 		57F7E1861AAD72E300264795 /* wayfind.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wayfind.txt; sourceTree = "<group>"; };
+		CE1CD6EA1ABD3B7D0075FD1C /* CourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseViewController.h; sourceTree = "<group>"; };
+		CE1CD6EB1ABD3B7D0075FD1C /* CourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseViewController.m; sourceTree = "<group>"; };
+		CE1CD6ED1ABD3BF40075FD1C /* CourseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseManager.h; sourceTree = "<group>"; };
+		CE1CD6EE1ABD3BF40075FD1C /* CourseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseManager.m; sourceTree = "<group>"; };
 		CE2936291AAC508000E6011A /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
 		CEC5AF591AAB34800068B400 /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
 		CEC5AF5A1AAB34800068B400 /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
@@ -202,6 +208,10 @@
 				072126201AABF7760036CEFA /* OnlineServices.h */,
 				072126211AABFAC70036CEFA /* WebViewScreen.m */,
 				072126231AABFAD60036CEFA /* WebViewScreen.h */,
+				CE1CD6EA1ABD3B7D0075FD1C /* CourseViewController.h */,
+				CE1CD6EB1ABD3B7D0075FD1C /* CourseViewController.m */,
+				CE1CD6ED1ABD3BF40075FD1C /* CourseManager.h */,
+				CE1CD6EE1ABD3BF40075FD1C /* CourseManager.m */,
 			);
 			name = "Academic Services";
 			sourceTree = "<group>";
@@ -505,9 +515,11 @@
 				0721261E1AABF7400036CEFA /* OnlineServices.m in Sources */,
 				072126221AABFAC70036CEFA /* WebViewScreen.m in Sources */,
 				0741D8C51AA66E0200370808 /* MapViewController.m in Sources */,
+				CE1CD6EF1ABD3BF40075FD1C /* CourseManager.m in Sources */,
 				07329FED1ABBCCFD0069B235 /* LibraryHomePage.m in Sources */,
 				079FF3741ABBF6560010912F /* LibraryWebsite.m in Sources */,
 				CEC5AF5D1AAB34800068B400 /* LoginManager.m in Sources */,
+				CE1CD6EC1ABD3B7D0075FD1C /* CourseViewController.m in Sources */,
 				0741D8C21AA66E0200370808 /* AppDelegate.m in Sources */,
 				EDD2DD5A1AAC55880045A485 /* iCarousel.m in Sources */,
 				0741D8BF1AA66E0200370808 /* main.m in Sources */,
