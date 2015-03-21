@@ -19,6 +19,13 @@
 @property (nonatomic, strong) NSDictionary * jsonArray;
 @property (nonatomic, strong) NSMutableArray * hoursArray;
 
+@property (weak, nonatomic) IBOutlet UILabel *bbyOpenTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *surOpenTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *vanOpenTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *bbyCloseTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *surCloseTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *vanCloseTimeLabel;
+
 #pragma mark -
 #pragma mark Class Methods
 - (void) retrieveData;

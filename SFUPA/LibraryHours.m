@@ -19,17 +19,20 @@
 #define getDataURL @"http://api.lib.sfu.ca/hours/summary"
 @interface LibraryHours ()
 {
-    NSString *location;
-    NSString *bennettHours;
-    NSString *fraserHours;
-    NSString *belzbergHours;
+    NSArray *bennettOpenTime;
+    NSArray *bennettCloseTime;
+    NSArray *bennettTime;
+    NSArray *fraserOpenTime;
+    NSArray *fraserCloseTime;
+    NSArray *belzbergOpenTime;
+    NSArray *belzbergCloseTime;
 }
 
 
 @end
 
 @implementation LibraryHours
-@synthesize jsonArray, hoursArray;
+@synthesize jsonArray, hoursArray, bbyOpenTimeLabel, surOpenTimeLabel, vanOpenTimeLabel, bbyCloseTimeLabel, surCloseTimeLabel, vanCloseTimeLabel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -52,14 +55,36 @@
     jsonArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
     NSLog(@"%@",jsonArray);
     
-    location = [jsonArray valueForKey:@"location"];
-    NSLog(@"LOCATION: %@", location);
+    //location = [jsonArray valueForKey:@"location"];
+    //NSLog(@"LOCATION: %@", location);
     
-    if([location  isEqual: @"Bennett Library"])
-    {
-        bennettHours = [jsonArray valueForKey:@"open_time"];
-        NSLog(@"LALALLAA: %@",bennettHours);
-    }
+    bennettOpenTime = [jsonArray valueForKey:@"open_time"];
+    NSLog(@"Bennett Open Time: %@",bennettOpenTime[0]);
+    
+    bennettCloseTime = [jsonArray valueForKey:@"close_time"];
+    NSLog(@"Bennett Closed Time: %@",bennettCloseTime[0]);
+    
+    fraserOpenTime = [jsonArray valueForKey:@"open_time"];
+    NSLog(@"Fraser Open Time: %@",fraserOpenTime[1]);
+    
+    fraserCloseTime = [jsonArray valueForKey:@"close_time"];
+    NSLog(@"Fraser Closed Time: %@",fraserCloseTime[1]);
+    
+    belzbergOpenTime = [jsonArray valueForKey:@"open_time"];
+    NSLog(@"Belzberg Open Time: %@",belzbergOpenTime[2]);
+    
+    belzbergCloseTime = [jsonArray valueForKey:@"close_time"];
+    NSLog(@"Belzberg Closed Time: %@",belzbergCloseTime[2]);
+    
+    [bbyOpenTimeLabel setText:[NSString stringWithFormat:@"%@", bennettOpenTime[0]]];
+    [bbyCloseTimeLabel setText:[NSString stringWithFormat:@"%@", bennettCloseTime[0]]];
+    //[surOpenTimeLabel setText:[NSString stringWithFormat:@"%@", fraserOpenTime[1]]];
+    //[surCloseTimeLabel setText:[NSString stringWithFormat:@"%@", fraserCloseTime[1]]];
+    //[vanOpenTimeLabel setText:[NSString stringWithFormat:@"%@", belzbergOpenTime[2]]];
+    //[vanCloseTimeLabel setText:[NSString stringWithFormat:@"%@", belzbergCloseTime[2]]];
+    
+    
+    
     /*
     checkedout = [jsonArray valueForKey:@"checkedout"];
     total = [jsonArray valueForKey:@"total"];
