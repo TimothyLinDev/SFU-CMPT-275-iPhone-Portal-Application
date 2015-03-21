@@ -12,11 +12,23 @@
     NSMutableArray *parameters;
 }
 
+- init {
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    parameters = [[NSMutableArray alloc] init];
+    return self;
+}
+
 - (id) fetchOutline {
     NSString *urlString = [[NSString alloc]
                            initWithFormat:@"https://www.sfu.ca/bin/wcm/course-outlines?%@",
                            [parameters componentsJoinedByString:@"/"]];
     NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]];
+    if (data == nil) {
+        return nil;
+    }
     id outline = [NSJSONSerialization JSONObjectWithData:data
                                                  options:NSJSONReadingMutableContainers
                                                    error:nil];
@@ -37,6 +49,10 @@
     if (parameters.count > 0) {
         [parameters removeLastObject];
     }
+}
+
+- (NSInteger) level {
+    return [parameters count];
 }
 
 @end

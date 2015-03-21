@@ -20,4 +20,6 @@
 // Remove the last parameter of the query to the Course Outline API
 - (void) upOneLevel;
 
+- (NSInteger) level;
+
 @end
