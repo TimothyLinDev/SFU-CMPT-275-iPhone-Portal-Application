@@ -44,6 +44,13 @@
 		079FF3711ABBD57B0010912F /* AvailableLaptop.m in Sources */ = {isa = PBXBuildFile; fileRef = 079FF3701ABBD57B0010912F /* AvailableLaptop.m */; };
 		079FF3741ABBF6560010912F /* LibraryWebsite.m in Sources */ = {isa = PBXBuildFile; fileRef = 079FF3731ABBF6560010912F /* LibraryWebsite.m */; };
 		079FF3771ABBFE1A0010912F /* LibraryHours.m in Sources */ = {isa = PBXBuildFile; fileRef = 079FF3761ABBFE1A0010912F /* LibraryHours.m */; };
+		0F34D4801ABCBFE500846A0C /* buslist.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F34D47B1ABCBFE500846A0C /* buslist.m */; };
+		0F34D4811ABCBFE500846A0C /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F34D47D1ABCBFE500846A0C /* SearchController.m */; };
+		0F34D4821ABCBFE500846A0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F34D47F1ABCBFE500846A0C /* ViewController.m */; };
+		0F34D4871ABD5D9300846A0C /* 135.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F34D4831ABD5D9300846A0C /* 135.png */; };
+		0F34D4881ABD5D9300846A0C /* 143.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F34D4841ABD5D9300846A0C /* 143.png */; };
+		0F34D4891ABD5D9300846A0C /* 144.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F34D4851ABD5D9300846A0C /* 144.png */; };
+		0F34D48A1ABD5D9300846A0C /* 145.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F34D4861ABD5D9300846A0C /* 145.png */; };
 		0F7D97D71AB355C700681B5F /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F7D97D61AB355C700681B5F /* background.png */; };
 		0F7D97D91AB3560D00681B5F /* thumb-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F7D97D81AB3560D00681B5F /* thumb-button.png */; };
 		0F7D97DC1AB35B2200681B5F /* info-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F7D97DA1AB35B2200681B5F /* info-2.png */; };
@@ -128,6 +135,16 @@
 		079FF3751ABBF6670010912F /* LibraryWebsite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryWebsite.h; sourceTree = "<group>"; };
 		079FF3761ABBFE1A0010912F /* LibraryHours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryHours.m; sourceTree = "<group>"; };
 		079FF3781ABBFE230010912F /* LibraryHours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryHours.h; sourceTree = "<group>"; };
+		0F34D47A1ABCBFE500846A0C /* buslist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buslist.h; sourceTree = "<group>"; };
+		0F34D47B1ABCBFE500846A0C /* buslist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = buslist.m; sourceTree = "<group>"; };
+		0F34D47C1ABCBFE500846A0C /* SearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchController.h; sourceTree = "<group>"; };
+		0F34D47D1ABCBFE500846A0C /* SearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchController.m; sourceTree = "<group>"; };
+		0F34D47E1ABCBFE500846A0C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0F34D47F1ABCBFE500846A0C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0F34D4831ABD5D9300846A0C /* 135.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 135.png; sourceTree = "<group>"; };
+		0F34D4841ABD5D9300846A0C /* 143.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 143.png; sourceTree = "<group>"; };
+		0F34D4851ABD5D9300846A0C /* 144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 144.png; sourceTree = "<group>"; };
+		0F34D4861ABD5D9300846A0C /* 145.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 145.png; sourceTree = "<group>"; };
 		0F7D97D61AB355C700681B5F /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		0F7D97D81AB3560D00681B5F /* thumb-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumb-button.png"; sourceTree = "<group>"; };
 		0F7D97DA1AB35B2200681B5F /* info-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-2.png"; sourceTree = "<group>"; };
@@ -253,6 +270,7 @@
 		0741D8BB1AA66E0200370808 /* SFUPA */ = {
 			isa = PBXGroup;
 			children = (
+				0F34D4791ABCBFE500846A0C /* Translink */,
 				EDD2DD571AAC55880045A485 /* iCarousel */,
 				072126241AAC06F70036CEFA /* Academic Services */,
 				0721261F1AABF7520036CEFA /* Map */,
@@ -302,6 +320,10 @@
 		077C0C8B1AA9088E000449D0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0F34D4831ABD5D9300846A0C /* 135.png */,
+				0F34D4841ABD5D9300846A0C /* 143.png */,
+				0F34D4851ABD5D9300846A0C /* 144.png */,
+				0F34D4861ABD5D9300846A0C /* 145.png */,
 				0F7D97DA1AB35B2200681B5F /* info-2.png */,
 				0F7D97DB1AB35B2200681B5F /* Login background.png */,
 				0F7D97D81AB3560D00681B5F /* thumb-button.png */,
@@ -349,6 +371,19 @@
 				077C0C9E1AA90BFD000449D0 /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0F34D4791ABCBFE500846A0C /* Translink */ = {
+			isa = PBXGroup;
+			children = (
+				0F34D47A1ABCBFE500846A0C /* buslist.h */,
+				0F34D47B1ABCBFE500846A0C /* buslist.m */,
+				0F34D47C1ABCBFE500846A0C /* SearchController.h */,
+				0F34D47D1ABCBFE500846A0C /* SearchController.m */,
+				0F34D47E1ABCBFE500846A0C /* ViewController.h */,
+				0F34D47F1ABCBFE500846A0C /* ViewController.m */,
+			);
+			path = Translink;
 			sourceTree = "<group>";
 		};
 		CEC5AF581AAB34800068B400 /* Login */ = {
@@ -455,9 +490,12 @@
 				07655F1F1AA92C64003BB634 /* AQ.txt in Resources */,
 				0F7D97D71AB355C700681B5F /* background.png in Resources */,
 				0FF7F3041AAA2F8F004CF1F6 /* arrow-left-01-128.png in Resources */,
+				0F34D4891ABD5D9300846A0C /* 144.png in Resources */,
+				0F34D4871ABD5D9300846A0C /* 135.png in Resources */,
 				0741D8C81AA66E0200370808 /* Main.storyboard in Resources */,
 				0FF7F3141AACF989004CF1F6 /* cancel.png in Resources */,
 				0FF7F31A1AACFADA004CF1F6 /* previous.png in Resources */,
+				0F34D48A1ABD5D9300846A0C /* 145.png in Resources */,
 				07655F1B1AA91430003BB634 /* GoogleMaps.bundle in Resources */,
 				077C0C991AA9088E000449D0 /* transit icon.jpg in Resources */,
 				0F7D97DC1AB35B2200681B5F /* info-2.png in Resources */,
@@ -469,6 +507,7 @@
 				077C0C951AA9088E000449D0 /* campus information icon.jpg in Resources */,
 				0F7D97DD1AB35B2200681B5F /* Login background.png in Resources */,
 				077C0C941AA9088E000449D0 /* ancillary icon.jpg in Resources */,
+				0F34D4881ABD5D9300846A0C /* 143.png in Resources */,
 				CE29362A1AAC508000E6011A /* logout.png in Resources */,
 				077C0C981AA9088E000449D0 /* news icon.jpg in Resources */,
 				0FF7F3061AAA2F8F004CF1F6 /* refresh-128.png in Resources */,
@@ -499,6 +538,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F34D4821ABCBFE500846A0C /* ViewController.m in Sources */,
 				CE278B3A1AAC6D2A00B62E83 /* ViewController.m in Sources */,
 				079FF3771ABBFE1A0010912F /* LibraryHours.m in Sources */,
 				079FF3711ABBD57B0010912F /* AvailableLaptop.m in Sources */,
@@ -506,10 +546,12 @@
 				072126221AABFAC70036CEFA /* WebViewScreen.m in Sources */,
 				0741D8C51AA66E0200370808 /* MapViewController.m in Sources */,
 				07329FED1ABBCCFD0069B235 /* LibraryHomePage.m in Sources */,
+				0F34D4811ABCBFE500846A0C /* SearchController.m in Sources */,
 				079FF3741ABBF6560010912F /* LibraryWebsite.m in Sources */,
 				CEC5AF5D1AAB34800068B400 /* LoginManager.m in Sources */,
 				0741D8C21AA66E0200370808 /* AppDelegate.m in Sources */,
 				EDD2DD5A1AAC55880045A485 /* iCarousel.m in Sources */,
+				0F34D4801ABCBFE500846A0C /* buslist.m in Sources */,
 				0741D8BF1AA66E0200370808 /* main.m in Sources */,
 				CEC5AF5E1AAB34800068B400 /* LoginViewController.m in Sources */,
 				07329FE91ABBC9200069B235 /* AncillaryServicesHomePage.m in Sources */,
