@@ -39,14 +39,14 @@
     NSError *error = [[NSError alloc] init];
     NSData *response = [NSURLConnection sendSynchronousRequest: Request returningResponse: &resp error: &error];
     NSString *responseString = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
-    if(responseString == nil){
-        NSLog(@"%i", 0);
-        
-    }
-    else{
-        NSLog(@"%i",1);
-    }
-    NSLog(@"resp:%@", responseString);
+//    if(responseString == nil){
+//        NSLog(@"%i", 0);
+//        
+//    }
+//    else{
+//        NSLog(@"%i",1);
+//    }
+//    NSLog(@"resp:%@", responseString);
 //    if(responseString == nil){
 //        bol = 0;
 //    }
@@ -593,7 +593,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    if(bol == 1){
+    NSURLRequest *Request = [NSURLRequest requestWithURL:[NSURL URLWithString: @"http://api.translink.ca/rttiapi/v1/stops/51861/estimates?apikey=ezVK3cAFTnCz2iCPSAVg"]];
+    NSURLResponse *resp = nil;
+    NSError *error = [[NSError alloc] init];
+    NSData *response = [NSURLConnection sendSynchronousRequest: Request returningResponse: &resp error: &error];
+    NSString *responseString = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
+    if([responseString isEqualToString: @""] || responseString == nil){
+        bol=0;
+        NSLog(@"%i",0);
+    }
+    else{
+        bol=1;
+        NSLog(@"%i",1);
+    }
+    NSLog(@"test:%i",bol);
+    if(bol == 1){
         if(!self.segueData){
             return;
         }
@@ -669,15 +683,15 @@
             [self.Button144 setTitle:@"144 (Bus#: 51864)" forState:UIControlStateNormal];
             [self.Button143 setTitle:@"143 (Bus#: 51864)" forState:UIControlStateNormal];
         }
-//    }
-//    else{
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Internet Connection"
-//                                                        message:@"⚠"
-//                                                       delegate:nil
-//                                              cancelButtonTitle:@"OK"
-//                                              otherButtonTitles:nil];
-//        [alert show];
-//    }
+    }
+    else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Internet Connection"
+                                                        message:@"⚠"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
