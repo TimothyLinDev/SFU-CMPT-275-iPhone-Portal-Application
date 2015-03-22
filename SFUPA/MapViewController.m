@@ -34,6 +34,8 @@
     GMSCameraPosition *camera;
     CGFloat endLat;
     CGFloat endLong;
+    CGFloat begLat;
+    CGFloat begLong;
     long to;
     long from;
     IBOutlet GMSMapView *mapView;
@@ -115,6 +117,8 @@
     CGFloat readLong=0;
     CGFloat floorFrom=0;
     CGFloat floorTo=0;
+    NSString *tempTo;
+    NSString *tempFrom;
     bool exist = NO;
 
     from=[sroom.text integerValue];
@@ -151,6 +155,8 @@
     if (exist == YES){
         latitude=num[count+1];
         longtitude=num[count+2];
+        begLat = wayfind[wfIndex+1];
+        begLong = wayfind[wfIndex+2];
         if ((to > from) && (floorFrom == floorTo)){
             while(readLat != endLat && readLong != endLong){
             readLat = wayfind[wfIndex + 1];
@@ -166,6 +172,35 @@
                 [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
                 wfIndex = wfIndex - 3;
             }
+        }
+        /*if (floorFrom > floorTo){
+            //tempTo =
+            [path addCoordinate:CLLocationCoordinate2DMake(49.278724, -122.917371)];
+            while(readLat != begLat && readLong != endLong){
+                readLat = wayfind[wfIndex +1];
+                readLong = wayfind[wfIndex +2];
+                [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                            wfIndex  = wfIndex + 3;
+            }
+        }*/
+        
+        if (floorFrom < floorTo){
+            while(wayfind[wfIndex] != 00000){
+                readLat = wayfind[wfIndex +1];
+                readLong = wayfind[wfIndex +2];
+                [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                wfIndex = wfIndex + 3;
+            }
+            readLat = wayfind[wfIndex +1];
+            readLong = wayfind[wfIndex +2];
+            [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+            CLLocationCoordinate2D position = CLLocationCoordinate2DMake(readLat, readLong);
+            marker = [GMSMarker markerWithPosition:position];
+            marker.title =@"Please go up stairs";
+            //marker.icon = [UIImage imageNamed:@"stairs"];
+            marker.icon = [GMSMarker markerImageWithColor:[UIColor blueColor]];
+            marker.map = mapView;
+            
         }
 
         GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
