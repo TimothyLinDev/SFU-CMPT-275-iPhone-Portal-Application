@@ -41,6 +41,7 @@
 
 @implementation TranController
 
+//show the 135 schedule when select 135
 -(IBAction)clickNoFirst:(id)sender{
     self.scrollimage.hidden = NO;
     [self.scrollimage setScrollEnabled:YES];
@@ -52,6 +53,7 @@
     self.image135.image = [UIImage imageNamed:@"135.png"];
 }
 
+//show the 143 schedule when select 143
 -(IBAction)clickNoSecond:(id)sender{
     self.scrollimage.hidden = NO;
     [self.scrollimage setScrollEnabled:YES];
@@ -63,6 +65,7 @@
     self.image143.image = [UIImage imageNamed:@"143.png"];
 }
 
+//show the 144 schedule when select 144
 -(IBAction)clickNoThird:(id)sender{
     self.scrollimage.hidden = NO;
     [self.scrollimage setScrollEnabled:YES];
@@ -74,6 +77,7 @@
     self.image144.image = [UIImage imageNamed:@"144.png"];
 }
 
+//show the 145 schedule when select 145
 -(IBAction)clickNoFourth:(id)sender{
     self.scrollimage.hidden = NO;
     [self.scrollimage setScrollEnabled:YES];
@@ -86,6 +90,7 @@
     
 }
 
+//switch the view by segmented control
 -(IBAction)switchcontroller{
     if (segmentcontrol.selectedSegmentIndex == 0){
         self.HideFirstView.hidden = NO;
@@ -137,6 +142,7 @@
     }
 }
 
+//send the segue to another view controller
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"SFU Transit Exchange"]){
         BusController *bus =[segue destinationViewController];
@@ -168,13 +174,16 @@
     }
     else if ([segue.identifier isEqualToString:@"SearchMain"]){
         SearchController *search =[segue destinationViewController];
-        NSLog(@"send: %@", self.searchTextField.text);
         search.segueData = self.searchTextField.text;
     }
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.searchTextField.placeholder = @"Bus#/Stop#";
+    
+    //prepare the view
     self.UpFirstStop.hidden = YES;
     self.UpSecondStop.hidden = YES;
     self.NoFirst.hidden = YES;
@@ -182,7 +191,6 @@
     self.NoThird.hidden = YES;
     self.NoFourth.hidden = YES;
     self.scrollimage.hidden = YES;
-    number.placeholder =@"bus#/stop#";
     // Do any additional setup after loading the view, typically from a nib.
     
 }

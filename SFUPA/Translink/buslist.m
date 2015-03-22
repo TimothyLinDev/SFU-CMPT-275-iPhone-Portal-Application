@@ -32,6 +32,7 @@
 
 @implementation BusController
 
+//send API request and record API responses
 -(NSString*) makeRestAPICall : (NSString*) reqURLStr
 {
     NSURLRequest *Request = [NSURLRequest requestWithURL:[NSURL URLWithString: reqURLStr]];
@@ -39,24 +40,13 @@
     NSError *error = [[NSError alloc] init];
     NSData *response = [NSURLConnection sendSynchronousRequest: Request returningResponse: &resp error: &error];
     NSString *responseString = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
-//    if(responseString == nil){
-//        NSLog(@"%i", 0);
-//        
-//    }
-//    else{
-//        NSLog(@"%i",1);
-//    }
-//    NSLog(@"resp:%@", responseString);
-//    if(responseString == nil){
-//        bol = 0;
-//    }
-//    else{
-//        bol = 1;
-//    }
     return responseString;
 }
 
+//collect the useful information from API response about Bus# 145
 -(void)get145schedule:(NSString *)stop{
+    
+    //use different APIs for each stops
     NSString *MyUrl;
     if ([stop  isEqual: @"SFU Transit Exchange"]) {
         MyUrl =@"http://api.translink.ca/rttiapi/v1/stops/51861/estimates?apikey=ezVK3cAFTnCz2iCPSAVg";
@@ -77,6 +67,7 @@
         MyUrl =@"http://api.translink.ca/rttiapi/v1/stops/51864/estimates?apikey=ezVK3cAFTnCz2iCPSAVg";
     }
     
+    //initialize the variables
     NSString *resp;
     NSString *route;
     NSString *firstneedle;
@@ -91,11 +82,15 @@
     NSString *L5;
     NSString *L6;
     resp=[self makeRestAPICall: MyUrl];
+    
+    //check whether the bus still runs
     if (![resp containsString:@"</Message></Error>"]){
         if([stop isEqual:@"SFU Transit Exchange"]){
             route = [resp componentsSeparatedByString:@"<RouteNo>"][1];
             index=0;
         }
+        //if the stop is not "SFU Transit Exchange"(which has different stop code for each bus)
+        //catch the substring only works for 145
         else{
             NSString *sfind = @"<RouteNo>";
             Count = [resp length] - [[resp stringByReplacingOccurrencesOfString:sfind withString:@""] length];
@@ -103,12 +98,10 @@
             NSString *temp;
             for (int i=0; i < Count+1; i++){
                 temp = [resp componentsSeparatedByString:@"<RouteNo>"][i];
-                NSLog (@"%@",temp);
                 if ([temp containsString:@"145"]){
                     index=i;
                 }
             }
-            NSLog(@"index:%i",index);
             if (index < 5){
                 route = [resp componentsSeparatedByString:@"<RouteNo>"][index];
             }
@@ -117,71 +110,71 @@
         strCount = [route length] - [[route stringByReplacingOccurrencesOfString:find withString:@""] length];
         strCount /= [find length];
     }
-    NSLog(@"strCount:%i", strCount);
     if (index > 10){
         strCount = 0;
     }
     
+    // if there is only one time in response for 145
     if(strCount > 0){
         firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][1];
         secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
         secondneedle = [secondneedle substringToIndex:7];
         L1 = secondneedle;
-        NSLog (@"%@",secondneedle);
     }
     else{
         L1 = @"No Bus  ";
     }
+    
+    // if there are two time in response for 145
     if(strCount > 1){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][2];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
         secondneedle = [secondneedle substringToIndex:7];
         L2 = secondneedle;
-        NSLog (@"%@",secondneedle);
     }
     else{
         L2 = @"No Bus  ";
     }
     
+    // if there are three time in response for 145
     if(strCount > 2){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][3];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
         secondneedle = [secondneedle substringToIndex:7];
         L3 = secondneedle;
-        NSLog (@"%@",secondneedle);
     }
     else{
         L3 = @"No Bus  ";
     }
     
+    // if there are four time in response for 145
     if(strCount > 3){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][4];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
         secondneedle = [secondneedle substringToIndex:7];
         L4 = secondneedle;
-        NSLog (@"%@",secondneedle);
     }
     else{
         L4 = @"No Bus  ";
     }
     
+    // if there are five time in response for 145
     if(strCount > 4){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][5];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
         secondneedle = [secondneedle substringToIndex:7];
         L5 = secondneedle;
-        NSLog (@"%@",secondneedle);
     }
     else{
         L5 = @"No Bus  ";
     }
     
+    // if there are six time in response for 145
     if(strCount > 5){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][6];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
         secondneedle = [secondneedle substringToIndex:7];
         L6 = secondneedle;
-        NSLog (@"%@",secondneedle);
     }
     else{
         L6 = @"No Bus  ";
@@ -189,6 +182,8 @@
     self.FirstScroll.text = [NSString stringWithFormat: @"%@\t\t%@\t\t%@\n%@\t\t%@\t\t%@",L1,L2,L3,L4,L5,L6];
 }
 
+//collect the useful information from API response about Bus# 135
+//the method is the same as get145schedule
 -(void)get135schedule:(NSString *)stop{
     NSString *MyUrl;
     if ([stop  isEqual: @"SFU Transit Exchange"]) {
@@ -240,12 +235,10 @@
                     index=i;
                 }
             }
-            NSLog(@"%i",index);
             if (index < 5){
                 route = [resp componentsSeparatedByString:@"<RouteNo>"][index];
             }
         }
-        //NSLog(@"t:%@",route);
         NSString *find = @"<ExpectedLeaveTime>";
         strCount = [route length] - [[route stringByReplacingOccurrencesOfString:find withString:@""] length];
         strCount /= [find length];
@@ -259,7 +252,6 @@
         secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
         secondneedle = [secondneedle substringToIndex:7];
         L1 = secondneedle;
-        //NSLog (@"%@",secondneedle);
     }
     else{
         L1 = @"No Bus  ";
@@ -269,7 +261,6 @@
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
         secondneedle = [secondneedle substringToIndex:7];
         L2 = secondneedle;
-        //NSLog (@"%@",secondneedle);
     }
     else{
         L2 = @"No Bus  ";
@@ -280,7 +271,6 @@
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
         secondneedle = [secondneedle substringToIndex:7];
         L3 = secondneedle;
-        //NSLog (@"%@",secondneedle);
     }
     else{
         L3 = @"No Bus  ";
@@ -291,7 +281,6 @@
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
         secondneedle = [secondneedle substringToIndex:7];
         L4 = secondneedle;
-        //NSLog (@"%@",secondneedle);
     }
     else{
         L4 = @"No Bus  ";
@@ -302,7 +291,6 @@
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
         secondneedle = [secondneedle substringToIndex:7];
         L5 = secondneedle;
-        //NSLog (@"%@",secondneedle);
     }
     else{
         L5 = @"No Bus  ";
@@ -313,7 +301,6 @@
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
         secondneedle = [secondneedle substringToIndex:7];
         L6 = secondneedle;
-        //NSLog (@"%@",secondneedle);
     }
     else{
         L6 = @"No Bus  ";
@@ -321,6 +308,8 @@
     self.SecondScroll.text = [NSString stringWithFormat: @"%@\t\t%@\t\t%@\n%@\t\t%@\t\t%@",L1,L2,L3,L4,L5,L6];
 }
 
+//collect the useful information from API response about Bus# 144
+//the method is the same as get145schedule
 -(void)get144schedule:(NSString *)stop{
     NSString *MyUrl;
     if ([stop  isEqual: @"SFU Transit Exchange"]) {
@@ -357,7 +346,6 @@
     NSString *L6;
     resp=[self makeRestAPICall: MyUrl];
     if (![resp containsString:@"</Message></Error>"]){
-        NSLog(@"t:%@",stop);
         if([stop isEqual:@"SFU Transit Exchange"]){
             route = [resp componentsSeparatedByString:@"<RouteNo>"][1];
             index = 0;
@@ -373,7 +361,6 @@
                     index=i;
                 }
             }
-            NSLog(@"%i",index);
             if (index < 5){
                 route = [resp componentsSeparatedByString:@"<RouteNo>"][index];
             }
@@ -387,11 +374,9 @@
     }
     if(strCount > 0){
         firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][1];
-        //NSLog(@"a:%@",[route componentsSeparatedByString:@"<ExpectedLeaveTime>"][0]);
         secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
         secondneedle = [secondneedle substringToIndex:7];
         L1 = secondneedle;
-        //NSLog (@"%@",secondneedle);
     }
     else{
         L1 = @"No Bus  ";
@@ -401,7 +386,6 @@
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
         secondneedle = [secondneedle substringToIndex:7];
         L2 = secondneedle;
-        //NSLog (@"%@",secondneedle);
     }
     else{
         L2 = @"No Bus  ";
@@ -412,7 +396,6 @@
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
         secondneedle = [secondneedle substringToIndex:7];
         L3 = secondneedle;
-        //NSLog (@"%@",secondneedle);
     }
     else{
         L3 = @"No Bus  ";
@@ -423,7 +406,6 @@
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
         secondneedle = [secondneedle substringToIndex:7];
         L4 = secondneedle;
-        //NSLog (@"%@",secondneedle);
     }
     else{
         L4 = @"No Bus  ";
@@ -434,7 +416,6 @@
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
         secondneedle = [secondneedle substringToIndex:7];
         L5 = secondneedle;
-        //NSLog (@"%@",secondneedle);
     }
     else{
         L5 = @"No Bus  ";
@@ -445,15 +426,16 @@
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
         secondneedle = [secondneedle substringToIndex:7];
         L6 = secondneedle;
-        //NSLog (@"%@",secondneedle);
+
     }
     else{
         L6 = @"No Bus  ";
     }
     self.ThirdScroll.text = [NSString stringWithFormat: @"%@\t\t%@\t\t%@\n%@\t\t%@\t\t%@",L1,L2,L3,L4,L5,L6];
-    //NSLog (@"%@",self.ThirdScroll.text);
 }
 
+//collect the useful information from API response about Bus# 143
+//the method is the same as get145schedule
 -(void)get143schedule:(NSString *)stop{
     NSString *MyUrl;
     if ([stop  isEqual: @"SFU Transit Exchange"]) {
@@ -521,7 +503,6 @@
         secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
         secondneedle = [secondneedle substringToIndex:7];
         L1 = secondneedle;
-        //NSLog (@"%@",secondneedle);
     }
     else{
         L1 = @"No Bus  ";
@@ -531,7 +512,6 @@
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
         secondneedle = [secondneedle substringToIndex:7];
         L2 = secondneedle;
-        //NSLog (@"%@",secondneedle);
     }
     else{
         L2 = @"No Bus  ";
@@ -542,7 +522,6 @@
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
         secondneedle = [secondneedle substringToIndex:7];
         L3 = secondneedle;
-        //NSLog (@"%@",secondneedle);
     }
     else{
         L3 = @"No Bus  ";
@@ -553,7 +532,6 @@
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
         secondneedle = [secondneedle substringToIndex:7];
         L4 = secondneedle;
-        //NSLog (@"%@",secondneedle);
     }
     else{
         L4 = @"No Bus  ";
@@ -564,7 +542,6 @@
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
         secondneedle = [secondneedle substringToIndex:7];
         L5 = secondneedle;
-        //NSLog (@"%@",secondneedle);
     }
     else{
         L5 = @"No Bus  ";
@@ -575,13 +552,11 @@
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
         secondneedle = [secondneedle substringToIndex:7];
         L6 = secondneedle;
-        //NSLog (@"%@",secondneedle);
     }
     else{
         L6 = @"No Bus  ";
     }
     self.FourthScroll.text = [NSString stringWithFormat: @"%@\t\t%@\t\t%@\n%@\t\t%@\t\t%@",L1,L2,L3,L4,L5,L6];
-    //NSLog (@"%@",self.FourthScroll.text);
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
@@ -593,6 +568,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.searchtext.placeholder = @"Bus#/Stop#";
+    
+    //check whether user has internet connection
     NSURLRequest *Request = [NSURLRequest requestWithURL:[NSURL URLWithString: @"http://api.translink.ca/rttiapi/v1/stops/51861/estimates?apikey=ezVK3cAFTnCz2iCPSAVg"]];
     NSURLResponse *resp = nil;
     NSError *error = [[NSError alloc] init];
@@ -600,13 +579,12 @@
     NSString *responseString = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
     if([responseString isEqualToString: @""] || responseString == nil){
         bol=0;
-        NSLog(@"%i",0);
     }
     else{
         bol=1;
-        NSLog(@"%i",1);
     }
-    NSLog(@"test:%i",bol);
+    
+    //if user has internet connection, show the four buses' schedule
     if(bol == 1){
         if(!self.segueData){
             return;
@@ -684,6 +662,8 @@
             [self.Button143 setTitle:@"143 (Bus#: 51864)" forState:UIControlStateNormal];
         }
     }
+    
+    //otherwise, use alert view to notice user that they do not have internet connection
     else{
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Internet Connection"
                                                         message:@"⚠"
