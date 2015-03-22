@@ -5,9 +5,17 @@
 //  Created by Rylan on 2015-03-20.
 //  Copyright (c) 2015 7thHeaven. All rights reserved.
 //
+//  Known Bugs:
+//
+//  Contributors: Rylan Lim
+//
+//  Assignment 4:
+//  Edited by: | What was done?
+//  Rylan      | Created
 
 #import "CourseViewController.h"
 #import "CourseManager.h"
+#import "WebViewScreen.h"
 
 @interface CourseViewController ()
 
@@ -15,24 +23,31 @@
 
 @implementation CourseViewController {
     CourseManager *courseManager;
-    id outline;
+    id jsonArray;
     NSMutableArray *choices;
+    NSMutableDictionary *choiceDict;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     courseManager = [[CourseManager alloc] init];
-    outline = [courseManager fetchOutline];
-    if (outline == nil) {
+    jsonArray = [courseManager fetchJSONArray];
+    if (jsonArray == nil) { // was unable to fetch JSON array
+        [[[UIAlertView alloc] initWithTitle:@"No Internet Connection"
+                                    message:@"⚠"
+                                   delegate:self
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil] show];
         return;
     }
     choices = [[NSMutableArray alloc] init];
+    choiceDict = [[NSMutableDictionary alloc] init];
 
     _courseTableView.delegate = self;
     _courseTableView.dataSource = self;
 
-    [self parseOutline];
+    [self updateChoices];
     [_courseTableView reloadData];
 }
 
@@ -41,40 +56,67 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)parseOutline {
-    // Parse table data to be displayed
-    // If `outline` is really just a list of valid values for a parameter
-    [choices removeAllObjects];
-    if ([outline isKindOfClass:[NSArray class]]) {
-        for (NSDictionary *dict in outline) {
-            [choices addObject:[dict objectForKey:@"value"]];
-        }
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier
+                                  sender:(id)sender {
+    // Go back to the Academic Services screen only when the user is at the top level
+    return [courseManager level] == 0;
+}
+
+- (IBAction)pressedBtnBack:(id)sender {
+    if ([courseManager level] == 0) {
+        return;
     }
-    // If `outline` is actually a course outline or an error message
-    else if ([outline isKindOfClass:[NSDictionary class]]) {
-        ;//TEMP
+    jsonArray = [courseManager upOneLevel];
+    if (jsonArray == nil) { // was unable to fetch JSON array
+        [[[UIAlertView alloc] initWithTitle:@"No Internet Connection"
+                                    message:@"⚠"
+                                   delegate:self
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil] show];
+        return;
+    }
+    [self updateChoices];
+    [_courseTableView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:NO];
+    [_courseTableView reloadData];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"courseToWeb"]){
+        WebViewScreen *wvs = segue.destinationViewController;
+        wvs.segueData = [[NSString alloc]
+                         initWithFormat:@"https://www.sfu.ca/outlines.html?%@",
+                         [courseManager query]];
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView
+clickedButtonAtIndex:(NSInteger)buttonIndex {
+    [self performSegueWithIdentifier:@"courseToAcademic" sender:self];
+}
+
+- (void)updateChoices {
+    [choices removeAllObjects];
+    [choiceDict removeAllObjects];
+    for (NSDictionary *dict in jsonArray) {
+        [choices addObject:[dict objectForKey:@"text"]];
+        [choiceDict setObject:[dict objectForKey:@"value"]
+                      forKey:[dict objectForKey:@"text"]];
     }
 }
 
 // UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [outline isKindOfClass:[NSDictionary class]] ? [outline count] : 1;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section {
-    if ([outline isKindOfClass:[NSDictionary class]]) {
-        return [[[outline allKeys] objectAtIndex:section] count];
-    }
     return [choices count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    if ([courseManager level] == 5) {
-        return [[outline allKeys] objectAtIndex:section];
-    }
-    // else [courseManager level] is at least 0 and at most 4
+    // Precondition: [courseManager level] is at least 0 and at most 4
     return [[NSString alloc] initWithFormat:@"Please select a %@:", [@[
         @"year",
         @"term",
@@ -88,10 +130,10 @@
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                                    reuseIdentifier:nil];
-    cell.textLabel.text = [[outline isKindOfClass:[NSDictionary class]] ?
-                           [outline allKeys] :
-                           choices
-                           objectAtIndex:indexPath.row];
+    cell.textLabel.numberOfLines = 0;
+    if ([choices count] > 0) {
+        cell.textLabel.text = [choices objectAtIndex:indexPath.row];
+    }
     return cell;
 }
 
@@ -99,14 +141,24 @@
 
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ([choices count] == 0) {
+    jsonArray = [courseManager downToLevel:
+                 [choiceDict objectForKey:
+                  [tableView cellForRowAtIndexPath:indexPath].textLabel.text]];
+    if (jsonArray == nil) { // was unable to fetch JSON array
+        [[[UIAlertView alloc] initWithTitle:@"No Internet Connection"
+                                    message:@"⚠"
+                                   delegate:self
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil] show];
         return;
     }
-    outline = [courseManager downToLevel:[tableView cellForRowAtIndexPath:indexPath].textLabel.text];
-    if (outline == nil) {
+    if ([courseManager level] == 5) {
+        [self performSegueWithIdentifier:@"courseToWeb" sender:self];
         return;
     }
-    [self parseOutline];
+
+    [self updateChoices];
+    [_courseTableView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:NO];
     [_courseTableView reloadData];
 }
 
