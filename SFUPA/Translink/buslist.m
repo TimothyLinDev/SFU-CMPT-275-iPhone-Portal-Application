@@ -125,62 +125,68 @@
     if(strCount > 0){
         firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][1];
         secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
+        secondneedle = [secondneedle substringToIndex:7];
         L1 = secondneedle;
         NSLog (@"%@",secondneedle);
     }
     else{
-        L1 = @"No Bus";
+        L1 = @"No Bus  ";
     }
     if(strCount > 1){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][2];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
+        secondneedle = [secondneedle substringToIndex:7];
         L2 = secondneedle;
         NSLog (@"%@",secondneedle);
     }
     else{
-        L2 = @"No Bus";
+        L2 = @"No Bus  ";
     }
     
     if(strCount > 2){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][3];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
+        secondneedle = [secondneedle substringToIndex:7];
         L3 = secondneedle;
         NSLog (@"%@",secondneedle);
     }
     else{
-        L3 = @"No Bus";
+        L3 = @"No Bus  ";
     }
     
     if(strCount > 3){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][4];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
+        secondneedle = [secondneedle substringToIndex:7];
         L4 = secondneedle;
         NSLog (@"%@",secondneedle);
     }
     else{
-        L4 = @"No Bus";
+        L4 = @"No Bus  ";
     }
     
     if(strCount > 4){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][5];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
+        secondneedle = [secondneedle substringToIndex:7];
         L5 = secondneedle;
         NSLog (@"%@",secondneedle);
     }
     else{
-        L5 = @"No Bus";
+        L5 = @"No Bus  ";
     }
     
     if(strCount > 5){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][6];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
+        secondneedle = [secondneedle substringToIndex:7];
         L6 = secondneedle;
         NSLog (@"%@",secondneedle);
     }
     else{
-        L6 = @"No Bus";
+        L6 = @"No Bus  ";
     }
-    self.FirstScroll.text = [NSString stringWithFormat: @"%@\t\t\t%@\t\t\t%@\n%@\t\t\t%@\t\t\t%@",L1,L2,L3,L4,L5,L6];
+    self.FirstScroll.text = [NSString stringWithFormat: @"%@\t\t%@\t\t%@\n%@\t\t%@\t\t%@",L1,L2,L3,L4,L5,L6];
 }
 
 -(void)get135schedule:(NSString *)stop{
@@ -251,62 +257,68 @@
     if(strCount > 0){
         firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][1];
         secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
+        secondneedle = [secondneedle substringToIndex:7];
         L1 = secondneedle;
         //NSLog (@"%@",secondneedle);
     }
     else{
-        L1 = @"No Bus";
+        L1 = @"No Bus  ";
     }
     if(strCount > 1){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][2];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
+        secondneedle = [secondneedle substringToIndex:7];
         L2 = secondneedle;
         //NSLog (@"%@",secondneedle);
     }
     else{
-        L2 = @"No Bus";
+        L2 = @"No Bus  ";
     }
     
     if(strCount > 2){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][3];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
+        secondneedle = [secondneedle substringToIndex:7];
         L3 = secondneedle;
         //NSLog (@"%@",secondneedle);
     }
     else{
-        L3 = @"No Bus";
+        L3 = @"No Bus  ";
     }
     
     if(strCount > 3){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][4];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
+        secondneedle = [secondneedle substringToIndex:7];
         L4 = secondneedle;
         //NSLog (@"%@",secondneedle);
     }
     else{
-        L4 = @"No Bus";
+        L4 = @"No Bus  ";
     }
     
     if(strCount > 4){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][5];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
+        secondneedle = [secondneedle substringToIndex:7];
         L5 = secondneedle;
         //NSLog (@"%@",secondneedle);
     }
     else{
-        L5 = @"No Bus";
+        L5 = @"No Bus  ";
     }
     
     if(strCount > 5){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][6];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
+        secondneedle = [secondneedle substringToIndex:7];
         L6 = secondneedle;
         //NSLog (@"%@",secondneedle);
     }
     else{
-        L6 = @"No Bus";
+        L6 = @"No Bus  ";
     }
-    self.SecondScroll.text = [NSString stringWithFormat: @"%@\t\t\t%@\t\t\t%@\n%@\t\t\t%@\t\t\t%@",L1,L2,L3,L4,L5,L6];
+    self.SecondScroll.text = [NSString stringWithFormat: @"%@\t\t%@\t\t%@\n%@\t\t%@\t\t%@",L1,L2,L3,L4,L5,L6];
 }
 
 -(void)get144schedule:(NSString *)stop{
@@ -377,62 +389,68 @@
         firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][1];
         //NSLog(@"a:%@",[route componentsSeparatedByString:@"<ExpectedLeaveTime>"][0]);
         secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
+        secondneedle = [secondneedle substringToIndex:7];
         L1 = secondneedle;
         //NSLog (@"%@",secondneedle);
     }
     else{
-        L1 = @"No Bus";
+        L1 = @"No Bus  ";
     }
     if(strCount > 1){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][2];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
+        secondneedle = [secondneedle substringToIndex:7];
         L2 = secondneedle;
         //NSLog (@"%@",secondneedle);
     }
     else{
-        L2 = @"No Bus";
+        L2 = @"No Bus  ";
     }
     
     if(strCount > 2){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][3];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
+        secondneedle = [secondneedle substringToIndex:7];
         L3 = secondneedle;
         //NSLog (@"%@",secondneedle);
     }
     else{
-        L3 = @"No Bus";
+        L3 = @"No Bus  ";
     }
     
     if(strCount > 3){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][4];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
+        secondneedle = [secondneedle substringToIndex:7];
         L4 = secondneedle;
         //NSLog (@"%@",secondneedle);
     }
     else{
-        L4 = @"No Bus";
+        L4 = @"No Bus  ";
     }
     
     if(strCount > 4){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][5];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
+        secondneedle = [secondneedle substringToIndex:7];
         L5 = secondneedle;
         //NSLog (@"%@",secondneedle);
     }
     else{
-        L5 = @"No Bus";
+        L5 = @"No Bus  ";
     }
     
     if(strCount > 5){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][6];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
+        secondneedle = [secondneedle substringToIndex:7];
         L6 = secondneedle;
         //NSLog (@"%@",secondneedle);
     }
     else{
-        L6 = @"No Bus";
+        L6 = @"No Bus  ";
     }
-    self.ThirdScroll.text = [NSString stringWithFormat: @"%@\t\t\t%@\t\t\t%@\n%@\t\t\t%@\t\t\t%@",L1,L2,L3,L4,L5,L6];
+    self.ThirdScroll.text = [NSString stringWithFormat: @"%@\t\t%@\t\t%@\n%@\t\t%@\t\t%@",L1,L2,L3,L4,L5,L6];
     //NSLog (@"%@",self.ThirdScroll.text);
 }
 
@@ -501,62 +519,68 @@
     if(strCount > 0){
         firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][1];
         secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
+        secondneedle = [secondneedle substringToIndex:7];
         L1 = secondneedle;
         //NSLog (@"%@",secondneedle);
     }
     else{
-        L1 = @"No Bus";
+        L1 = @"No Bus  ";
     }
     if(strCount > 1){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][2];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
+        secondneedle = [secondneedle substringToIndex:7];
         L2 = secondneedle;
         //NSLog (@"%@",secondneedle);
     }
     else{
-        L2 = @"No Bus";
+        L2 = @"No Bus  ";
     }
     
     if(strCount > 2){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][3];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
+        secondneedle = [secondneedle substringToIndex:7];
         L3 = secondneedle;
         //NSLog (@"%@",secondneedle);
     }
     else{
-        L3 = @"No Bus";
+        L3 = @"No Bus  ";
     }
     
     if(strCount > 3){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][4];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
+        secondneedle = [secondneedle substringToIndex:7];
         L4 = secondneedle;
         //NSLog (@"%@",secondneedle);
     }
     else{
-        L4 = @"No Bus";
+        L4 = @"No Bus  ";
     }
     
     if(strCount > 4){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][5];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
+        secondneedle = [secondneedle substringToIndex:7];
         L5 = secondneedle;
         //NSLog (@"%@",secondneedle);
     }
     else{
-        L5 = @"No Bus";
+        L5 = @"No Bus  ";
     }
     
     if(strCount > 5){
         NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][6];
         NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
+        secondneedle = [secondneedle substringToIndex:7];
         L6 = secondneedle;
         //NSLog (@"%@",secondneedle);
     }
     else{
-        L6 = @"No Bus";
+        L6 = @"No Bus  ";
     }
-    self.FourthScroll.text = [NSString stringWithFormat: @"%@\t\t\t%@\t\t\t%@\n%@\t\t\t%@\t\t\t%@",L1,L2,L3,L4,L5,L6];
+    self.FourthScroll.text = [NSString stringWithFormat: @"%@\t\t%@\t\t%@\n%@\t\t%@\t\t%@",L1,L2,L3,L4,L5,L6];
     //NSLog (@"%@",self.FourthScroll.text);
 }
 
