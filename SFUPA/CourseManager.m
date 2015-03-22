@@ -5,6 +5,13 @@
 //  Created by Rylan on 2015-03-20.
 //  Copyright (c) 2015 7thHeaven. All rights reserved.
 //
+//  Known Bugs:
+//
+//  Contributors: Rylan Lim
+//
+//  Assignment 4:
+//  Edited by: | What was done?
+//  Rylan      | Created
 
 #import "CourseManager.h"
 
@@ -21,7 +28,7 @@
     return self;
 }
 
-- (id) fetchOutline {
+- (id)fetchJSONArray {
     NSString *urlString = [[NSString alloc]
                            initWithFormat:@"https://www.sfu.ca/bin/wcm/course-outlines?%@",
                            [parameters componentsJoinedByString:@"/"]];
@@ -29,30 +36,35 @@
     if (data == nil) {
         return nil;
     }
-    id outline = [NSJSONSerialization JSONObjectWithData:data
+    id jsonArray = [NSJSONSerialization JSONObjectWithData:data
                                                  options:NSJSONReadingMutableContainers
                                                    error:nil];
-    return outline;
+    return jsonArray;
 }
 
-- (id) fetchOutlineWithParameters:(NSArray *)params {
+- (id)fetchJSONArrayWithParameters:(NSArray *)params {
     parameters = [params mutableCopy];
-    return [self fetchOutline];
+    return [self fetchJSONArray];
 }
 
-- (id) downToLevel:(NSString *)parameter {
+- (id)downToLevel:(NSString *)parameter {
     [parameters addObject:parameter];
-    return [self fetchOutline];
+    return [self fetchJSONArray];
 }
 
-- (void) upOneLevel {
+- (id)upOneLevel {
     if (parameters.count > 0) {
         [parameters removeLastObject];
     }
+    return [self fetchJSONArray];
 }
 
-- (NSInteger) level {
+- (NSInteger)level {
     return [parameters count];
+}
+
+- (NSString *)query {
+    return [parameters componentsJoinedByString:@"/"];
 }
 
 @end

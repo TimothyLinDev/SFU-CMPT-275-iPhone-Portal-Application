@@ -16,6 +16,9 @@
 //  Rylan      | Refactored Academic Services code
 //  Rylan      | Accessing an academic service without Internet makes an error message appear
 //  Amandeep   | Added Sakai
+//
+//  Assignment 4:
+//  Rylan      | Added functionality for Course Viewer
 
 #import "WebViewScreen.h"
 
@@ -53,6 +56,10 @@
     }
     else if([self.segueData isEqualToString:@"Sakai"]){
         URL = [NSURL URLWithString:@"http://sakai.sfu.ca/portal"];
+    }
+    else if([self.segueData rangeOfString:@"https://www.sfu.ca/outlines.html?"].location != NSNotFound){
+        URL = [NSURL URLWithString:self.segueData];
+        self.segueData = @"Course Viewer";
     }
     _webView.delegate = self;
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
