@@ -5,6 +5,16 @@
 //  Created by Mavis on 15-3-16.
 //  Copyright (c) 2015年 Mavis. All rights reserved.
 //
+//  Known Bugs:
+//
+//
+//  Contributors: Mavis
+//
+// Assignment 4:
+// Edited by: | What was done?
+// Mavis | Created
+// Mavis | Get the API response
+// Mavis | Linking to storyboard
 
 #import "buslist.h"
 #import "SearchController.h"

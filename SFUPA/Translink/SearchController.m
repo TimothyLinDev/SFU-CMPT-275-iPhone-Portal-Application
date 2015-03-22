@@ -5,6 +5,17 @@
 //  Created by Mavis on 15-3-18.
 //  Copyright (c) 2015年 Mavis. All rights reserved.
 //
+//  Known Bugs:
+//
+//
+//  Contributors: Mavis
+//
+// Assignment 3:
+// Edited by: | What was done?
+// Mavis | Created
+// Mavis | Implementing maps
+// Mavis | Get API responses
+// Mavis | Linking to storyboard
 
 #import "SearchController.h"
 
