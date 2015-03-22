@@ -113,6 +113,8 @@
     CGFloat longtitude=0;
     CGFloat readLat=0;
     CGFloat readLong=0;
+    CGFloat floorFrom=0;
+    CGFloat floorTo=0;
     bool exist = NO;
 
     from=[sroom.text integerValue];
@@ -140,11 +142,16 @@
         wfIndex = wfIndex + 3;
     }
     
+    floorFrom = from/1000;
+    floorTo = to/1000;
+    
+    [NSString stringWithFormat:@" %.0f", (floorFrom, floorTo)];
+    
     //if room found, set a marker at room location and draw path from "From" to "To" coordinates
     if (exist == YES){
         latitude=num[count+1];
         longtitude=num[count+2];
-        if (to > from){
+        if ((to > from) && (floorFrom == floorTo)){
             while(readLat != endLat && readLong != endLong){
             readLat = wayfind[wfIndex + 1];
             readLong = wayfind[wfIndex + 2];
@@ -152,7 +159,7 @@
             wfIndex = wfIndex + 3;
             }
         }
-        if (from > to){
+        if ((from > to) && (floorFrom == floorTo)){
             while(readLat != endLat && readLong != endLong){
                 readLat = wayfind[wfIndex +1];
                 readLong = wayfind[wfIndex +2];
