@@ -17,6 +17,7 @@
 
 @interface CourseViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *courseTableView;
+
 - (IBAction)pressedBtnBack:(id)sender;
 
 @end
