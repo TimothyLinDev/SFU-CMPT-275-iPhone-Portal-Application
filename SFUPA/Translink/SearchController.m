@@ -8,6 +8,7 @@
 //  Known Bugs:
 //  The "time" in bus schedule cannot show "m" in the end. Example: "12:00am" -> "12:00a"
 //  There may be some errors in the API response. No way to get rid of these.
+//  The night bus doesn't work for the bus position search.
 //
 //  Contributors: Mavis
 //
