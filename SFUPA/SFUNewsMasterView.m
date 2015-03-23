@@ -44,7 +44,7 @@
     parsedItems = [[NSMutableArray alloc] init];
     self.itemsForDisplay = [NSArray array];
     
-    //Parsing URL
+    //Parsing URL Currently just hardcoded with the People section of SFU News
     NSURL *newsURL = [NSURL URLWithString:@"feed://www.sfu.ca:80/content/sfu/sfunews/people/jcr:content/main_content/list.feed"];
     
     //Parse
@@ -63,6 +63,7 @@
     self.tableView.alpha = 1;
     [self.tableView reloadData];
 }
+
 //Parser Delegate
 - (void)feedParserDidStart:(MWFeedParser *)parser {
     NSLog(@"Started Parsing: %@", parser.url);
