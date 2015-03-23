@@ -12,6 +12,7 @@
 //  Assignment 3:
 //  Edited by: | What was done?
 //  Amandeep   | Created
+//  Amandeep   | If checkedout is Null, Edited to become 0
 
 #import <Foundation/Foundation.h>
 #import "AvailableLaptop.h"
@@ -56,6 +57,14 @@
 
     //Assigning checkedout value to a variable named checkedout
     checkedout = [jsonArray valueForKey:@"checkedout"];
+    if ([checkedout isKindOfClass:[NSNull class]])
+    {
+        [checkedoutLabel setText:@"0"];
+    }
+    else
+    {
+        [checkedoutLabel setText:[NSString stringWithFormat:@"%@", checkedout]];
+    }
     NSLog(@"C: %@",checkedout);
     
     //Assigning total value to a variable named total
@@ -72,7 +81,7 @@
     
     
     //Transfering the assigned value to a Label
-    [checkedoutLabel setText:[NSString stringWithFormat:@"%@", checkedout]];
+    //[checkedoutLabel setText:[NSString stringWithFormat:@"%@", checkedout]];
     [totalLabel setText:[NSString stringWithFormat:@"%@", total]];
     [availableLabel setText:[NSString stringWithFormat:@"%@", available]];
     [unavailableLabel setText:[NSString stringWithFormat:@"%@", unavailable]];
