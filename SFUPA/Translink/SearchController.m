@@ -7,6 +7,7 @@
 //
 //  Known Bugs:
 //  The "time" in bus schedule cannot show "m" in the end. Example: "12:00am" -> "12:00a"
+//  There may be some errors in the API response. No way to get rid of these.
 //
 //  Contributors: Mavis
 //
