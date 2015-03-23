@@ -117,8 +117,8 @@
     CGFloat readLong=0;
     CGFloat floorFrom=0;
     CGFloat floorTo=0;
-    NSString *tempTo;
-    NSString *tempFrom;
+    //NSString *tempTo;
+   // NSString *tempFrom;
     bool exist = NO;
 
     from=[sroom.text integerValue];
@@ -173,6 +173,8 @@
                 wfIndex = wfIndex - 3;
             }
         }
+        
+        //WORK IN PROGRESS: Implementing wayfinding for different floors
         /*if (floorFrom > floorTo){
             //tempTo =
             [path addCoordinate:CLLocationCoordinate2DMake(49.278724, -122.917371)];
@@ -183,8 +185,7 @@
                             wfIndex  = wfIndex + 3;
             }
         }*/
-        
-        if (floorFrom < floorTo){
+        /*if (floorFrom < floorTo){
             while(wayfind[wfIndex] != 00000){
                 readLat = wayfind[wfIndex +1];
                 readLong = wayfind[wfIndex +2];
@@ -200,8 +201,22 @@
             //marker.icon = [UIImage imageNamed:@"stairs"];
             marker.icon = [GMSMarker markerImageWithColor:[UIColor blueColor]];
             marker.map = mapView;
+            GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+            polyline.map = mapView;
+            double delaySeconds = 10;
+            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delaySeconds* NSEC_PER_SEC));
+            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){ ;
+            });
             
-        }
+            while(readLat != endLat && readLong != endLong){
+                readLat = wayfind[wfIndex + 1];
+                readLong = wayfind[wfIndex + 2];
+                [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                wfIndex = wfIndex + 3;
+            }
+            //[NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(t) userInfo:nil repeats:NO];
+    }*/
+        
 
         GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
         camera = [GMSCameraPosition cameraWithLatitude:latitude
@@ -216,6 +231,7 @@
         polyline.strokeColor = [UIColor greenColor];
         polyline.map = mapView;
     }
+
     
     //if room not found, ask user try again
     else{
