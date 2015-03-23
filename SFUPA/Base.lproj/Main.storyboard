@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -24,6 +24,9 @@
                                 <color key="backgroundColor" red="0.73074776785714279" green="0.0044486062138620027" blue="0.075942361871836256" alpha="0.35000000000000003" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="News"/>
+                                <connections>
+                                    <segue destination="isQ-Cn-h3g" kind="presentation" id="yrt-TT-ldt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1P-nZ-OX6">
                                 <rect key="frame" x="131" y="306" width="162" height="100"/>
@@ -1166,6 +1169,97 @@
             </objects>
             <point key="canvasLocation" x="893" y="302"/>
         </scene>
+        <!--News-->
+        <scene sceneID="Vbi-o1-Fqt">
+            <objects>
+                <tableViewController id="0mD-jA-zvL" customClass="SFUNewsMasterView" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="sPh-Ol-Ucv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="reb-5i-Res" style="IBUITableViewCellStyleDefault" id="Aql-nS-L91">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Aql-nS-L91" id="jMl-ys-qEP">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="reb-5i-Res">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="imt-dg-Ssm" kind="push" identifier="showDetail" id="2rG-B6-EE6"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0mD-jA-zvL" id="89i-AY-vrj"/>
+                            <outlet property="delegate" destination="0mD-jA-zvL" id="wZb-sY-tcm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="News" id="a3A-rt-U1g"/>
+                    <connections>
+                        <outlet property="tableView" destination="sPh-Ol-Ucv" id="6b8-Fs-lc0"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="awB-l5-UO6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-94" y="-645"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qVA-Ta-gFN">
+            <objects>
+                <navigationController id="isQ-Cn-h3g" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oMY-LW-YsB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0mD-jA-zvL" kind="relationship" relationship="rootViewController" id="sFA-bU-D0Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hfl-bn-IjF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-532" y="-651"/>
+        </scene>
+        <!--News Detail View-->
+        <scene sceneID="ngg-ZF-yfG">
+            <objects>
+                <viewController id="imt-dg-Ssm" customClass="SFUNewsDetailView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="35M-6K-yNs"/>
+                        <viewControllerLayoutGuide type="bottom" id="69L-Rn-bQ2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kN9-9Z-VSv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hB9-Kw-Klt">
+                                <rect key="frame" x="0.0" y="15" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="ldv-qX-LNg"/>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NKZ-uT-6fm">
+                                <rect key="frame" x="0.0" y="64" width="320" height="509"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vz1-QO-KII"/>
+                    <connections>
+                        <outlet property="webView" destination="NKZ-uT-6fm" id="iMR-wD-V7i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cl2-Ba-1Tl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="364" y="-633"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="D9A-fI-t4N">
             <objects>
@@ -1677,14 +1771,14 @@
         <image name="thumb-button.png" width="150" height="75"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dUh-6p-oy8"/>
-        <segue reference="KVB-3y-Z2s"/>
-        <segue reference="lDX-5W-DLV"/>
-        <segue reference="nUG-4L-FM9"/>
         <segue reference="D8H-H1-bHq"/>
+        <segue reference="rXa-hB-y8k"/>
+        <segue reference="lDX-5W-DLV"/>
         <segue reference="o2M-cY-dL1"/>
-        <segue reference="vld-6d-zWt"/>
+        <segue reference="pnk-7S-ttz"/>
+        <segue reference="weN-XG-1jf"/>
         <segue reference="TLs-gW-YoR"/>
         <segue reference="y5I-wX-1cC"/>
+        <segue reference="dUh-6p-oy8"/>
     </inferredMetricsTieBreakers>
 </document>
