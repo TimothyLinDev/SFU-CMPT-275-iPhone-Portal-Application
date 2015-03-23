@@ -4,11 +4,12 @@
 //
 //  Created by Timothy Lin on 2015-03-22.
 //  Copyright (c) 2015 7thHeaven. All rights reserved.
+//
 //  Known Bugs:
 //
 //  Contributors: Timothy Lin
 //
-//  Assignment 3:
+//  Assignment 4:
 //  Edited by: | What was done?
 //  Timothy    | Created
 // Code mostly taken from Michael Waterfall's MWFeedReader Application
@@ -43,7 +44,7 @@
     parsedItems = [[NSMutableArray alloc] init];
     self.itemsForDisplay = [NSArray array];
     
-    //Parsing URL
+    //Parsing URL Currently just hardcoded with the People section of SFU News
     NSURL *newsURL = [NSURL URLWithString:@"feed://www.sfu.ca:80/content/sfu/sfunews/people/jcr:content/main_content/list.feed"];
     
     //Parse
@@ -62,6 +63,7 @@
     self.tableView.alpha = 1;
     [self.tableView reloadData];
 }
+
 //Parser Delegate
 - (void)feedParserDidStart:(MWFeedParser *)parser {
     NSLog(@"Started Parsing: %@", parser.url);

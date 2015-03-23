@@ -6,7 +6,11 @@
 //  Copyright (c) 2015年 Mavis. All rights reserved.
 //
 //  Known Bugs:
-//
+//  The "time" in bus schedule cannot show "m" in the end. Example: "12:00am" -> "12:00a"
+//  There may be some errors in the API response. No way to get rid of these.
+//  The night bus doesn't work for the bus position search.
+//  Due to the alert from translink website, start with March 23rd, there is no bus schedule available for SFU Transit
+//  Exchange stations
 //
 //  Contributors: Mavis
 //
@@ -91,7 +95,7 @@
         
         //if it is an invaild stop number
         if ([resp containsString:@"</Message></Error>"]){
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Such Stop"
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Such Stop or no available bus"
                                                             message:@"Please try again"
                                                            delegate:nil
                                                   cancelButtonTitle:@"OK"
@@ -185,7 +189,7 @@
         
         //if it is an invaild stop number
         if ([resp containsString:@"</Message></Error>"]){
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Such Bus"
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Such Bus or no available bus"
                                                             message:@"Please try again"
                                                            delegate:nil
                                                   cancelButtonTitle:@"OK"
