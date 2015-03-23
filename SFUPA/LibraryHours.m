@@ -16,9 +16,11 @@
 #import <Foundation/Foundation.h>
 #import "LibraryHours.h"
 
+//Declare the URL where we will get the data
 #define getDataURL @"http://api.lib.sfu.ca/hours/summary"
 @interface LibraryHours ()
 {
+    //Declare some Array's that store the value of the OpenTime and CloseTime of the 3 campus
     NSArray *bennettOpenTime;
     NSArray *bennettCloseTime;
     NSArray *bennettTime;
@@ -37,6 +39,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //Caling the method Retrieve Data
     [self retrieveData];
     
 }
@@ -46,62 +49,47 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+//Method
 - (void) retrieveData
 {
+    //Setting the URL variable with getDataURL
     NSURL * url = [NSURL URLWithString:getDataURL];
     NSData * data= [NSData dataWithContentsOfURL:url];
     
+    //Storing the json file in this array 
     jsonArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
     NSLog(@"%@",jsonArray);
     
-    //location = [jsonArray valueForKey:@"location"];
-    //NSLog(@"LOCATION: %@", location);
-    
+    //Assigning Open time value to Bennett
     bennettOpenTime = [jsonArray valueForKey:@"open_time"];
     NSLog(@"Bennett Open Time: %@",bennettOpenTime[0]);
     
+    //Assigning Close time value to Bennett
     bennettCloseTime = [jsonArray valueForKey:@"close_time"];
-    NSLog(@"Bennett Closed Time: %@",bennettCloseTime[0]);
+    NSLog(@"Bennett Close Time: %@",bennettCloseTime[0]);
     
+    //Assigning Open time value to Fraser
     fraserOpenTime = [jsonArray valueForKey:@"open_time"];
     NSLog(@"Fraser Open Time: %@",fraserOpenTime[1]);
     
+    //Assigning Close time value to Fraser
     fraserCloseTime = [jsonArray valueForKey:@"close_time"];
-    NSLog(@"Fraser Closed Time: %@",fraserCloseTime[1]);
+    NSLog(@"Fraser Close Time: %@",fraserCloseTime[1]);
     
+    //Assigning Open time value to Belzberg
     belzbergOpenTime = [jsonArray valueForKey:@"open_time"];
     NSLog(@"Belzberg Open Time: %@",belzbergOpenTime[2]);
     
+    //Assigning Close time value to Belzberg
     belzbergCloseTime = [jsonArray valueForKey:@"close_time"];
-    NSLog(@"Belzberg Closed Time: %@",belzbergCloseTime[2]);
+    NSLog(@"Belzberg Close Time: %@",belzbergCloseTime[2]);
     
+    //Transfering the assigned value to a Label
     [bbyOpenTimeLabel setText:[NSString stringWithFormat:@"%@", bennettOpenTime[0]]];
     [bbyCloseTimeLabel setText:[NSString stringWithFormat:@"%@", bennettCloseTime[0]]];
-    //[surOpenTimeLabel setText:[NSString stringWithFormat:@"%@", fraserOpenTime[1]]];
-    //[surCloseTimeLabel setText:[NSString stringWithFormat:@"%@", fraserCloseTime[1]]];
-    //[vanOpenTimeLabel setText:[NSString stringWithFormat:@"%@", belzbergOpenTime[2]]];
-    //[vanCloseTimeLabel setText:[NSString stringWithFormat:@"%@", belzbergCloseTime[2]]];
-    
-    
-    
-    /*
-    checkedout = [jsonArray valueForKey:@"checkedout"];
-    total = [jsonArray valueForKey:@"total"];
-    available = [jsonArray valueForKey:@"available"];
-    unavailable = [jsonArray valueForKey:@"unavailable"];
-    NSLog(@"C: %@",checkedout);
-    NSLog(@"T: %@",total);
-    NSLog(@"A: %@",available);
-    NSLog(@"U: %@",unavailable);
-    
-    [checkedoutLabel setText:[NSString stringWithFormat:@"%@", checkedout]];
-    [totalLabel setText:[NSString stringWithFormat:@"%@", total]];
-    [availableLabel setText:[NSString stringWithFormat:@"%@", available]];
-    [unavailableLabel setText:[NSString stringWithFormat:@"%@", unavailable]];
-    */
-    
+    [surOpenTimeLabel setText:[NSString stringWithFormat:@"%@", fraserOpenTime[1]]];
+    [surCloseTimeLabel setText:[NSString stringWithFormat:@"%@", fraserCloseTime[1]]];
+    [vanOpenTimeLabel setText:[NSString stringWithFormat:@"%@", belzbergOpenTime[2]]];
+    [vanCloseTimeLabel setText:[NSString stringWithFormat:@"%@", belzbergCloseTime[2]]];
 }
-
-
 @end

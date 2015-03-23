@@ -12,6 +12,7 @@
 //  Assignment 3:
 //  Edited by: | What was done?
 //  Amandeep   | Created
+//  Amandeep   | Added Comments
 
 #import <Foundation/Foundation.h>
 #import "LibraryWebsite.h"
@@ -26,8 +27,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //URL of the Library
     NSURL *URL = [NSURL URLWithString:@"http://www.lib.sfu.ca/"];
     _webView.delegate = self;
+    //Requesting to URL
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     [_webView loadRequest:request];
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
@@ -1225,12 +1225,6 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xoi-HV-jDD">
                                 <rect key="frame" x="0.0" y="16" width="320" height="52"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwa-GE-if3">
-                                        <rect key="frame" x="134" y="15" width="52" height="21"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJy-bk-VW1">
                                         <rect key="frame" x="3" y="9" width="35" height="35"/>
                                         <state key="normal" image="arrow-left-01-128.png">
@@ -1240,6 +1234,12 @@
                                             <segue destination="Zt5-gV-5gu" kind="modal" id="nnS-WS-9Uv"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Available Laptop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwa-GE-if3">
+                                        <rect key="frame" x="90" y="15" width="140" height="22"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -1677,14 +1677,14 @@
         <image name="thumb-button.png" width="150" height="75"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dUh-6p-oy8"/>
-        <segue reference="KVB-3y-Z2s"/>
-        <segue reference="lDX-5W-DLV"/>
-        <segue reference="nUG-4L-FM9"/>
-        <segue reference="D8H-H1-bHq"/>
-        <segue reference="o2M-cY-dL1"/>
+        <segue reference="y5I-wX-1cC"/>
         <segue reference="vld-6d-zWt"/>
         <segue reference="TLs-gW-YoR"/>
-        <segue reference="y5I-wX-1cC"/>
+        <segue reference="D8H-H1-bHq"/>
+        <segue reference="nUG-4L-FM9"/>
+        <segue reference="lDX-5W-DLV"/>
+        <segue reference="o2M-cY-dL1"/>
+        <segue reference="nnS-WS-9Uv"/>
+        <segue reference="KVB-3y-Z2s"/>
     </inferredMetricsTieBreakers>
 </document>
