@@ -114,7 +114,7 @@
                 if(strCount > 0){
                     firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][1];
                     secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
-                    secondneedle = [secondneedle substringToIndex:7];
+                    secondneedle = [secondneedle substringToIndex:6];
                     L1 = secondneedle;
                 }
                 else{
@@ -124,7 +124,7 @@
                 if(strCount > 1){
                     NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][2];
                     NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
-                    secondneedle = [secondneedle substringToIndex:7];
+                    secondneedle = [secondneedle substringToIndex:6];
                     L2 = secondneedle;
                 }
                 else{
@@ -134,7 +134,7 @@
                 if(strCount > 2){
                     NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][3];
                 NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
-                secondneedle = [secondneedle substringToIndex:7];
+                secondneedle = [secondneedle substringToIndex:6];
                 L3 = secondneedle;
                 }
                 else{
@@ -144,7 +144,7 @@
                 if(strCount > 3){
                     NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][4];
                     NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
-                    secondneedle = [secondneedle substringToIndex:7];
+                    secondneedle = [secondneedle substringToIndex:6];
                     L4 = secondneedle;
                 }
                 else{
@@ -154,7 +154,7 @@
                 if(strCount > 4){
                     NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][5];
                     NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
-                    secondneedle = [secondneedle substringToIndex:7];
+                    secondneedle = [secondneedle substringToIndex:6];
                     L5 = secondneedle;
                 }
                 else{
@@ -164,7 +164,7 @@
                 if(strCount > 5){
                     NSString *firstneedle = [route componentsSeparatedByString:@"<ExpectedLeaveTime>"][6];
                     NSString *secondneedle = [firstneedle componentsSeparatedByString:@"</ExpectedLeaveTime>"][0];
-                    secondneedle = [secondneedle substringToIndex:7];
+                    secondneedle = [secondneedle substringToIndex:6];
                     L6 = secondneedle;
                 }
                 else{

@@ -17,7 +17,6 @@
 #import <UIKit/UIKit.h>
 
 @interface AncillaryServicesHomePage : UIViewController <UIWebViewDelegate>
-//@property (retain, nonatomic) NSString *segueData;
 - (IBAction)LibraryButton:(id)sender;
 
 
