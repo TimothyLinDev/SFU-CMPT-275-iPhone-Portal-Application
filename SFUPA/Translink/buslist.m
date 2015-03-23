@@ -8,6 +8,8 @@
 //  Known Bugs:
 //  The "time" in bus schedule cannot show "m" in the end. Example: "12:00am" -> "12:00a"
 //  There may be some errors in the API response. No way to get rid of these.
+//  Due to the alert from translink website, start with March 23rd, there is no bus schedule available for SFU Transit
+//  Exchange stations
 //
 //  Contributors: Mavis
 //
