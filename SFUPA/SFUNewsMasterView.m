@@ -137,12 +137,17 @@
     }
     return cell;
 }
-
+//Sends URL information to web view
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
+        
+        //Grabbing article link
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         MWFeedItem *item = [itemsForDisplay objectAtIndex:indexPath.row];
         NSString *string = item.link;
+        
+        //Sending link to View Controller
         SFUNewsDetailView *destinationViewController = segue.destinationViewController;
         destinationViewController.url = string;
 

@@ -21,6 +21,8 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+    
+    //Loads article URL in webView
     NSURL *myURL = [NSURL URLWithString:[self.url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     NSURLRequest *request = [NSURLRequest requestWithURL:myURL];
     [self.webView loadRequest:request];

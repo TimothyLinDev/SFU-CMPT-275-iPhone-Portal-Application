@@ -1771,14 +1771,14 @@
         <image name="thumb-button.png" width="150" height="75"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="y5I-wX-1cC"/>
+        <segue reference="vld-6d-zWt"/>
+        <segue reference="TLs-gW-YoR"/>
         <segue reference="D8H-H1-bHq"/>
-        <segue reference="rXa-hB-y8k"/>
+        <segue reference="nUG-4L-FM9"/>
         <segue reference="lDX-5W-DLV"/>
         <segue reference="o2M-cY-dL1"/>
-        <segue reference="pnk-7S-ttz"/>
-        <segue reference="weN-XG-1jf"/>
-        <segue reference="TLs-gW-YoR"/>
-        <segue reference="y5I-wX-1cC"/>
-        <segue reference="dUh-6p-oy8"/>
+        <segue reference="nnS-WS-9Uv"/>
+        <segue reference="KVB-3y-Z2s"/>
     </inferredMetricsTieBreakers>
 </document>
