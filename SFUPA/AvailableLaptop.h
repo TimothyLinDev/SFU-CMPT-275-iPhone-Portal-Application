@@ -17,16 +17,19 @@
 
 @interface AvailableLaptop : UIViewController <UIWebViewDelegate>
 
+//Array properties
 @property (nonatomic, strong) NSDictionary * jsonArray;
 @property (nonatomic, strong) NSMutableArray * laptopArray;
 
-#pragma mark -
-#pragma mark Class Methods
-- (void) retrieveData;
+//Label properties
 @property (weak, nonatomic) IBOutlet UILabel *checkedoutLabel;
 @property (weak, nonatomic) IBOutlet UILabel *availableLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 @property (weak, nonatomic) IBOutlet UILabel *unavailableLabel;
+
+//Method
+- (void) retrieveData;
+
 
 
 @end

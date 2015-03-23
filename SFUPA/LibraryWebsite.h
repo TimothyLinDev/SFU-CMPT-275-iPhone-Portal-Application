@@ -16,6 +16,7 @@
 #import <UIKit/UIKit.h>
 
 @interface LibraryWebsite : UIViewController <UIWebViewDelegate>
+//Web View property
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 
