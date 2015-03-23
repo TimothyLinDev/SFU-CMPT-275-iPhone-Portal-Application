@@ -102,6 +102,7 @@
 
 //switch the view by segmented control
 -(IBAction)switchcontroller{
+    //show the view under "Down-Hill" selection
     if (segmentcontrol.selectedSegmentIndex == 0){
         self.HideFirstView.hidden = NO;
         self.HideSecondView.hidden = NO;
@@ -119,6 +120,7 @@
         self.NoFourth.hidden = YES;
         self.scrollimage.hidden = YES;
     }
+    //show the view under "Up-Hill" selection
     else if(segmentcontrol.selectedSegmentIndex == 1){
         self.HideFirstView.hidden = YES;
         self.HideSecondView.hidden = YES;
@@ -133,6 +135,7 @@
         self.NoFourth.hidden = YES;
         self.scrollimage.hidden = YES;
     }
+    //show the view under "No-Internet" selection
     else if (segmentcontrol.selectedSegmentIndex == 2){
         self.HideFirstView.hidden = YES;
         self.HideSecondView.hidden = YES;

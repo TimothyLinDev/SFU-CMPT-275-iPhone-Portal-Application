@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 Mavis. All rights reserved.
 //
 //  Known Bugs:
-//
+//  The "time" in bus schedule cannot show "m" in the end. Example: "12:00am" -> "12:00a"
 //
 //  Contributors: Mavis
 //

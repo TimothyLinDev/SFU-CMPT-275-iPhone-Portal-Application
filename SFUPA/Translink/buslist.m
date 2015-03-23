@@ -6,6 +6,7 @@
 //  Copyright (c) 2015年 Mavis. All rights reserved.
 //
 //  Known Bugs:
+//  The "time" in bus schedule cannot show "m" in the end. Example: "12:00am" -> "12:00a"
 //
 //
 //  Contributors: Mavis
@@ -102,10 +103,14 @@
         //if the stop is not "SFU Transit Exchange"(which has different stop code for each bus)
         //catch the substring only works for 145
         else{
+            
+            //count the number of routes in string
             NSString *sfind = @"<RouteNo>";
             Count = [resp length] - [[resp stringByReplacingOccurrencesOfString:sfind withString:@""] length];
             Count /= [sfind length];
             NSString *temp;
+            
+            //check the position of the route that in the string
             for (int i=0; i < Count+1; i++){
                 temp = [resp componentsSeparatedByString:@"<RouteNo>"][i];
                 if ([temp containsString:@"145"]){
@@ -116,6 +121,8 @@
                 route = [resp componentsSeparatedByString:@"<RouteNo>"][index];
             }
         }
+        
+        //count the number of time for each bus in schedule
         NSString *find = @"<ExpectedLeaveTime>";
         strCount = [route length] - [[route stringByReplacingOccurrencesOfString:find withString:@""] length];
         strCount /= [find length];
