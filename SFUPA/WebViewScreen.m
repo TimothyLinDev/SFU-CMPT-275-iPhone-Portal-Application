@@ -19,6 +19,7 @@
 //
 //  Assignment 4:
 //  Rylan      | Added functionality for Course Viewer
+//  Rylan      | Fixed a bug that causes the "No Internet" message to appear at the wrong times
 
 #import "WebViewScreen.h"
 
@@ -71,6 +72,9 @@
 
 - (void)webView:webView
 didFailLoadWithError:error {
+    if ([error code] != -1009) {
+        return;
+    }
     //Notifying the user that there is no Internet Connection
     [[[UIAlertView alloc] initWithTitle:@"No Internet Connection"
                                 message:@"⚠"

@@ -24,6 +24,9 @@
     if (!self) {
         return nil;
     }
+
+    // Initialize the array `parameters`, which contains the parameters to be
+    // sent to the Course Outline API
     parameters = [[NSMutableArray alloc] init];
     return self;
 }
@@ -37,8 +40,8 @@
         return nil;
     }
     id jsonArray = [NSJSONSerialization JSONObjectWithData:data
-                                                 options:NSJSONReadingMutableContainers
-                                                   error:nil];
+                                                   options:NSJSONReadingMutableContainers
+                                                     error:nil];
     return jsonArray;
 }
 
