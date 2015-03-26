@@ -209,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXY-ys-avR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-457" y="2131"/>
+            <point key="canvasLocation" x="-867" y="1998"/>
         </scene>
         <!--Bus Controller-->
         <scene sceneID="8vs-xM-lML">
@@ -368,7 +368,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LA0-pv-H3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-58" y="2131"/>
+            <point key="canvasLocation" x="-446" y="2196"/>
         </scene>
         <!--Tran Controller-->
         <scene sceneID="snS-Im-N8s">
@@ -631,7 +631,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fwG-oY-dh5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-58" y="1400"/>
+            <point key="canvasLocation" x="-446" y="1284"/>
         </scene>
         <!--Online Services-->
         <scene sceneID="S9u-ei-zNj">
@@ -720,7 +720,7 @@
                                         <rect key="frame" x="260" y="0.0" width="60" height="60"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.96862751250000001" green="0.90196084980000002" blue="0.89019614459999996" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="1" green="0.82884291899999996" blue="0.80136388940000003" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V0a-UA-58T">
                                 <rect key="frame" x="-1" y="188" width="320" height="60"/>
@@ -741,7 +741,7 @@
                                         <rect key="frame" x="260" y="0.0" width="60" height="60"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.96862751250000001" green="0.90196084980000002" blue="0.89019614459999996" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="1" green="0.82884291899999996" blue="0.80136388940000003" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZSJ-aZ-Bbc">
                                 <rect key="frame" x="0.0" y="308" width="320" height="60"/>
@@ -762,7 +762,7 @@
                                         <rect key="frame" x="260" y="0.0" width="60" height="60"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.96862751250000001" green="0.90196084980000002" blue="0.89019614459999996" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="1" green="0.82884291899999996" blue="0.80136388940000003" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o3m-FF-5ga">
                                 <rect key="frame" x="0.0" y="428" width="320" height="60"/>
@@ -782,7 +782,7 @@
                                         <rect key="frame" x="260" y="0.0" width="60" height="60"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.96862751250000001" green="0.90196084980000002" blue="0.89019614459999996" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="1" green="0.82884291899999996" blue="0.80136388940000003" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="online.png" translatesAutoresizingMaskIntoConstraints="NO" id="AQi-HR-XxO">
                                 <rect key="frame" x="260" y="130" width="60" height="60"/>
@@ -851,7 +851,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uzI-Ue-Omb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380" y="1841"/>
+            <point key="canvasLocation" x="621" y="1893"/>
         </scene>
         <!--Web View Screen-->
         <scene sceneID="Qse-zp-BmL">
@@ -869,6 +869,27 @@
                                 <rect key="frame" x="0.0" y="69" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D4s-pf-b2u">
+                                <rect key="frame" x="0.0" y="16" width="320" height="52"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vpa-YJ-cmf">
+                                        <rect key="frame" x="3" y="9" width="35" height="35"/>
+                                        <state key="normal" image="arrow-left-01-128.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="AIX-hT-9w7" kind="modal" identifier="webViewToAcademic" modalTransitionStyle="crossDissolve" id="qgr-T0-9Td"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYM-2O-lwV">
+                                        <rect key="frame" x="54" y="15" width="212" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qs2-UO-0ja">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
@@ -900,27 +921,6 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="barTintColor" red="0.88435763629999997" green="0.90611049109999997" blue="0.89599839979999996" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D4s-pf-b2u">
-                                <rect key="frame" x="0.0" y="16" width="320" height="52"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vpa-YJ-cmf">
-                                        <rect key="frame" x="3" y="9" width="35" height="35"/>
-                                        <state key="normal" image="arrow-left-01-128.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="AIX-hT-9w7" kind="modal" identifier="webViewToAcademic" modalTransitionStyle="crossDissolve" id="qgr-T0-9Td"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYM-2O-lwV">
-                                        <rect key="frame" x="54" y="15" width="212" height="21"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1392,7 +1392,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5B5-HF-iBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-847" y="-37"/>
+            <point key="canvasLocation" x="-1307" y="-81"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3Dy-jb-9ee">
@@ -1487,7 +1487,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Zh-vv-CEy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-443" y="621"/>
+            <point key="canvasLocation" x="-867" y="449"/>
         </scene>
         <!--Library Hours-->
         <scene sceneID="enC-Zd-P9y">
@@ -1645,7 +1645,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F73-Dj-PVG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-847" y="1270"/>
+            <point key="canvasLocation" x="-1307" y="1250"/>
         </scene>
         <!--Library Website-->
         <scene sceneID="0nQ-yt-jIN">
@@ -1660,7 +1660,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="92t-OY-2xz">
-                                <rect key="frame" x="0.0" y="68" width="320" height="500"/>
+                                <rect key="frame" x="0.0" y="68" width="320" height="456"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nI6-bh-6Nc">
@@ -1684,6 +1684,31 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DtL-fN-m0x">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem image="previous.png" id="T6U-DK-PKz">
+                                        <connections>
+                                            <action selector="goBack" destination="92t-OY-2xz" id="Oes-n9-4gZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="forward.png" width="122" id="WVO-tg-zTf">
+                                        <connections>
+                                            <action selector="goForward" destination="92t-OY-2xz" id="cFo-To-yJk"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="refresh.png" id="znW-mG-SAi">
+                                        <connections>
+                                            <action selector="reload" destination="92t-OY-2xz" id="gyE-vp-z2V"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="cancel.png" width="116" id="ZuV-yD-vyV">
+                                        <connections>
+                                            <action selector="stopLoading" destination="92t-OY-2xz" id="xjj-b5-kDU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1694,7 +1719,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5x-X6-7Hs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-847" y="621"/>
+            <point key="canvasLocation" x="-1307" y="609"/>
         </scene>
         <!--Ancillary Services Home Page-->
         <scene sceneID="2cp-Ia-k4k">
@@ -1784,7 +1809,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clT-54-QFT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-58" y="621"/>
+            <point key="canvasLocation" x="-446" y="449"/>
         </scene>
     </scenes>
     <resources>
@@ -1807,14 +1832,14 @@
         <image name="thumb-button.png" width="150" height="75"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lDX-5W-DLV"/>
-        <segue reference="rXa-hB-y8k"/>
-        <segue reference="D8H-H1-bHq"/>
-        <segue reference="weN-XG-1jf"/>
+        <segue reference="5lu-wZ-mSb"/>
         <segue reference="o2M-cY-dL1"/>
+        <segue reference="qgr-T0-9Td"/>
         <segue reference="y5I-wX-1cC"/>
         <segue reference="vld-6d-zWt"/>
-        <segue reference="TLs-gW-YoR"/>
-        <segue reference="dUh-6p-oy8"/>
+        <segue reference="Iy1-Jw-8iH"/>
+        <segue reference="SQ4-ja-OHB"/>
+        <segue reference="eFu-E8-2LE"/>
+        <segue reference="KVB-3y-Z2s"/>
     </inferredMetricsTieBreakers>
 </document>
