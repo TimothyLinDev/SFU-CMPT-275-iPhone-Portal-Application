@@ -12,19 +12,16 @@
 //  Assignment 3:
 //  Edited by: | What was done?
 //  Rylan      | Created and set up login
+//
+//  Assignment 5:
+//  Rylan      | Refactoring
 
 #import "LoginManager.h"
 #import "LoginViewController.h"
 
-@interface XMLParserDelegate : NSObject <NSXMLParserDelegate>
-
-@property NSString *loginTicket;
-@property NSString *flowExecutionKey;
-
-@end
-
-
 @implementation LoginManager {
+    NSString *loginTicket;
+    NSString *flowExecutionKey;
     NSMutableData *receivedData;
     id controller;
 }
@@ -38,11 +35,10 @@
     // Obtain login ticket and flow execution key from a parser delegate.
     NSURL *url = [NSURL URLWithString:@"https://cas.sfu.ca/cas/login"];
     NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
-    XMLParserDelegate *delegate = [[XMLParserDelegate alloc] init];
-    [parser setDelegate:delegate];
+    [parser setDelegate:self];
     [parser parse];
     
-    if (!delegate.loginTicket || !delegate.flowExecutionKey) {
+    if (!loginTicket || !flowExecutionKey) {
         [controller didReceiveLoginAttemptStatus:LOGIN_NO_CONNECTION];
         return;
     }
@@ -50,8 +46,7 @@
     // Build the query string
     NSString *query = [NSString stringWithFormat:
                        @"username=%@&password=%@&lt=%@&execution=%@&_eventId=%@",
-                       username, password, delegate.loginTicket,
-                       delegate.flowExecutionKey, @"submit"];
+                       username, password, loginTicket, flowExecutionKey, @"submit"];
 
     // Make an HTTP POST request
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
@@ -92,6 +87,8 @@
     }
 }
 
+#pragma mark - NSURLConnectionDelegate
+
 - (void)connection:(NSURLConnection *)connection
 didReceiveResponse:(NSURLResponse *)response {
     [receivedData setLength:0];
@@ -114,10 +111,8 @@ didReceiveResponse:(NSURLResponse *)response {
         [controller didReceiveLoginAttemptStatus:LOGIN_INVALID];
     }
 }
-@end
 
-
-@implementation XMLParserDelegate
+#pragma mark - NSXMLParserDelegate
 
 - (void)         parser:(NSXMLParser *)parser
         didStartElement:(NSString *)element
@@ -127,18 +122,11 @@ didReceiveResponse:(NSURLResponse *)response {
     // Need the `value` attributes of `input` elements whose `name` attribute is "lt" or "execution"
     if ([element isEqualToString:@"input"]) {
         if ([attributes[@"name"] isEqualToString:@"lt"]) {
-            [self setLoginTicket:attributes[@"value"]];
+            loginTicket = attributes[@"value"];
         } else if ([attributes[@"name"] isEqualToString:@"execution"]) {
-            [self setFlowExecutionKey:attributes[@"value"]];
+            flowExecutionKey = attributes[@"value"];
         }
     }
-}
-
-- (void)    parser:(NSXMLParser *)parser
-parseErrorOccurred:(NSError *)parseError {
-}
-
-- (void)parserDidEndDocument:(NSXMLParser *)parser {
 }
 
 @end

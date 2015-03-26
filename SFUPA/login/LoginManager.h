@@ -12,6 +12,9 @@
 //  Assignment 3:
 //  Edited by: | What was done?
 //  Rylan      | Created
+//
+//  Assignment 5:
+//  Rylan      | Refactoring
 
 #import <Foundation/Foundation.h>
 
@@ -21,7 +24,7 @@ typedef enum {
     LOGIN_NO_CONNECTION
 } LoginAttemptStatus;
 
-@interface LoginManager : NSObject <NSURLConnectionDelegate>
+@interface LoginManager : NSObject <NSURLConnectionDelegate, NSXMLParserDelegate>
 
 - (void)logInWithUsername:(NSString *)username
                  password:(NSString *)password
