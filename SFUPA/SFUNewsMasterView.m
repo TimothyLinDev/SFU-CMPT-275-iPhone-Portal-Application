@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 7thHeaven. All rights reserved.
 //
 //  Known Bugs:
+//  * Missing Back button
 //
 //  Contributors: Timothy Lin
 //
