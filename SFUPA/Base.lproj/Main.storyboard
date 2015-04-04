@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -839,15 +839,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="yQW-mY-2KC">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="yQW-mY-2KC">
                                 <rect key="frame" x="0.0" y="66" width="320" height="502"/>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ep0-V7-PjB">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ep0-V7-PjB">
                                 <rect key="frame" x="0.0" y="16" width="320" height="52"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGb-PN-Dd8">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGb-PN-Dd8">
                                         <rect key="frame" x="2" y="10" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="Abv-N3-2It"/>
+                                            <constraint firstAttribute="height" constant="35" id="MGT-Ch-xSj"/>
+                                        </constraints>
                                         <state key="normal" title="Back" image="arrow-left-01-128.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -856,7 +860,7 @@
                                             <segue destination="AIX-hT-9w7" kind="presentation" identifier="courseToAcademic" modalTransitionStyle="crossDissolve" id="nUG-4L-FM9"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Course Viewer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQq-h4-NpT">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Course Viewer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQq-h4-NpT">
                                         <rect key="frame" x="97" y="15" width="127" height="22"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -864,9 +868,22 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="BKd-GL-BhB"/>
+                                    <constraint firstAttribute="centerX" secondItem="rQq-h4-NpT" secondAttribute="centerX" id="GiM-bh-OnT"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yQW-mY-2KC" secondAttribute="trailing" id="79F-DA-Vbz"/>
+                            <constraint firstItem="yQW-mY-2KC" firstAttribute="bottom" secondItem="nnh-k0-f42" secondAttribute="top" id="DoM-V7-IQN"/>
+                            <constraint firstItem="yQW-mY-2KC" firstAttribute="top" secondItem="ehh-2X-PRB" secondAttribute="bottom" constant="46" id="V8a-vl-Ck7"/>
+                            <constraint firstItem="Ep0-V7-PjB" firstAttribute="top" secondItem="djE-Qe-iZo" secondAttribute="topMargin" constant="16" id="Zhj-rR-dAH"/>
+                            <constraint firstItem="yQW-mY-2KC" firstAttribute="leading" secondItem="Ep0-V7-PjB" secondAttribute="leading" id="h6M-2H-UUw"/>
+                            <constraint firstItem="yQW-mY-2KC" firstAttribute="leading" secondItem="djE-Qe-iZo" secondAttribute="leading" id="hK9-rL-2J8"/>
+                            <constraint firstItem="yQW-mY-2KC" firstAttribute="trailing" secondItem="Ep0-V7-PjB" secondAttribute="trailing" id="tMj-dS-pWZ"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -2079,14 +2096,14 @@
         <image name="thumb-button.png" width="150" height="75"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rXa-hB-y8k"/>
-        <segue reference="sqN-Dk-vyW"/>
-        <segue reference="weN-XG-1jf"/>
-        <segue reference="pnk-7S-ttz"/>
         <segue reference="2xs-gB-W9v"/>
+        <segue reference="weN-XG-1jf"/>
+        <segue reference="D8H-H1-bHq"/>
+        <segue reference="nUG-4L-FM9"/>
+        <segue reference="lDX-5W-DLV"/>
+        <segue reference="o2M-cY-dL1"/>
+        <segue reference="pnk-7S-ttz"/>
         <segue reference="y5I-wX-1cC"/>
         <segue reference="Iy1-Jw-8iH"/>
-        <segue reference="5lu-wZ-mSb"/>
-        <segue reference="o2M-cY-dL1"/>
     </inferredMetricsTieBreakers>
 </document>
