@@ -50,7 +50,7 @@
         URL = [NSURL URLWithString:@"https://connect.sfu.ca/"];
     }
     else if([self.segueData isEqualToString:@"goSFU"]){
-        URL = [NSURL URLWithString:@"https://go.sfu.ca/"];
+        URL = [NSURL URLWithString:@"https://go.sfu.ca/psp/paprd/EMPLOYEE/EMPL/h/?tab=SFU_STUDENT_CENTER"];
     }
     else if([self.segueData isEqualToString:@"Symplicity"]){
         URL = [NSURL URLWithString:@"https://sfu-csm.symplicity.com/sso/students"];

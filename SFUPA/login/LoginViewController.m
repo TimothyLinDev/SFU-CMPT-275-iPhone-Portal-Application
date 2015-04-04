@@ -22,12 +22,13 @@
 @end
 
 @implementation LoginViewController {
+    LoginManager *manager;
     LoginAttemptStatus loginAttemptStatus;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    manager = [[LoginManager alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,7 +37,6 @@
 }
 
 - (IBAction)pressedBtnLogin:(id)sender {
-    LoginManager *manager = [[LoginManager alloc] init];
     [manager logInWithUsername:[_usernameField text]
                       password:[_passwordField text]
                       delegate:self];

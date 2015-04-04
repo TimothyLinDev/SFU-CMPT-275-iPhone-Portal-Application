@@ -15,20 +15,16 @@
 //
 //  Assignment 5:
 //  Rylan      | Refactoring
+//  Rylan      | Implemented goSFU login
 
 #import <Foundation/Foundation.h>
-
-typedef enum {
-    LOGIN_SUCCESS,
-    LOGIN_INVALID,
-    LOGIN_NO_CONNECTION
-} LoginAttemptStatus;
+#import "LoginViewController.h"
 
 @interface LoginManager : NSObject <NSURLConnectionDelegate, NSXMLParserDelegate>
 
 - (void)logInWithUsername:(NSString *)username
                  password:(NSString *)password
-                 delegate:(id)viewController;
+                 delegate:(LoginViewController *)viewController;
 + (BOOL)loggedIn;
 + (void)logOut;
 

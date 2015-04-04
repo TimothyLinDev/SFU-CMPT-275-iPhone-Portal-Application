@@ -15,7 +15,12 @@
 //  Rylan      | Linking to storyboard
 
 #import <UIKit/UIKit.h>
-#import "LoginManager.h"
+
+typedef enum {
+    LOGIN_SUCCESS,
+    LOGIN_INVALID,
+    LOGIN_NO_CONNECTION
+} LoginAttemptStatus;
 
 @interface LoginViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
