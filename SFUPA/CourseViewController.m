@@ -150,6 +150,13 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                                    reuseIdentifier:nil];
     cell.textLabel.numberOfLines = 0;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    id color = indexPath.row & 1 ? [UIColor whiteColor] : [UIColor colorWithRed:(float)0xff/0xff
+                                                                          green:(float)0xd3/0xff
+                                                                           blue:(float)0xcc/0xff
+                                                                          alpha:1];
+    cell.backgroundView = [[UIView alloc] init];
+    cell.backgroundView.backgroundColor = color;
     if ([choices count] > 0) {
         cell.textLabel.text = [choices objectAtIndex:indexPath.row];
     }
