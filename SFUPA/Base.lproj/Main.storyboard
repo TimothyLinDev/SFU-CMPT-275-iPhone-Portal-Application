@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -20,53 +20,53 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="qZd-7M-ijw">
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PoZ-X3-PcY">
-                                <rect key="frame" x="27" y="305" width="104" height="50"/>
+                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PoZ-X3-PcY">
+                                <rect key="frame" x="23" y="300" width="93" height="120"/>
                                 <color key="backgroundColor" red="0.73074776785714279" green="0.0044486062138620027" blue="0.075942361871836256" alpha="0.35000000000000003" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="News"/>
+                                <state key="normal" image="news icon.png"/>
                                 <connections>
                                     <segue destination="isQ-Cn-h3g" kind="presentation" id="yrt-TT-ldt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1P-nZ-OX6">
-                                <rect key="frame" x="131" y="305" width="162" height="100"/>
+                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1P-nZ-OX6">
+                                <rect key="frame" x="206" y="418" width="93" height="120"/>
                                 <color key="backgroundColor" red="0.38012197066326525" green="0.0023140857011124741" blue="0.039503863742473486" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="Academic Services">
+                                <state key="normal" image="acadamic service icon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="AIX-hT-9w7" kind="modal" modalTransitionStyle="flipHorizontal" id="rXa-hB-y8k"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPg-Fl-91L">
-                                <rect key="frame" x="27" y="406" width="104" height="50"/>
+                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPg-Fl-91L">
+                                <rect key="frame" x="114" y="300" width="93" height="120"/>
                                 <color key="backgroundColor" red="0.69738520410000004" green="0.0042455034260000003" blue="0.072475184819999997" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="Ancillary">
+                                <state key="normal" image="ancillary icon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="Ymg-vG-Cat" kind="modal" id="weN-XG-1jf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCT-2J-1gz">
-                                <rect key="frame" x="27" y="456" width="104" height="50"/>
+                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCT-2J-1gz">
+                                <rect key="frame" x="115" y="418" width="91" height="120"/>
                                 <color key="backgroundColor" red="0.69738520410000004" green="0.0042455034260000003" blue="0.072475184819999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="Translink">
+                                <state key="normal" image="transit icon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="IzZ-Gx-A7k" kind="modal" id="pnk-7S-ttz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBo-a0-qbB">
-                                <rect key="frame" x="131" y="406" width="162" height="100"/>
+                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBo-a0-qbB">
+                                <rect key="frame" x="23" y="418" width="93" height="120"/>
                                 <color key="backgroundColor" red="0.38012197069999998" green="0.0023140857009999998" blue="0.039503863739999999" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="Maps">
+                                <state key="normal" image="map icon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -86,15 +86,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2f-uT-ApQ">
-                                <rect key="frame" x="27" y="355" width="104" height="50"/>
-                                <color key="backgroundColor" red="0.69738520410000004" green="0.0042455034260000003" blue="0.072475184819999997" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="Security">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRD-p7-lgF">
                                 <rect key="frame" x="218" y="20" width="81" height="71"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -112,6 +103,15 @@
                                     <segue destination="H46-cT-XjJ" kind="embed" id="l3q-PX-VOX"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2f-uT-ApQ">
+                                <rect key="frame" x="207" y="300" width="93" height="120"/>
+                                <color key="backgroundColor" red="0.69738520410000004" green="0.0042455034260000003" blue="0.072475184819999997" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Security" image="campus information icon.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -2082,28 +2082,34 @@
         <image name="144.png" width="490" height="3445"/>
         <image name="145.png" width="996" height="4896"/>
         <image name="Login background.png" width="97" height="117"/>
+        <image name="acadamic service icon.png" width="120" height="163"/>
+        <image name="ancillary icon.png" width="120" height="163"/>
         <image name="arrow-down-01-128.png" width="128" height="128"/>
         <image name="arrow-left-01-128.png" width="128" height="128"/>
         <image name="arrow-up-01-128.png" width="128" height="128"/>
         <image name="background.png" width="373" height="658"/>
+        <image name="campus information icon.png" width="118" height="163"/>
         <image name="cancel.png" width="33" height="33"/>
         <image name="forward.png" width="32" height="33"/>
         <image name="info-2.png" width="50" height="80"/>
+        <image name="map icon.png" width="118" height="163"/>
+        <image name="news icon.png" width="120" height="163"/>
         <image name="online.png" width="128" height="128"/>
         <image name="previous.png" width="34" height="34"/>
         <image name="refresh-128.png" width="128" height="128"/>
         <image name="refresh.png" width="31" height="34"/>
         <image name="thumb-button.png" width="150" height="75"/>
+        <image name="transit icon.png" width="120" height="163"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2xs-gB-W9v"/>
-        <segue reference="weN-XG-1jf"/>
         <segue reference="D8H-H1-bHq"/>
-        <segue reference="nUG-4L-FM9"/>
+        <segue reference="rXa-hB-y8k"/>
         <segue reference="lDX-5W-DLV"/>
         <segue reference="o2M-cY-dL1"/>
         <segue reference="pnk-7S-ttz"/>
+        <segue reference="weN-XG-1jf"/>
         <segue reference="y5I-wX-1cC"/>
         <segue reference="Iy1-Jw-8iH"/>
+        <segue reference="2xs-gB-W9v"/>
     </inferredMetricsTieBreakers>
 </document>
