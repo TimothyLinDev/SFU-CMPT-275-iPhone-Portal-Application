@@ -22,13 +22,7 @@
 		07655F1B1AA91430003BB634 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 07655F1A1AA91430003BB634 /* GoogleMaps.bundle */; };
 		07655F1D1AA91B36003BB634 /* ic_refresh_48px-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 07655F1C1AA91B36003BB634 /* ic_refresh_48px-128.png */; };
 		07655F1F1AA92C64003BB634 /* AQ.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07655F1E1AA92C64003BB634 /* AQ.txt */; };
-		077C0C931AA9088E000449D0 /* acadamic service icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C8C1AA9088E000449D0 /* acadamic service icon.jpg */; };
-		077C0C941AA9088E000449D0 /* ancillary icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C8D1AA9088E000449D0 /* ancillary icon.jpg */; };
-		077C0C951AA9088E000449D0 /* campus information icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C8E1AA9088E000449D0 /* campus information icon.jpg */; };
 		077C0C961AA9088E000449D0 /* information button.png in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C8F1AA9088E000449D0 /* information button.png */; };
-		077C0C971AA9088E000449D0 /* map icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C901AA9088E000449D0 /* map icon.jpg */; };
-		077C0C981AA9088E000449D0 /* news icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C911AA9088E000449D0 /* news icon.jpg */; };
-		077C0C991AA9088E000449D0 /* transit icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077C0C921AA9088E000449D0 /* transit icon.jpg */; };
 		077C0C9F1AA90BFD000449D0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0C9E1AA90BFD000449D0 /* SystemConfiguration.framework */; };
 		077C0CA11AA90C06000449D0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0CA01AA90C06000449D0 /* QuartzCore.framework */; };
 		077C0CA31AA90C10000449D0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077C0CA21AA90C10000449D0 /* OpenGLES.framework */; };
@@ -129,13 +123,7 @@
 		07655F1A1AA91430003BB634 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
 		07655F1C1AA91B36003BB634 /* ic_refresh_48px-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_refresh_48px-128.png"; sourceTree = "<group>"; };
 		07655F1E1AA92C64003BB634 /* AQ.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AQ.txt; sourceTree = "<group>"; };
-		077C0C8C1AA9088E000449D0 /* acadamic service icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "acadamic service icon.jpg"; sourceTree = "<group>"; };
-		077C0C8D1AA9088E000449D0 /* ancillary icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ancillary icon.jpg"; sourceTree = "<group>"; };
-		077C0C8E1AA9088E000449D0 /* campus information icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "campus information icon.jpg"; sourceTree = "<group>"; };
 		077C0C8F1AA9088E000449D0 /* information button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "information button.png"; sourceTree = "<group>"; };
-		077C0C901AA9088E000449D0 /* map icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "map icon.jpg"; sourceTree = "<group>"; };
-		077C0C911AA9088E000449D0 /* news icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "news icon.jpg"; sourceTree = "<group>"; };
-		077C0C921AA9088E000449D0 /* transit icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "transit icon.jpg"; sourceTree = "<group>"; };
 		077C0C9E1AA90BFD000449D0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		077C0CA01AA90C06000449D0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		077C0CA21AA90C10000449D0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -400,13 +388,7 @@
 				0FF7F3011AAA2F8F004CF1F6 /* arrow-up-01-128.png */,
 				0FF7F3021AAA2F8F004CF1F6 /* refresh-128.png */,
 				07655F1C1AA91B36003BB634 /* ic_refresh_48px-128.png */,
-				077C0C8C1AA9088E000449D0 /* acadamic service icon.jpg */,
-				077C0C8D1AA9088E000449D0 /* ancillary icon.jpg */,
-				077C0C8E1AA9088E000449D0 /* campus information icon.jpg */,
 				077C0C8F1AA9088E000449D0 /* information button.png */,
-				077C0C901AA9088E000449D0 /* map icon.jpg */,
-				077C0C911AA9088E000449D0 /* news icon.jpg */,
-				077C0C921AA9088E000449D0 /* transit icon.jpg */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -607,20 +589,14 @@
 				0FF7F31A1AACFADA004CF1F6 /* previous.png in Resources */,
 				0F34D48A1ABD5D9300846A0C /* 145.png in Resources */,
 				07655F1B1AA91430003BB634 /* GoogleMaps.bundle in Resources */,
-				077C0C991AA9088E000449D0 /* transit icon.jpg in Resources */,
 				0F7D97DC1AB35B2200681B5F /* info-2.png in Resources */,
 				EDD2DD621AAC58000045A485 /* Default-568h@2x.png in Resources */,
 				07655F1D1AA91B36003BB634 /* ic_refresh_48px-128.png in Resources */,
-				077C0C931AA9088E000449D0 /* acadamic service icon.jpg in Resources */,
 				0FF7F3031AAA2F8F004CF1F6 /* arrow-down-01-128.png in Resources */,
 				0F3295D41ACF88CE00D577CC /* acadamic service icon.png in Resources */,
-				077C0C971AA9088E000449D0 /* map icon.jpg in Resources */,
-				077C0C951AA9088E000449D0 /* campus information icon.jpg in Resources */,
 				0F7D97DD1AB35B2200681B5F /* Login background.png in Resources */,
-				077C0C941AA9088E000449D0 /* ancillary icon.jpg in Resources */,
 				0F34D4881ABD5D9300846A0C /* 143.png in Resources */,
 				CE29362A1AAC508000E6011A /* logout.png in Resources */,
-				077C0C981AA9088E000449D0 /* news icon.jpg in Resources */,
 				0F3295D61ACF88CE00D577CC /* campus information icon.png in Resources */,
 				0FF7F3061AAA2F8F004CF1F6 /* refresh-128.png in Resources */,
 				0F7D97D91AB3560D00681B5F /* thumb-button.png in Resources */,
