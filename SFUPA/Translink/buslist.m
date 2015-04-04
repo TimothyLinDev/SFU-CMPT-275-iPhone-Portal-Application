@@ -85,7 +85,7 @@
     NSString *route;
     NSString *firstneedle;
     NSString *secondneedle;
-    NSInteger strCount;
+    NSInteger strCount=0;
     NSInteger Count;
     NSInteger index = 100;
     NSString *L1;
@@ -228,7 +228,7 @@
     NSString *route;
     NSString *firstneedle;
     NSString *secondneedle;
-    NSInteger strCount;
+    NSInteger strCount=0;
     NSInteger Count;
     NSInteger index=100;
     NSString *L1;
@@ -354,7 +354,7 @@
     NSString *route;
     NSString *firstneedle;
     NSString *secondneedle;
-    NSInteger strCount;
+    NSInteger strCount=0;
     NSInteger Count;
     NSInteger index=100;
     NSString *L1;
@@ -480,7 +480,7 @@
     NSString *route;
     NSString *firstneedle;
     NSString *secondneedle;
-    NSInteger strCount;
+    NSInteger strCount=0;
     NSInteger Count;
     NSInteger index;
     NSString *L1;
