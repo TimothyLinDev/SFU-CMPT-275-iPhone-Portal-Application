@@ -126,6 +126,10 @@
     NSInteger count = 0;
     
     NSInteger wfIndex = 0;
+    NSInteger tempIndex;
+    NSInteger begIndex1;
+    NSInteger begIndex2;
+    NSInteger numEle;
     
     floorFrom = from/1000;
     floorTo = to/1000;
@@ -139,7 +143,6 @@
         for (NSString *wfLines in wayfindLines){
             CGFloat nse2 = [wfLines floatValue];
             wayfind[wfIndex] = nse2;
-            
             wfIndex++;
         }
     }
@@ -150,11 +153,11 @@
         for (NSString *wfLines in wayfindLines){
             CGFloat nse2 = [wfLines floatValue];
             wayfind[wfIndex] = nse2;
-            
             wfIndex++;
         }
     }
     
+    numEle = wfIndex;
     wfIndex = 0;
     
     //compare user input in "From" search bar with room location coordinates
@@ -177,9 +180,15 @@
     }
     
     wfIndex = 0;
+    
     //compare user input in "From" search bar with wayfinding path coordinates
     while(wfIndex <1000){
         if (wayfind[wfIndex] == from){
+            begLat = wayfind[wfIndex+1];
+            begLong = wayfind[wfIndex+2];
+            tempIndex = wfIndex;
+            begIndex1 = wfIndex;
+            begIndex2 = wfIndex;
             break;
         }
         wfIndex = wfIndex + 3;
@@ -190,10 +199,55 @@
     if (exist == YES){
         latitude=num[count+1];
         longtitude=num[count+2];
-        begLat = wayfind[wfIndex+1];
-        begLong = wayfind[wfIndex+2];
-    
-        //condition for when room number to > from and rooms are on the same floor
+
+        if (floorFrom == floorTo == 2){
+            //condition for when room number to > from and rooms are on the same floor
+            if (to > from){
+                while(readLat != endLat && readLong != endLong){
+                    readLat = wayfind[wfIndex + 1];
+                    readLong = wayfind[wfIndex + 2];
+                    [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                    wfIndex = wfIndex + 3;
+                }
+            }
+            
+            //Condition for when room number From > to and rooms are on the same floor
+            if (from > to){
+                while(readLat != endLat && readLong != endLong){
+                    readLat = wayfind[wfIndex +1];
+                    readLong = wayfind[wfIndex +2];
+                    [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                    wfIndex = wfIndex - 3;
+                }
+            }
+        }
+        
+        if(floorFrom == floorTo != 2){
+            for(int i; i<numEle/2; i++){
+                if (wayfind[begIndex1] == to){
+                    while(readLat != endLat && readLong != endLong){
+                        readLat = wayfind[wfIndex + 1];
+                        readLong = wayfind[wfIndex + 2];
+                        [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                        wfIndex = wfIndex + 3;
+                    }
+                    break;
+                }
+                if(wayfind[begIndex2] == to){
+                    while(readLat != endLat && readLong != endLong){
+                        readLat = wayfind[wfIndex +1];
+                        readLong = wayfind[wfIndex +2];
+                        [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                        wfIndex = wfIndex - 3;
+                        }
+                    break;
+                }
+                begIndex1 = begIndex1 + 3;
+                begIndex2 = begIndex2 - 3;
+            }
+        }
+        
+   /*     //condition for when room number to > from and rooms are on the same floor
         if ((to > from) && (floorFrom == floorTo)){
             while(readLat != endLat && readLong != endLong){
             readLat = wayfind[wfIndex + 1];
@@ -211,50 +265,8 @@
             [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
             wfIndex = wfIndex - 3;
             }
-        }
-        
-        //WORK IN PROGRESS: Implementing wayfinding for different floors
-        /*if (floorFrom > floorTo){
-            //tempTo =
-            [path addCoordinate:CLLocationCoordinate2DMake(49.278724, -122.917371)];
-            while(readLat != begLat && readLong != endLong){
-                readLat = wayfind[wfIndex +1];
-                readLong = wayfind[wfIndex +2];
-                [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
-                            wfIndex  = wfIndex + 3;
-            }
         }*/
-        /*if (floorFrom < floorTo){
-            while(wayfind[wfIndex] != 00000){
-                readLat = wayfind[wfIndex +1];
-                readLong = wayfind[wfIndex +2];
-                [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
-                wfIndex = wfIndex + 3;
-            }
-            readLat = wayfind[wfIndex +1];
-            readLong = wayfind[wfIndex +2];
-            [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
-            CLLocationCoordinate2D position = CLLocationCoordinate2DMake(readLat, readLong);
-            marker = [GMSMarker markerWithPosition:position];
-            marker.title =@"Please go up stairs";
-            //marker.icon = [UIImage imageNamed:@"stairs"];
-            marker.icon = [GMSMarker markerImageWithColor:[UIColor blueColor]];
-            marker.map = mapView;
-            GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
-            polyline.map = mapView;
-            double delaySeconds = 10;
-            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delaySeconds* NSEC_PER_SEC));
-            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){ ;
-            });
-            
-            while(readLat != endLat && readLong != endLong){
-                readLat = wayfind[wfIndex + 1];
-                readLong = wayfind[wfIndex + 2];
-                [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
-                wfIndex = wfIndex + 3;
-            }
-            //[NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(t) userInfo:nil repeats:NO];
-    }*/
+        
         
 
         GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
