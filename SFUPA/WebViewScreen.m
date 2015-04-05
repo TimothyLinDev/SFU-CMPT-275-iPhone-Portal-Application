@@ -62,6 +62,10 @@
         URL = [NSURL URLWithString:self.segueData];
         self.segueData = @"Course Viewer";
     }
+    else if([self.segueData isEqualToString:@"http://sfu.collegestoreonline.com/"]){
+        URL = [NSURL URLWithString:self.segueData];
+        self.segueData = @"Bookstore";
+    }
     _webView.delegate = self;
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     [_webView loadRequest:request];
@@ -85,7 +89,7 @@ didFailLoadWithError:error {
 
 - (void)alertView:(UIAlertView *)alertView
 clickedButtonAtIndex:(NSInteger)buttonIndex {
-    [self performSegueWithIdentifier:@"webViewToAcademic" sender:self];
+    [self pressedBtnBack:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -93,5 +97,15 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)pressedBtnBack:(id)sender {
+    NSString *segueIdentifier;
+    if ([self.lblNavBar.text isEqualToString:@"Bookstore"]){
+        segueIdentifier = @"webToAncillary";
+    }
+    else{
+        segueIdentifier = @"webToAcademic";
+    }
+    [self performSegueWithIdentifier:segueIdentifier sender:self];
+}
 @end
 

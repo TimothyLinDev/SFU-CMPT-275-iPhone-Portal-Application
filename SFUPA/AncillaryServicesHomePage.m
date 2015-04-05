@@ -16,6 +16,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AncillaryServicesHomePage.h"
+#import "WebViewScreen.h"
 
 @interface AncillaryServicesHomePage ()
 
@@ -32,5 +33,11 @@
 }
 
 - (IBAction)LibraryButton:(id)sender {
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"ancillaryBookstoreToWeb"]) {
+        [segue.destinationViewController setSegueData:@"http://sfu.collegestoreonline.com/"];
+    }
 }
 @end

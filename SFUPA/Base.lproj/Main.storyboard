@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -1058,7 +1058,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="AIX-hT-9w7" kind="modal" identifier="webViewToAcademic" modalTransitionStyle="crossDissolve" id="qgr-T0-9Td"/>
+                                            <action selector="pressedBtnBack:" destination="jWg-ak-em3" eventType="touchUpInside" id="rLc-Iz-QjS"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYM-2O-lwV">
@@ -1095,6 +1095,8 @@
                         <outlet property="lblNavBar" destination="rYM-2O-lwV" id="e8Q-2Q-RUP"/>
                         <outlet property="webView" destination="K8G-Qr-gAO" id="AP5-9p-5S8"/>
                         <segue destination="3bE-Gm-plA" kind="presentation" identifier="webToCourse" modalTransitionStyle="crossDissolve" id="5lu-wZ-mSb"/>
+                        <segue destination="Ymg-vG-Cat" kind="presentation" identifier="webToAncillary" modalTransitionStyle="crossDissolve" id="nGO-wX-VoX"/>
+                        <segue destination="AIX-hT-9w7" kind="presentation" identifier="webToAcademic" modalTransitionStyle="crossDissolve" id="f6C-U5-YCK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w9l-fR-Yx0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2296,6 +2298,9 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="jWg-ak-em3" kind="presentation" identifier="ancillaryBookstoreToWeb" id="oi3-vb-Gec"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.82745098039215681" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2370,14 +2375,14 @@
         <image name="transit icon.png" width="120" height="163"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="y5I-wX-1cC"/>
-        <segue reference="pnk-7S-ttz"/>
-        <segue reference="Fih-RG-VNF"/>
-        <segue reference="Iy1-Jw-8iH"/>
-        <segue reference="dUh-6p-oy8"/>
-        <segue reference="KVB-3y-Z2s"/>
-        <segue reference="wMs-5g-Vkg"/>
-        <segue reference="qgr-T0-9Td"/>
+        <segue reference="MzQ-7Y-CgE"/>
+        <segue reference="nGO-wX-VoX"/>
+        <segue reference="oi3-vb-Gec"/>
         <segue reference="5lu-wZ-mSb"/>
+        <segue reference="f6C-U5-YCK"/>
+        <segue reference="2xs-gB-W9v"/>
+        <segue reference="pnk-7S-ttz"/>
+        <segue reference="y5I-wX-1cC"/>
+        <segue reference="Iy1-Jw-8iH"/>
     </inferredMetricsTieBreakers>
 </document>

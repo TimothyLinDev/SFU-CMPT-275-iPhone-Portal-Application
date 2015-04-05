@@ -20,5 +20,6 @@
 @property (retain, nonatomic) NSString *segueData;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UILabel *lblNavBar;
+- (IBAction)pressedBtnBack:(id)sender;
 
 @end
