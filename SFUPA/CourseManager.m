@@ -28,6 +28,7 @@
     // Initialize the array `parameters`, which contains the parameters to be
     // sent to the Course Outline API
     parameters = [[NSMutableArray alloc] init];
+    self.outlinesWasSelected = NO;
     return self;
 }
 
@@ -63,7 +64,7 @@
 }
 
 - (NSInteger)level {
-    return [parameters count];
+    return self.outlinesWasSelected ? [parameters count] + 1 : 0;
 }
 
 - (NSString *)query {

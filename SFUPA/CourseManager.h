@@ -16,6 +16,7 @@
 #import <Foundation/Foundation.h>
 
 @interface CourseManager : NSObject
+@property BOOL outlinesWasSelected;
 
 // Return an array fetched from the Course Outline API with the parameters contained in the CourseManager instance.
 // If the fetch failed, return `nil`.

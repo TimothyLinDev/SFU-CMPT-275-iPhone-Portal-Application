@@ -50,7 +50,7 @@
         URL = [NSURL URLWithString:@"https://connect.sfu.ca/"];
     }
     else if([self.segueData isEqualToString:@"goSFU"]){
-        URL = [NSURL URLWithString:@"https://go.sfu.ca/"];
+        URL = [NSURL URLWithString:@"https://go.sfu.ca/psp/paprd/EMPLOYEE/EMPL/h/?tab=SFU_STUDENT_CENTER"];
     }
     else if([self.segueData isEqualToString:@"Symplicity"]){
         URL = [NSURL URLWithString:@"https://sfu-csm.symplicity.com/sso/students"];
@@ -61,6 +61,14 @@
     else if([self.segueData rangeOfString:@"https://www.sfu.ca/outlines.html?"].location != NSNotFound){
         URL = [NSURL URLWithString:self.segueData];
         self.segueData = @"Course Viewer";
+    }
+    else if([self.segueData isEqualToString:@"http://sfu.collegestoreonline.com/"]){
+        URL = [NSURL URLWithString:self.segueData];
+        self.segueData = @"Bookstore";
+    }
+    else if([self.segueData rangeOfString:@"https://sims-prd.sfu.ca/psc/csprd_1/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SS_ES_STUDY_LIST.GBL?STRM="].location != NSNotFound){
+        URL = [NSURL URLWithString:self.segueData];
+        self.segueData = @"My Courses";
     }
     _webView.delegate = self;
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
@@ -85,7 +93,7 @@ didFailLoadWithError:error {
 
 - (void)alertView:(UIAlertView *)alertView
 clickedButtonAtIndex:(NSInteger)buttonIndex {
-    [self performSegueWithIdentifier:@"webViewToAcademic" sender:self];
+    [self pressedBtnBack:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -93,5 +101,15 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)pressedBtnBack:(id)sender {
+    NSString *segueIdentifier;
+    if ([self.lblNavBar.text isEqualToString:@"Bookstore"]){
+        segueIdentifier = @"webToAncillary";
+    }
+    else{
+        segueIdentifier = @"webToAcademic";
+    }
+    [self performSegueWithIdentifier:segueIdentifier sender:self];
+}
 @end
 
