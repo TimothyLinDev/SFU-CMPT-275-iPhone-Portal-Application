@@ -64,7 +64,8 @@
 		0FF7F3191AACFADA004CF1F6 /* forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F3171AACFADA004CF1F6 /* forward.png */; };
 		0FF7F31A1AACFADA004CF1F6 /* previous.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F3181AACFADA004CF1F6 /* previous.png */; };
 		0FF7F31C1AACFE60004CF1F6 /* online.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F31B1AACFE60004CF1F6 /* online.png */; };
-		57F7E1871AAD72E300264795 /* wayfind.txt in Resources */ = {isa = PBXBuildFile; fileRef = 57F7E1861AAD72E300264795 /* wayfind.txt */; };
+		5765E1671AD1426F003BB21B /* wayfindAQ2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5765E1661AD1426F003BB21B /* wayfindAQ2.txt */; };
+		57F7E1871AAD72E300264795 /* wayfindAQ3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 57F7E1861AAD72E300264795 /* wayfindAQ3.txt */; };
 		CE1CD6EC1ABD3B7D0075FD1C /* CourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CD6EB1ABD3B7D0075FD1C /* CourseViewController.m */; };
 		CE1CD6EF1ABD3BF40075FD1C /* CourseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CD6EE1ABD3BF40075FD1C /* CourseManager.m */; };
 		CE278B3A1AAC6D2A00B62E83 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD2DD5F1AAC56010045A485 /* ViewController.m */; };
@@ -171,7 +172,8 @@
 		0FF7F3171AACFADA004CF1F6 /* forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forward.png; sourceTree = "<group>"; };
 		0FF7F3181AACFADA004CF1F6 /* previous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = previous.png; sourceTree = "<group>"; };
 		0FF7F31B1AACFE60004CF1F6 /* online.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = online.png; sourceTree = "<group>"; };
-		57F7E1861AAD72E300264795 /* wayfind.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wayfind.txt; sourceTree = "<group>"; };
+		5765E1661AD1426F003BB21B /* wayfindAQ2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wayfindAQ2.txt; sourceTree = "<group>"; };
+		57F7E1861AAD72E300264795 /* wayfindAQ3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wayfindAQ3.txt; sourceTree = "<group>"; };
 		CE1CD6EA1ABD3B7D0075FD1C /* CourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseViewController.h; sourceTree = "<group>"; };
 		CE1CD6EB1ABD3B7D0075FD1C /* CourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseViewController.m; sourceTree = "<group>"; };
 		CE1CD6ED1ABD3BF40075FD1C /* CourseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseManager.h; sourceTree = "<group>"; };
@@ -337,7 +339,8 @@
 		0741D8BC1AA66E0200370808 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				57F7E1861AAD72E300264795 /* wayfind.txt */,
+				5765E1661AD1426F003BB21B /* wayfindAQ2.txt */,
+				57F7E1861AAD72E300264795 /* wayfindAQ3.txt */,
 				07655F1E1AA92C64003BB634 /* AQ.txt */,
 				077C0C8B1AA9088E000449D0 /* Images */,
 				0741D8BD1AA66E0200370808 /* Info.plist */,
@@ -587,6 +590,7 @@
 				0FF7F3031AAA2F8F004CF1F6 /* arrow-down-01-128.png in Resources */,
 				077C0C971AA9088E000449D0 /* map icon.jpg in Resources */,
 				077C0C951AA9088E000449D0 /* campus information icon.jpg in Resources */,
+				5765E1671AD1426F003BB21B /* wayfindAQ2.txt in Resources */,
 				0F7D97DD1AB35B2200681B5F /* Login background.png in Resources */,
 				077C0C941AA9088E000449D0 /* ancillary icon.jpg in Resources */,
 				0F34D4881ABD5D9300846A0C /* 143.png in Resources */,
@@ -594,7 +598,7 @@
 				077C0C981AA9088E000449D0 /* news icon.jpg in Resources */,
 				0FF7F3061AAA2F8F004CF1F6 /* refresh-128.png in Resources */,
 				0F7D97D91AB3560D00681B5F /* thumb-button.png in Resources */,
-				57F7E1871AAD72E300264795 /* wayfind.txt in Resources */,
+				57F7E1871AAD72E300264795 /* wayfindAQ3.txt in Resources */,
 				0FF7F3051AAA2F8F004CF1F6 /* arrow-up-01-128.png in Resources */,
 				ED40EB5F1AAD6636007B0494 /* cute-cat.jpg in Resources */,
 				0741D8CD1AA66E0200370808 /* LaunchScreen.xib in Resources */,

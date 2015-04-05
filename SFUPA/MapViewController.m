@@ -66,7 +66,7 @@
     NSInteger index = 0;
     NSInteger count = 0;
     
-    NSInteger wfIndex = 0;
+    //NSInteger wfIndex = 0;
     
     //compare user input in "To" search bar with room location coordinates
     while(index<1000){
@@ -78,20 +78,12 @@
     }
     
     
-    //compare user input in "To" search bar with wayfinding path coordinates
-    while(wfIndex < 1000){
-        if (wayfind[wfIndex] == to){
-            break;
-        }
-        wfIndex = wfIndex + 3;
-    }
+
     
     //if room found, set a marker at room location, store coordinates as ending coordinate for wayfinding
     if (exist == YES){
         latitude=num[count+1];
         longtitude=num[count+2];
-        endLat = wayfind[wfIndex+1];
-        endLong = wayfind[wfIndex+2];
         camera = [GMSCameraPosition cameraWithLatitude:latitude
                                              longitude:longtitude
                                                   zoom:20];
@@ -135,6 +127,36 @@
     
     NSInteger wfIndex = 0;
     
+    floorFrom = from/1000;
+    floorTo = to/1000;
+    [NSString stringWithFormat:@" %.0f", (floorFrom)];
+    [NSString stringWithFormat:@" %.0f", (floorTo)];
+    
+    
+    if (floorFrom == 2){
+        NSString *wayfindFile = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"wayfindAQ2" ofType:@"txt"] encoding:NSUTF8StringEncoding error:NULL];
+        NSArray *wayfindLines = [wayfindFile componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+        for (NSString *wfLines in wayfindLines){
+            CGFloat nse2 = [wfLines floatValue];
+            wayfind[wfIndex] = nse2;
+            
+            wfIndex++;
+        }
+    }
+    
+    if (floorFrom == 3){
+        NSString *wayfindFile = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"wayfindAQ3" ofType:@"txt"] encoding:NSUTF8StringEncoding error:NULL];
+        NSArray *wayfindLines = [wayfindFile componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+        for (NSString *wfLines in wayfindLines){
+            CGFloat nse2 = [wfLines floatValue];
+            wayfind[wfIndex] = nse2;
+            
+            wfIndex++;
+        }
+    }
+    
+    wfIndex = 0;
+    
     //compare user input in "From" search bar with room location coordinates
     while(index<1000){
         if (num[index] == from){
@@ -144,6 +166,17 @@
         index++;
     }
     
+    //compare user input in "To" search bar with wayfinding path coordinates
+    while(wfIndex < 1000){
+        if (wayfind[wfIndex] == to){
+            endLat = wayfind[wfIndex+1];
+            endLong = wayfind[wfIndex+2];
+            break;
+        }
+        wfIndex = wfIndex + 3;
+    }
+    
+    wfIndex = 0;
     //compare user input in "From" search bar with wayfinding path coordinates
     while(wfIndex <1000){
         if (wayfind[wfIndex] == from){
@@ -152,10 +185,6 @@
         wfIndex = wfIndex + 3;
     }
     
-    //Determine which floor level user is at and taking the whole number part out by removing decimal places.
-    floorFrom = from/1000;
-    floorTo = to/1000;
-    [NSString stringWithFormat:@" %.0f", (floorFrom, floorTo)];
     
     //if room found, set a marker at room location and draw path from "From" to "To" coordinates
     if (exist == YES){
@@ -292,15 +321,6 @@
         num[index]=nse;
         index++;
         
-    //read file of coordinates for creating wayfinding paths
-    NSString *wayfindFile = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"wayfind" ofType:@"txt"] encoding:NSUTF8StringEncoding error:NULL];
-    NSArray *wayfindLines = [wayfindFile componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-    NSInteger wfIndex = 0;
-    for (NSString *wfLines in wayfindLines){
-        CGFloat nse2 = [wfLines floatValue];
-        wayfind[wfIndex] = nse2;
-        wfIndex++;
-    }
     }
 }
 
