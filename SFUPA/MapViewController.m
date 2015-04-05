@@ -35,7 +35,7 @@
     
     //variables declaration
     double num[1000];
-    double wayfind[1000];
+    double wayfind[2000];
     GMSMarker *marker;
     GMSCameraPosition *camera;
     CGFloat endLat;
