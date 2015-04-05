@@ -66,6 +66,10 @@
         URL = [NSURL URLWithString:self.segueData];
         self.segueData = @"Bookstore";
     }
+    else if([self.segueData rangeOfString:@"https://sims-prd.sfu.ca/psc/csprd_1/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SS_ES_STUDY_LIST.GBL?STRM="].location != NSNotFound){
+        URL = [NSURL URLWithString:self.segueData];
+        self.segueData = @"My Courses";
+    }
     _webView.delegate = self;
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     [_webView loadRequest:request];

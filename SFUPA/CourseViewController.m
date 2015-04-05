@@ -32,24 +32,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    // Fetch a JSON array from the Course Outline API
-    courseManager = [[CourseManager alloc] init];
-    jsonArray = [courseManager fetchJSONArray];
-    if (jsonArray == nil) { // was unable to fetch JSON array
-        [[[UIAlertView alloc] initWithTitle:@"No Internet Connection"
-                                    message:@"⚠"
-                                   delegate:self
-                          cancelButtonTitle:@"OK"
-                          otherButtonTitles:nil] show];
-        return;
-    }
-    // Parse the array and store the relevant data
     choices = [[NSMutableArray alloc] init];
+    [choices setArray:@[@"Course Outlines", @"My Courses"]];
     choiceDict = [[NSMutableDictionary alloc] init];
-    [self updateChoices];
+    courseManager = [[CourseManager alloc] init];
 
-    // Display the data in the table view
+    // Display choices in the table view
     _courseTableView.delegate = self;
     _courseTableView.dataSource = self;
     [_courseTableView reloadData];
@@ -61,6 +49,21 @@
 }
 
 #pragma mark - miscellaneous
+
+NSString *currentTerm() {
+    NSDateComponents *components = [[NSCalendar currentCalendar]
+                                    components:NSCalendarUnitYear | NSCalendarUnitMonth
+                                    fromDate:[NSDate date]];
+    NSInteger trimester;
+    if ([components month] < 5) {
+        trimester = 1;
+    } else if ([components month] < 9) {
+        trimester = 4;
+    } else {
+        trimester = 7;
+    }
+    return [[NSString alloc] initWithFormat:@"%ld", ([components year] - 1900) * 10 + trimester];
+}
 
 - (void)updateChoices {
     [choices removeAllObjects];
@@ -75,22 +78,30 @@
 #pragma mark - IBAction
 
 - (IBAction)pressedBtnBack:(id)sender {
-    // Do nothing if we are at the top level (i.e. selecting the year)
-    if ([courseManager level] == 0) {
-        return;
+    switch ([courseManager level]) {
+        case 0:
+            // Do nothing if we are at the top level.
+            // A segue will take us to the previous screen.
+            return;
+        case 1:
+            // Allow the user to choose to view either course outlines or
+            // a list of their courses
+            [choices setArray:@[@"Course Outlines", @"My Courses"]];
+            courseManager.outlinesWasSelected = NO;
+            break;
+        default:
+            // Go up one level
+            jsonArray = [courseManager upOneLevel];
+            if (jsonArray == nil) { // was unable to fetch JSON array
+                [[[UIAlertView alloc] initWithTitle:@"No Internet Connection"
+                                            message:@"⚠"
+                                           delegate:self
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil] show];
+                return;
+            }
+            [self updateChoices];
     }
-    
-    // Go up one level
-    jsonArray = [courseManager upOneLevel];
-    if (jsonArray == nil) { // was unable to fetch JSON array
-        [[[UIAlertView alloc] initWithTitle:@"No Internet Connection"
-                                    message:@"⚠"
-                                   delegate:self
-                          cancelButtonTitle:@"OK"
-                          otherButtonTitles:nil] show];
-        return;
-    }
-    [self updateChoices];
     [_courseTableView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:NO];
     [_courseTableView reloadData];
 }
@@ -107,10 +118,17 @@
     // If we are about to view a course outline in the Web view,
     // send the URL of the outline to be viewed
     if([segue.identifier isEqualToString:@"courseToWeb"]){
-        WebViewScreen *wvs = segue.destinationViewController;
-        wvs.segueData = [[NSString alloc]
-                         initWithFormat:@"https://www.sfu.ca/outlines.html?%@",
-                         [courseManager query]];
+        WebViewScreen *controller = segue.destinationViewController;
+        // Check whether user chose "My Courses"
+        controller.segueData = [courseManager level] == 0 ?
+                                // Load "My Courses"
+                                [[NSString alloc]
+                                 initWithFormat:@"https://sims-prd.sfu.ca/psc/csprd_1/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SS_ES_STUDY_LIST.GBL?STRM=%@",
+                                 currentTerm()] :
+                                // Load "Course Outlines"
+                                [[NSString alloc]
+                                initWithFormat:@"https://www.sfu.ca/outlines.html?%@",
+                                [courseManager query]];
     }
 }
 
@@ -135,13 +153,14 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    // Precondition: [courseManager level] is at least 0 and at most 4
-    return [[NSString alloc] initWithFormat:@"Please select a %@:", [@[
-        @"year",
-        @"term",
-        @"department",
-        @"course number",
-        @"section"
+    // Precondition: [courseManager level] is at least 0 and at most 5
+    return [[NSString alloc] initWithFormat:@"Please select %@:", [@[
+        @"an item to view",
+        @"a year",
+        @"a term",
+        @"a department",
+        @"a course number",
+        @"a section"
     ] objectAtIndex:[courseManager level]]];
 }
 
@@ -167,23 +186,45 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
 
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    jsonArray = [courseManager downToLevel:
-                 [choiceDict objectForKey:
-                  [tableView cellForRowAtIndexPath:indexPath].textLabel.text]];
-    if (jsonArray == nil) { // was unable to fetch JSON array
-        [[[UIAlertView alloc] initWithTitle:@"No Internet Connection"
-                                    message:@"⚠"
-                                   delegate:self
-                          cancelButtonTitle:@"OK"
-                          otherButtonTitles:nil] show];
-        return;
-    }
-    if ([courseManager level] == 5) {
-        [self performSegueWithIdentifier:@"courseToWeb" sender:self];
-        return;
+    // If we are at the top level
+    if (courseManager.level == 0) {
+        // If "My Courses" was selected
+        if (indexPath.row == 1) {
+            [self performSegueWithIdentifier:@"courseToWeb" sender:self];
+            return;
+        }
+
+        // "Course Outlines" was selected.
+        courseManager.outlinesWasSelected = YES;
+        // Fetch a JSON array from the Course Outline API
+        jsonArray = [courseManager fetchJSONArray];
+        if (jsonArray == nil) { // was unable to fetch JSON array
+            [[[UIAlertView alloc] initWithTitle:@"No Internet Connection"
+                                        message:@"⚠"
+                                       delegate:self
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil] show];
+            return;
+        }
+    } else {
+        jsonArray = [courseManager downToLevel:
+                     [choiceDict objectForKey:
+                      [tableView cellForRowAtIndexPath:indexPath].textLabel.text]];
+        if (jsonArray == nil) { // was unable to fetch JSON array
+            [[[UIAlertView alloc] initWithTitle:@"No Internet Connection"
+                                        message:@"⚠"
+                                       delegate:self
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil] show];
+            return;
+        }
+        if ([courseManager level] == 6) {
+            [self performSegueWithIdentifier:@"courseToWeb" sender:self];
+            return;
+        }
     }
 
-    [self updateChoices];
+    [self updateChoices];   // Parse the fetched JSON array and store the relevant data
     [_courseTableView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:NO];
     [_courseTableView reloadData];
 }
