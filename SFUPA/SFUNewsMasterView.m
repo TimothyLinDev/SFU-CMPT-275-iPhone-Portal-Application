@@ -140,6 +140,11 @@
     }
     return cell;
 }
+
+-(void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self performSegueWithIdentifier:@"showDetail" sender:self];
+}
+
 //Sends URL information to web view
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     

@@ -17,7 +17,7 @@
 #import <UIKit/UIKit.h>
 #import "MWFeedParser.h"
 
-@interface SFUNewsMasterView:UITableViewController <MWFeedParserDelegate>{
+@interface SFUNewsMasterView:UIViewController <UITableViewDataSource, UITableViewDelegate, MWFeedParserDelegate>{
     
     //For Parsing
     MWFeedParser *parser;

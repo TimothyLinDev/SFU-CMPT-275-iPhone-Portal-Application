@@ -69,6 +69,7 @@
 		CE5BEDF11AD1F1D200BE606F /* map icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5BEDEC1AD1F1D200BE606F /* map icon.png */; };
 		CE5BEDF21AD1F1D200BE606F /* news icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5BEDED1AD1F1D200BE606F /* news icon.png */; };
 		CE5BEDF31AD1F1D200BE606F /* transit icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5BEDEE1AD1F1D200BE606F /* transit icon.png */; };
+		CE5BEDF61AD20CE700BE606F /* ParkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5BEDF51AD20CE700BE606F /* ParkingViewController.m */; };
 		CEC5AF5D1AAB34800068B400 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC5AF5A1AAB34800068B400 /* LoginManager.m */; };
 		CEC5AF5E1AAB34800068B400 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC5AF5C1AAB34800068B400 /* LoginViewController.m */; };
 		ED40EB5F1AAD6636007B0494 /* cute-cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED40EB5E1AAD6636007B0494 /* cute-cat.jpg */; };
@@ -177,6 +178,8 @@
 		CE5BEDEC1AD1F1D200BE606F /* map icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map icon.png"; sourceTree = "<group>"; };
 		CE5BEDED1AD1F1D200BE606F /* news icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "news icon.png"; sourceTree = "<group>"; };
 		CE5BEDEE1AD1F1D200BE606F /* transit icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transit icon.png"; sourceTree = "<group>"; };
+		CE5BEDF41AD20CE700BE606F /* ParkingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParkingViewController.h; sourceTree = "<group>"; };
+		CE5BEDF51AD20CE700BE606F /* ParkingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParkingViewController.m; sourceTree = "<group>"; };
 		CEC5AF591AAB34800068B400 /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
 		CEC5AF5A1AAB34800068B400 /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
 		CEC5AF5B1AAB34800068B400 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -273,6 +276,8 @@
 				07329FE81ABBC9200069B235 /* AncillaryServicesHomePage.m */,
 				07329FEA1ABBC9350069B235 /* AncillaryServicesHomePage.h */,
 				07329FEF1ABBCD0F0069B235 /* Library */,
+				CE5BEDF41AD20CE700BE606F /* ParkingViewController.h */,
+				CE5BEDF51AD20CE700BE606F /* ParkingViewController.m */,
 			);
 			name = "Ancillary Services";
 			sourceTree = "<group>";
@@ -627,6 +632,7 @@
 				EDA12B8B1ABFADB400D1DDD0 /* SFUNewsDetailView.m in Sources */,
 				079FF3711ABBD57B0010912F /* AvailableLaptop.m in Sources */,
 				0721261E1AABF7400036CEFA /* OnlineServices.m in Sources */,
+				CE5BEDF61AD20CE700BE606F /* ParkingViewController.m in Sources */,
 				072126221AABFAC70036CEFA /* WebViewScreen.m in Sources */,
 				EDA12B841ABF893400D1DDD0 /* NSDate+InternetDateTime.m in Sources */,
 				EDA12B801ABF87BB00D1DDD0 /* NSString+HTML.m in Sources */,

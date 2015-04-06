@@ -26,7 +26,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" image="news icon.png"/>
                                 <connections>
-                                    <segue destination="isQ-Cn-h3g" kind="presentation" id="yrt-TT-ldt"/>
+                                    <segue destination="SDQ-0A-JbU" kind="presentation" id="w8h-Ke-7hX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1P-nZ-OX6">
@@ -37,7 +37,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="AIX-hT-9w7" kind="modal" modalTransitionStyle="flipHorizontal" id="rXa-hB-y8k"/>
+                                    <segue destination="AIX-hT-9w7" kind="presentation" id="rXa-hB-y8k"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPg-Fl-91L">
@@ -48,7 +48,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ymg-vG-Cat" kind="modal" id="weN-XG-1jf"/>
+                                    <segue destination="Ymg-vG-Cat" kind="presentation" id="weN-XG-1jf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykn-xp-ybP">
@@ -57,7 +57,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="s2k-al-n3R" kind="modal" id="4XZ-sA-NUt"/>
+                                    <segue destination="s2k-al-n3R" kind="presentation" id="4XZ-sA-NUt"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pc9-XI-DDd">
@@ -75,12 +75,6 @@
                                     <segue destination="ADK-ra-iqE" kind="presentation" identifier="mainToLogin" modalTransitionStyle="flipHorizontal" id="qr7-lA-gZT"/>
                                 </connections>
                             </button>
-                            <containerView opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eFI-22-hLh">
-                                <rect key="frame" x="16" y="112" width="288" height="176"/>
-                                <connections>
-                                    <segue destination="H46-cT-XjJ" kind="embed" id="l3q-PX-VOX"/>
-                                </connections>
-                            </containerView>
                             <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2f-uT-ApQ">
                                 <rect key="frame" x="206" y="300" width="93" height="120"/>
                                 <color key="backgroundColor" red="0.69738520410000004" green="0.0042455034260000003" blue="0.072475184819999997" alpha="0.5" colorSpace="calibratedRGB"/>
@@ -98,7 +92,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ScU-Za-XOT" kind="modal" modalTransitionStyle="flipHorizontal" id="XHh-ey-Eod"/>
+                                    <segue destination="ScU-Za-XOT" kind="presentation" id="XHh-ey-Eod"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCT-2J-1gz">
@@ -151,7 +145,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="IzZ-Gx-A7k" kind="modal" id="vld-6d-zWt"/>
+                                            <segue destination="IzZ-Gx-A7k" kind="presentation" id="vld-6d-zWt"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -236,7 +230,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="IzZ-Gx-A7k" kind="modal" id="3dq-Bk-5Uh"/>
+                                            <segue destination="IzZ-Gx-A7k" kind="presentation" id="3dq-Bk-5Uh"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGB-pf-9rt">
@@ -263,7 +257,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="sSR-7f-e1X" kind="modal" identifier="searchBus" id="Iy1-Jw-8iH"/>
+                                            <segue destination="sSR-7f-e1X" kind="presentation" identifier="searchBus" id="Iy1-Jw-8iH"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -418,7 +412,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="modal" id="SQ4-ja-OHB"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" id="SQ4-ja-OHB"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -439,7 +433,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="sSR-7f-e1X" kind="modal" identifier="SearchMain" id="TLs-gW-YoR"/>
+                                            <segue destination="sSR-7f-e1X" kind="presentation" identifier="SearchMain" id="TLs-gW-YoR"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -477,7 +471,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="8ut-Rd-YXh" kind="modal" identifier="SFU Transit Exchange" id="9Yp-hm-Xah"/>
+                                            <segue destination="8ut-Rd-YXh" kind="presentation" identifier="SFU Transit Exchange" id="9Yp-hm-Xah"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWl-I9-25Q">
@@ -488,7 +482,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="8ut-Rd-YXh" kind="modal" identifier="SFU Transportation Center(Up)" id="WeD-cF-SuS"/>
+                                            <segue destination="8ut-Rd-YXh" kind="presentation" identifier="SFU Transportation Center(Up)" id="WeD-cF-SuS"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Li0-yV-WLH">
@@ -524,7 +518,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="8ut-Rd-YXh" kind="modal" identifier="University High St" id="sPs-Lq-62T"/>
+                                    <segue destination="8ut-Rd-YXh" kind="presentation" identifier="University High St" id="sPs-Lq-62T"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ISD-5G-kRf">
@@ -538,7 +532,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="8ut-Rd-YXh" kind="modal" identifier="Science Rd" id="HYj-UN-VZN"/>
+                                            <segue destination="8ut-Rd-YXh" kind="presentation" identifier="Science Rd" id="HYj-UN-VZN"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -555,7 +549,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="8ut-Rd-YXh" kind="modal" identifier="Campus Rd" id="y5I-wX-1cC"/>
+                                            <segue destination="8ut-Rd-YXh" kind="presentation" identifier="Campus Rd" id="y5I-wX-1cC"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -569,7 +563,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="8ut-Rd-YXh" kind="modal" identifier="SFU Transportation Center" id="YtL-gc-hSp"/>
+                                    <segue destination="8ut-Rd-YXh" kind="presentation" identifier="SFU Transportation Center" id="YtL-gc-hSp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6m-eE-JU6">
@@ -580,7 +574,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="8ut-Rd-YXh" kind="modal" identifier="SFU Transit Exchange" id="Jzz-Mb-C8d"/>
+                                    <segue destination="8ut-Rd-YXh" kind="presentation" identifier="SFU Transit Exchange" id="Jzz-Mb-C8d"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdQ-hQ-S14">
@@ -661,7 +655,7 @@
                                 </state>
                                 <connections>
                                     <action selector="pressedBtnCanvas:" destination="AIX-hT-9w7" eventType="touchUpInside" id="4A4-2a-mJx"/>
-                                    <segue destination="jWg-ak-em3" kind="modal" identifier="CanvasScreen" modalTransitionStyle="crossDissolve" id="wMs-5g-Vkg"/>
+                                    <segue destination="jWg-ak-em3" kind="presentation" identifier="CanvasScreen" id="wMs-5g-Vkg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDs-EN-c6n">
@@ -676,7 +670,7 @@
                                 </state>
                                 <connections>
                                     <action selector="pressedBtnConnect:" destination="AIX-hT-9w7" eventType="touchUpInside" id="TrE-vY-PdH"/>
-                                    <segue destination="jWg-ak-em3" kind="modal" identifier="ConnectScreen" modalTransitionStyle="crossDissolve" id="Vry-Q6-Ptt"/>
+                                    <segue destination="jWg-ak-em3" kind="presentation" identifier="ConnectScreen" id="Vry-Q6-Ptt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7S-Xz-LYq">
@@ -691,7 +685,7 @@
                                 </state>
                                 <connections>
                                     <action selector="pressedBtnSymplicity:" destination="AIX-hT-9w7" eventType="touchUpInside" id="2dE-fy-lLY"/>
-                                    <segue destination="jWg-ak-em3" kind="modal" identifier="SimplicityScreen" modalTransitionStyle="crossDissolve" id="b0w-1T-Mr9"/>
+                                    <segue destination="jWg-ak-em3" kind="presentation" identifier="SimplicityScreen" id="b0w-1T-Mr9"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slh-0y-aqD">
@@ -744,7 +738,7 @@
                                         </state>
                                         <connections>
                                             <action selector="pressedBtnCourSys:" destination="AIX-hT-9w7" eventType="touchUpInside" id="Fok-7O-Ija"/>
-                                            <segue destination="jWg-ak-em3" kind="modal" identifier="CoursysScreen" modalTransitionStyle="crossDissolve" id="d7S-35-fiM"/>
+                                            <segue destination="jWg-ak-em3" kind="presentation" identifier="CoursysScreen" id="d7S-35-fiM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -777,7 +771,7 @@
                                         </state>
                                         <connections>
                                             <action selector="pressedBtnGoSFU:" destination="AIX-hT-9w7" eventType="touchUpInside" id="bxa-dg-qbn"/>
-                                            <segue destination="jWg-ak-em3" kind="modal" identifier="goSFUScreen" modalTransitionStyle="crossDissolve" id="h7E-1S-d3k"/>
+                                            <segue destination="jWg-ak-em3" kind="presentation" identifier="goSFUScreen" id="h7E-1S-d3k"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -809,7 +803,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="jWg-ak-em3" kind="modal" identifier="SakaiScreen" modalTransitionStyle="crossDissolve" id="kQy-1K-I7u"/>
+                                            <segue destination="jWg-ak-em3" kind="presentation" identifier="SakaiScreen" id="kQy-1K-I7u"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -851,7 +845,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="modal" modalTransitionStyle="crossDissolve" id="D8H-H1-bHq"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" id="D8H-H1-bHq"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1130,6 +1124,32 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJy-jc-0JN">
+                                <rect key="frame" x="16" y="234" width="84" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnI-fF-Ft9">
+                                <rect key="frame" x="18" y="272" width="81" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Oj-r7-ILi">
+                                <rect key="frame" x="83" y="319" width="150" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="hOR-fp-xEX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Login" backgroundImage="thumb-button.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedBtnLogin:" destination="ADK-ra-iqE" eventType="touchUpInside" id="NkP-3o-jVI"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBN-um-Lit">
                                 <rect key="frame" x="0.0" y="20" width="320" height="52"/>
                                 <subviews>
@@ -1176,32 +1196,6 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJy-jc-0JN">
-                                <rect key="frame" x="16" y="234" width="84" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnI-fF-Ft9">
-                                <rect key="frame" x="18" y="272" width="81" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Oj-r7-ILi">
-                                <rect key="frame" x="83" y="319" width="150" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="hOR-fp-xEX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                <state key="normal" title="Login" backgroundImage="thumb-button.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressedBtnLogin:" destination="ADK-ra-iqE" eventType="touchUpInside" id="NkP-3o-jVI"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1319,7 +1313,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="modal" id="sqN-Dk-vyW"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" id="sqN-Dk-vyW"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1379,6 +1373,10 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="far-2g-cUd">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOI-4z-kyR" customClass="GMSMapView">
+                                        <rect key="frame" x="0.0" y="104" width="320" height="464"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lHE-hw-ZSx">
                                         <rect key="frame" x="0.0" y="28" width="320" height="76"/>
                                         <subviews>
@@ -1468,7 +1466,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="BYZ-38-t0r" kind="modal" modalTransitionStyle="crossDissolve" id="TQA-CP-wxU"/>
+                                                    <segue destination="BYZ-38-t0r" kind="presentation" id="TQA-CP-wxU"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Maps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93r-U3-c8j">
@@ -1489,10 +1487,6 @@
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOI-4z-kyR" customClass="GMSMapView">
-                                        <rect key="frame" x="0.0" y="104" width="320" height="464"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1515,31 +1509,102 @@
             </objects>
             <point key="canvasLocation" x="893" y="302"/>
         </scene>
+        <!--News Master View-->
+        <scene sceneID="z2Y-RF-qsU">
+            <objects>
+                <viewController id="SDQ-0A-JbU" customClass="SFUNewsMasterView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mpg-eK-lXw"/>
+                        <viewControllerLayoutGuide type="bottom" id="HH8-0W-MFX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cYZ-88-0oK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="JF5-ZC-fJy">
+                                <rect key="frame" x="0.0" y="72" width="320" height="496"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="o9U-Vt-0x7">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o9U-Vt-0x7" id="8O3-9K-0MK">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" none="YES" button="YES"/>
+                                        </accessibility>
+                                        <connections>
+                                            <segue destination="imt-dg-Ssm" kind="show" identifier="showDetail" id="gZh-f0-Iiv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="SDQ-0A-JbU" id="nWM-E4-F0a"/>
+                                    <outlet property="delegate" destination="SDQ-0A-JbU" id="OcX-ZC-Ndd"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zq5-Tp-x1x">
+                                <rect key="frame" x="0.0" y="20" width="320" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="VWf-hY-fI0"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Title" id="tBQ-q2-GLZ"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zq5-Tp-x1x" firstAttribute="leading" secondItem="cYZ-88-0oK" secondAttribute="leadingMargin" constant="-16" id="2jQ-hB-bGY"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="JF5-ZC-fJy" secondAttribute="bottom" id="GD0-bF-Dhq"/>
+                            <constraint firstItem="JF5-ZC-fJy" firstAttribute="top" secondItem="zq5-Tp-x1x" secondAttribute="bottom" id="NQh-XL-VPB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JF5-ZC-fJy" secondAttribute="trailing" constant="-16" id="P7m-SQ-ZML"/>
+                            <constraint firstItem="JF5-ZC-fJy" firstAttribute="top" secondItem="zq5-Tp-x1x" secondAttribute="bottom" constant="52" id="QGD-P4-KWH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zq5-Tp-x1x" secondAttribute="trailing" constant="-16" id="S9J-lh-mo6"/>
+                            <constraint firstItem="zq5-Tp-x1x" firstAttribute="top" secondItem="Mpg-eK-lXw" secondAttribute="bottom" id="oYe-Ja-cxg"/>
+                            <constraint firstItem="zq5-Tp-x1x" firstAttribute="top" secondItem="Mpg-eK-lXw" secondAttribute="bottom" id="vEI-KP-P0W"/>
+                            <constraint firstItem="JF5-ZC-fJy" firstAttribute="leading" secondItem="cYZ-88-0oK" secondAttribute="leadingMargin" constant="-16" id="zNF-5i-veF"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="QGD-P4-KWH"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="JF5-ZC-fJy" id="e02-OY-Oes"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cyx-xG-CcU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-256" y="-450"/>
+        </scene>
         <!--News-->
         <scene sceneID="Vbi-o1-Fqt">
             <objects>
-                <tableViewController id="0mD-jA-zvL" customClass="SFUNewsMasterView" sceneMemberID="viewController">
+                <tableViewController id="0mD-jA-zvL" customClass="temp" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="sPh-Ol-Ucv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="52" translucent="NO" id="5We-5P-9H0">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <textAttributes key="titleTextAttributes">
+                                <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                            </textAttributes>
+                            <items>
+                                <navigationItem title="Title" id="FA8-yC-1um"/>
+                            </items>
+                        </navigationBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="reb-5i-Res" style="IBUITableViewCellStyleDefault" id="Aql-nS-L91">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" id="Aql-nS-L91">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Aql-nS-L91" id="jMl-ys-qEP">
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="reb-5i-Res">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="imt-dg-Ssm" kind="push" identifier="showDetail" id="2rG-B6-EE6"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1547,6 +1612,7 @@
                             <outlet property="delegate" destination="0mD-jA-zvL" id="wZb-sY-tcm"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="News" id="a3A-rt-U1g"/>
                     <connections>
                         <outlet property="tableView" destination="sPh-Ol-Ucv" id="6b8-Fs-lc0"/>
@@ -1554,23 +1620,72 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awB-l5-UO6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-94" y="-645"/>
+            <point key="canvasLocation" x="-306" y="-1073"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="qVA-Ta-gFN">
+        <!--Parking View Controller-->
+        <scene sceneID="t8l-gg-gMU">
             <objects>
-                <navigationController id="isQ-Cn-h3g" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oMY-LW-YsB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
+                <viewController id="Ygk-4a-JDg" customClass="ParkingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aLi-yG-6SY"/>
+                        <viewControllerLayoutGuide type="bottom" id="PTc-Ne-G78"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X8R-n1-pAs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fts-LB-AIw">
+                                <rect key="frame" x="0.0" y="16" width="320" height="52"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAA-mh-A0P">
+                                        <rect key="frame" x="2" y="10" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="dZV-jv-5jr"/>
+                                            <constraint firstAttribute="height" constant="35" id="fxv-Ma-tkv"/>
+                                        </constraints>
+                                        <state key="normal" title="Back" image="arrow-left-01-128.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Ymg-vG-Cat" kind="presentation" id="C9F-NI-eJs"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Parking Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNi-La-Uf8">
+                                        <rect key="frame" x="50" y="15" width="220" height="22"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="RNi-La-Uf8" secondAttribute="centerX" id="ekU-XC-KRZ"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="HIt-mx-IQ5">
+                                <rect key="frame" x="0.0" y="68" width="320" height="500"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fts-LB-AIw" firstAttribute="top" secondItem="X8R-n1-pAs" secondAttribute="topMargin" constant="16" id="2xF-07-HYW"/>
+                            <constraint firstItem="PTc-Ne-G78" firstAttribute="top" secondItem="HIt-mx-IQ5" secondAttribute="bottom" id="FR0-fp-Jo8"/>
+                            <constraint firstItem="HIt-mx-IQ5" firstAttribute="leading" secondItem="X8R-n1-pAs" secondAttribute="leadingMargin" constant="-16" id="Qb3-3T-WPE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fts-LB-AIw" secondAttribute="trailing" constant="-16" id="TJc-oH-odQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HIt-mx-IQ5" secondAttribute="trailing" constant="-16" id="ltm-yO-jTT"/>
+                            <constraint firstItem="HIt-mx-IQ5" firstAttribute="top" secondItem="fts-LB-AIw" secondAttribute="bottom" id="rLC-id-nLb"/>
+                            <constraint firstItem="fts-LB-AIw" firstAttribute="leading" secondItem="X8R-n1-pAs" secondAttribute="leadingMargin" constant="-16" id="y58-sX-Eqr"/>
+                        </constraints>
+                    </view>
                     <connections>
-                        <segue destination="0mD-jA-zvL" kind="relationship" relationship="rootViewController" id="sFA-bU-D0Y"/>
+                        <outlet property="tableView" destination="HIt-mx-IQ5" id="ljy-UP-2p5"/>
+                        <segue destination="jWg-ak-em3" kind="presentation" identifier="parkingToWeb" id="O14-Fz-YHf"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hfl-bn-IjF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LZp-XP-fl4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-532" y="-651"/>
+            <point key="canvasLocation" x="-926" y="-344"/>
         </scene>
         <!--News Detail View-->
         <scene sceneID="ngg-ZF-yfG">
@@ -1585,8 +1700,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hB9-Kw-Klt">
-                                <rect key="frame" x="-6" y="12" width="332" height="52"/>
+                                <rect key="frame" x="0.0" y="20" width="329" height="52"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="52" id="4aG-N8-SCf"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="KBq-8w-AE6"/>
                                     <constraint firstAttribute="height" constant="52" id="Oq5-V2-LwC"/>
                                 </constraints>
                                 <color key="barTintColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -1598,31 +1715,20 @@
                                 </items>
                             </navigationBar>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NKZ-uT-6fm">
-                                <rect key="frame" x="0.0" y="64" width="326" height="504"/>
+                                <rect key="frame" x="0.0" y="72" width="320" height="496"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="NKZ-uT-6fm" secondAttribute="bottom" constant="-5" id="3dK-BA-e5U"/>
-                            <constraint firstItem="NKZ-uT-6fm" firstAttribute="top" secondItem="hB9-Kw-Klt" secondAttribute="bottom" id="BTC-we-NVo"/>
-                            <constraint firstItem="hB9-Kw-Klt" firstAttribute="leading" secondItem="kN9-9Z-VSv" secondAttribute="leadingMargin" constant="-22" id="E3P-R4-Djd"/>
-                            <constraint firstItem="NKZ-uT-6fm" firstAttribute="leading" secondItem="kN9-9Z-VSv" secondAttribute="leadingMargin" constant="-16" id="ITh-D7-I0M"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="NKZ-uT-6fm" secondAttribute="trailing" constant="-16" id="Obi-hU-5cF"/>
-                            <constraint firstItem="NKZ-uT-6fm" firstAttribute="top" secondItem="35M-6K-yNs" secondAttribute="bottom" id="PQd-ii-xzc"/>
-                            <constraint firstItem="NKZ-uT-6fm" firstAttribute="leading" secondItem="kN9-9Z-VSv" secondAttribute="leadingMargin" constant="-16" id="S1G-Um-ygS"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="NKZ-uT-6fm" secondAttribute="trailing" constant="-22" id="eNt-LC-Lv1"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="NKZ-uT-6fm" secondAttribute="bottom" id="f01-6u-hkH"/>
-                            <constraint firstItem="hB9-Kw-Klt" firstAttribute="top" secondItem="kN9-9Z-VSv" secondAttribute="topMargin" constant="15" id="rsM-vq-aHk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hB9-Kw-Klt" secondAttribute="trailing" constant="-22" id="vdC-sP-qfm"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="NKZ-uT-6fm" secondAttribute="bottom" id="4ki-WQ-4dm"/>
+                            <constraint firstItem="hB9-Kw-Klt" firstAttribute="leading" secondItem="kN9-9Z-VSv" secondAttribute="leadingMargin" constant="-16" id="9Ye-hx-1VE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hB9-Kw-Klt" secondAttribute="trailing" constant="-25" id="AuL-vg-dK4"/>
+                            <constraint firstItem="NKZ-uT-6fm" firstAttribute="leading" secondItem="kN9-9Z-VSv" secondAttribute="leadingMargin" constant="-16" id="Dh1-qP-bGN"/>
+                            <constraint firstItem="NKZ-uT-6fm" firstAttribute="top" secondItem="35M-6K-yNs" secondAttribute="bottom" constant="52" id="YYZ-6a-orG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NKZ-uT-6fm" secondAttribute="trailing" constant="-16" id="fkl-Qg-kbV"/>
+                            <constraint firstItem="NKZ-uT-6fm" firstAttribute="top" secondItem="hB9-Kw-Klt" secondAttribute="top" constant="52" id="vDI-2W-60E"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="rsM-vq-aHk"/>
-                                <exclude reference="3dK-BA-e5U"/>
-                                <exclude reference="Obi-hU-5cF"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="vz1-QO-KII"/>
                     <connections>
@@ -1631,7 +1737,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cl2-Ba-1Tl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="364" y="-633"/>
+            <point key="canvasLocation" x="358" y="-631"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="D9A-fI-t4N">
@@ -1698,7 +1804,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Zt5-gV-5gu" kind="modal" id="nnS-WS-9Uv"/>
+                                            <segue destination="Zt5-gV-5gu" kind="presentation" id="nnS-WS-9Uv"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Available Laptop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwa-GE-if3">
@@ -1790,7 +1896,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="qlW-nZ-EdP" kind="modal" id="zKG-Xk-1Ye"/>
+                                    <segue destination="qlW-nZ-EdP" kind="presentation" id="zKG-Xk-1Ye"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGe-4X-nVw">
@@ -1808,7 +1914,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Ymg-vG-Cat" kind="modal" id="KVB-3y-Z2s"/>
+                                            <segue destination="Ymg-vG-Cat" kind="presentation" id="KVB-3y-Z2s"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1828,7 +1934,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Gee-H5-LhS" kind="modal" id="7og-xQ-zye"/>
+                                            <segue destination="Gee-H5-LhS" kind="presentation" id="7og-xQ-zye"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1865,7 +1971,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Chj-8b-vCH" kind="modal" id="PvV-8z-4WQ"/>
+                                    <segue destination="Chj-8b-vCH" kind="presentation" id="PvV-8z-4WQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1921,7 +2027,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Zt5-gV-5gu" kind="modal" id="dUh-6p-oy8"/>
+                                            <segue destination="Zt5-gV-5gu" kind="presentation" id="dUh-6p-oy8"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -2117,7 +2223,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Zt5-gV-5gu" kind="modal" id="eFu-E8-2LE"/>
+                                            <segue destination="Zt5-gV-5gu" kind="presentation" id="eFu-E8-2LE"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Library Website" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNh-Ln-Stc">
@@ -2222,7 +2328,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="modal" id="MzQ-7Y-CgE"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" id="MzQ-7Y-CgE"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -2251,7 +2357,7 @@
                                         </state>
                                         <connections>
                                             <action selector="LibraryButton:" destination="Ymg-vG-Cat" eventType="touchUpInside" id="bRg-rF-DFe"/>
-                                            <segue destination="Zt5-gV-5gu" kind="modal" id="2xs-gB-W9v"/>
+                                            <segue destination="Zt5-gV-5gu" kind="presentation" id="2xs-gB-W9v"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -2318,6 +2424,9 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Ygk-4a-JDg" kind="presentation" id="LN7-3b-bei"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2383,6 +2492,5 @@
         <segue reference="pnk-7S-ttz"/>
         <segue reference="rXa-hB-y8k"/>
         <segue reference="y5I-wX-1cC"/>
-        <segue reference="Iy1-Jw-8iH"/>
     </inferredMetricsTieBreakers>
 </document>
