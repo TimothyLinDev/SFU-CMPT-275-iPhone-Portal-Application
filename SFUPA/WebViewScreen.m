@@ -70,6 +70,10 @@
         URL = [NSURL URLWithString:self.segueData];
         self.segueData = @"My Courses";
     }
+    else if([self.segueData rangeOfString:@"https://www.sfu.ca/parking"].location != NSNotFound){
+        URL = [NSURL URLWithString:self.segueData];
+        self.segueData = @"Parking";
+    }
     _webView.delegate = self;
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     [_webView loadRequest:request];
@@ -103,7 +107,8 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
 
 - (IBAction)pressedBtnBack:(id)sender {
     NSString *segueIdentifier;
-    if ([self.lblNavBar.text isEqualToString:@"Bookstore"]){
+    if ([self.lblNavBar.text isEqualToString:@"Bookstore"] ||
+        [self.lblNavBar.text isEqualToString:@"Parking"]){
         segueIdentifier = @"webToAncillary";
     }
     else{
