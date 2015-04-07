@@ -47,6 +47,7 @@
 		079FF3711ABBD57B0010912F /* AvailableLaptop.m in Sources */ = {isa = PBXBuildFile; fileRef = 079FF3701ABBD57B0010912F /* AvailableLaptop.m */; };
 		079FF3741ABBF6560010912F /* LibraryWebsite.m in Sources */ = {isa = PBXBuildFile; fileRef = 079FF3731ABBF6560010912F /* LibraryWebsite.m */; };
 		079FF3771ABBFE1A0010912F /* LibraryHours.m in Sources */ = {isa = PBXBuildFile; fileRef = 079FF3761ABBFE1A0010912F /* LibraryHours.m */; };
+		0F14423C1AD498530042384F /* acadamic service icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F14423B1AD498530042384F /* acadamic service icon.png */; };
 		0F34D4801ABCBFE500846A0C /* buslist.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F34D47B1ABCBFE500846A0C /* buslist.m */; };
 		0F34D4811ABCBFE500846A0C /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F34D47D1ABCBFE500846A0C /* SearchController.m */; };
 		0F34D4821ABCBFE500846A0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F34D47F1ABCBFE500846A0C /* ViewController.m */; };
@@ -170,6 +171,7 @@
 		079FF3751ABBF6670010912F /* LibraryWebsite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryWebsite.h; sourceTree = "<group>"; };
 		079FF3761ABBFE1A0010912F /* LibraryHours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryHours.m; sourceTree = "<group>"; };
 		079FF3781ABBFE230010912F /* LibraryHours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryHours.h; sourceTree = "<group>"; };
+		0F14423B1AD498530042384F /* acadamic service icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "acadamic service icon.png"; path = "SFUPA/main-screen icon/acadamic service icon.png"; sourceTree = SOURCE_ROOT; };
 		0F34D47A1ABCBFE500846A0C /* buslist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buslist.h; sourceTree = "<group>"; };
 		0F34D47B1ABCBFE500846A0C /* buslist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = buslist.m; sourceTree = "<group>"; };
 		0F34D47C1ABCBFE500846A0C /* SearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchController.h; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 		077C0C8B1AA9088E000449D0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0F14423B1AD498530042384F /* acadamic service icon.png */,
 				0713C8B31AD4867D005D67C4 /* clear-day.png */,
 				0713C8B41AD4867D005D67C4 /* partly-cloudy-day.png */,
 				0713C8B51AD4867D005D67C4 /* partly-cloudy-night.png */,
@@ -643,6 +646,7 @@
 				0741D8C81AA66E0200370808 /* Main.storyboard in Resources */,
 				CE5BEDF31AD1F1D200BE606F /* transit icon.png in Resources */,
 				57EBD54F1AD3842D006313B7 /* wayfindAQ5.txt in Resources */,
+				0F14423C1AD498530042384F /* acadamic service icon.png in Resources */,
 				0FF7F3141AACF989004CF1F6 /* cancel.png in Resources */,
 				0FF7F31A1AACFADA004CF1F6 /* previous.png in Resources */,
 				0F34D48A1ABD5D9300846A0C /* 145.png in Resources */,
