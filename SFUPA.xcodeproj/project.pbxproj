@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0713C8AA1AD4828E005D67C4 /* CampusInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0713C8A71AD4828E005D67C4 /* CampusInformation.m */; };
+		0713C8AB1AD4828E005D67C4 /* CampusDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 0713C8A91AD4828E005D67C4 /* CampusDetails.m */; };
+		0713C8B11AD483BB005D67C4 /* FindABook.m in Sources */ = {isa = PBXBuildFile; fileRef = 0713C8AD1AD483BB005D67C4 /* FindABook.m */; };
+		0713C8B21AD483BB005D67C4 /* BookDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0713C8AF1AD483BB005D67C4 /* BookDetail.m */; };
+		0713C8B71AD4867D005D67C4 /* clear-day.png in Resources */ = {isa = PBXBuildFile; fileRef = 0713C8B31AD4867D005D67C4 /* clear-day.png */; };
+		0713C8B81AD4867D005D67C4 /* partly-cloudy-day.png in Resources */ = {isa = PBXBuildFile; fileRef = 0713C8B41AD4867D005D67C4 /* partly-cloudy-day.png */; };
+		0713C8B91AD4867D005D67C4 /* partly-cloudy-night.png in Resources */ = {isa = PBXBuildFile; fileRef = 0713C8B51AD4867D005D67C4 /* partly-cloudy-night.png */; };
+		0713C8BA1AD4867D005D67C4 /* rain.png in Resources */ = {isa = PBXBuildFile; fileRef = 0713C8B61AD4867D005D67C4 /* rain.png */; };
+		071C3C691AD48A1D000E7EB6 /* BookInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 071C3C681AD48A1D000E7EB6 /* BookInformation.m */; };
 		0721261E1AABF7400036CEFA /* OnlineServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 0721261D1AABF7400036CEFA /* OnlineServices.m */; };
 		072126221AABFAC70036CEFA /* WebViewScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 072126211AABFAC70036CEFA /* WebViewScreen.m */; };
 		07329FE91ABBC9200069B235 /* AncillaryServicesHomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 07329FE81ABBC9200069B235 /* AncillaryServicesHomePage.m */; };
@@ -103,6 +112,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0713C8A61AD4828E005D67C4 /* CampusInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampusInformation.h; sourceTree = "<group>"; };
+		0713C8A71AD4828E005D67C4 /* CampusInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampusInformation.m; sourceTree = "<group>"; };
+		0713C8A81AD4828E005D67C4 /* CampusDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampusDetails.h; sourceTree = "<group>"; };
+		0713C8A91AD4828E005D67C4 /* CampusDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampusDetails.m; sourceTree = "<group>"; };
+		0713C8AD1AD483BB005D67C4 /* FindABook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindABook.m; sourceTree = "<group>"; };
+		0713C8AE1AD483BB005D67C4 /* FindABook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindABook.h; sourceTree = "<group>"; };
+		0713C8AF1AD483BB005D67C4 /* BookDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDetail.m; sourceTree = "<group>"; };
+		0713C8B01AD483BB005D67C4 /* BookDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDetail.h; sourceTree = "<group>"; };
+		0713C8B31AD4867D005D67C4 /* clear-day.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clear-day.png"; sourceTree = "<group>"; };
+		0713C8B41AD4867D005D67C4 /* partly-cloudy-day.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "partly-cloudy-day.png"; sourceTree = "<group>"; };
+		0713C8B51AD4867D005D67C4 /* partly-cloudy-night.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "partly-cloudy-night.png"; sourceTree = "<group>"; };
+		0713C8B61AD4867D005D67C4 /* rain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rain.png; sourceTree = "<group>"; };
+		071C3C681AD48A1D000E7EB6 /* BookInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookInformation.m; sourceTree = "<group>"; };
+		071C3C6A1AD48A29000E7EB6 /* BookInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookInformation.h; sourceTree = "<group>"; };
 		0721261D1AABF7400036CEFA /* OnlineServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineServices.m; sourceTree = "<group>"; };
 		072126201AABF7760036CEFA /* OnlineServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineServices.h; sourceTree = "<group>"; };
 		072126211AABFAC70036CEFA /* WebViewScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewScreen.m; sourceTree = "<group>"; };
@@ -254,6 +277,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0713C8AC1AD482B1005D67C4 /* Campus Information */ = {
+			isa = PBXGroup;
+			children = (
+				0713C8A61AD4828E005D67C4 /* CampusInformation.h */,
+				0713C8A71AD4828E005D67C4 /* CampusInformation.m */,
+				0713C8A81AD4828E005D67C4 /* CampusDetails.h */,
+				0713C8A91AD4828E005D67C4 /* CampusDetails.m */,
+			);
+			name = "Campus Information";
+			sourceTree = "<group>";
+		};
 		0721261F1AABF7520036CEFA /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +327,10 @@
 		07329FEF1ABBCD0F0069B235 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				0713C8AD1AD483BB005D67C4 /* FindABook.m */,
+				0713C8AE1AD483BB005D67C4 /* FindABook.h */,
+				0713C8AF1AD483BB005D67C4 /* BookDetail.m */,
+				0713C8B01AD483BB005D67C4 /* BookDetail.h */,
 				07329FEC1ABBCCFD0069B235 /* LibraryHomePage.m */,
 				07329FEE1ABBCD070069B235 /* LibraryHomePage.h */,
 				079FF3701ABBD57B0010912F /* AvailableLaptop.m */,
@@ -301,6 +339,8 @@
 				079FF3751ABBF6670010912F /* LibraryWebsite.h */,
 				079FF3761ABBFE1A0010912F /* LibraryHours.m */,
 				079FF3781ABBFE230010912F /* LibraryHours.h */,
+				071C3C681AD48A1D000E7EB6 /* BookInformation.m */,
+				071C3C6A1AD48A29000E7EB6 /* BookInformation.h */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -327,6 +367,7 @@
 		0741D8BB1AA66E0200370808 /* SFUPA */ = {
 			isa = PBXGroup;
 			children = (
+				0713C8AC1AD482B1005D67C4 /* Campus Information */,
 				EDA12B851ABFAD2600D1DDD0 /* SFUNews */,
 				EDD2DD571AAC55880045A485 /* iCarousel */,
 				EDA12B4B1ABF870A00D1DDD0 /* MWFeedParser */,
@@ -383,6 +424,10 @@
 		077C0C8B1AA9088E000449D0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0713C8B31AD4867D005D67C4 /* clear-day.png */,
+				0713C8B41AD4867D005D67C4 /* partly-cloudy-day.png */,
+				0713C8B51AD4867D005D67C4 /* partly-cloudy-night.png */,
+				0713C8B61AD4867D005D67C4 /* rain.png */,
 				CE5BEDEA1AD1F1D200BE606F /* ancillary icon.png */,
 				CE5BEDEB1AD1F1D200BE606F /* campus information icon.png */,
 				CE5BEDEC1AD1F1D200BE606F /* map icon.png */,
@@ -589,6 +634,7 @@
 				0FE6B7201AD4814A0054001E /* building.txt in Resources */,
 				CE5BEDF11AD1F1D200BE606F /* map icon.png in Resources */,
 				07655F1F1AA92C64003BB634 /* AQ.txt in Resources */,
+				0713C8B71AD4867D005D67C4 /* clear-day.png in Resources */,
 				0F7D97D71AB355C700681B5F /* background.png in Resources */,
 				57E2E3221AD36DED003DE10A /* wayfindAQ4.txt in Resources */,
 				0FF7F3041AAA2F8F004CF1F6 /* arrow-left-01-128.png in Resources */,
@@ -611,6 +657,8 @@
 				5765E1671AD1426F003BB21B /* wayfindAQ2.txt in Resources */,
 				0F7D97DD1AB35B2200681B5F /* Login background.png in Resources */,
 				0F34D4881ABD5D9300846A0C /* 143.png in Resources */,
+				0713C8B81AD4867D005D67C4 /* partly-cloudy-day.png in Resources */,
+				0713C8B91AD4867D005D67C4 /* partly-cloudy-night.png in Resources */,
 				CE29362A1AAC508000E6011A /* logout.png in Resources */,
 				0FF7F3061AAA2F8F004CF1F6 /* refresh-128.png in Resources */,
 				CE5BEDEF1AD1F1D200BE606F /* ancillary icon.png in Resources */,
@@ -623,6 +671,7 @@
 				0741D8CA1AA66E0200370808 /* Images.xcassets in Resources */,
 				0FF7F30A1AACF590004CF1F6 /* refresh.png in Resources */,
 				0FF7F3191AACFADA004CF1F6 /* forward.png in Resources */,
+				0713C8BA1AD4867D005D67C4 /* rain.png in Resources */,
 				0FF7F31C1AACFE60004CF1F6 /* online.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -654,6 +703,7 @@
 				EDA12B801ABF87BB00D1DDD0 /* NSString+HTML.m in Sources */,
 				0741D8C51AA66E0200370808 /* MapViewController.m in Sources */,
 				CE1CD6EF1ABD3BF40075FD1C /* CourseManager.m in Sources */,
+				0713C8AA1AD4828E005D67C4 /* CampusInformation.m in Sources */,
 				EDA12B7D1ABF87BB00D1DDD0 /* MWFeedInfo.m in Sources */,
 				EDA12B881ABFAD5900D1DDD0 /* SFUNewsMasterView.m in Sources */,
 				07329FED1ABBCCFD0069B235 /* LibraryHomePage.m in Sources */,
@@ -665,9 +715,13 @@
 				CEC5AF5D1AAB34800068B400 /* LoginManager.m in Sources */,
 				CE1CD6EC1ABD3B7D0075FD1C /* CourseViewController.m in Sources */,
 				0741D8C21AA66E0200370808 /* AppDelegate.m in Sources */,
+				0713C8B21AD483BB005D67C4 /* BookDetail.m in Sources */,
+				0713C8AB1AD4828E005D67C4 /* CampusDetails.m in Sources */,
 				EDD2DD5A1AAC55880045A485 /* iCarousel.m in Sources */,
 				0F34D4801ABCBFE500846A0C /* buslist.m in Sources */,
+				0713C8B11AD483BB005D67C4 /* FindABook.m in Sources */,
 				0741D8BF1AA66E0200370808 /* main.m in Sources */,
+				071C3C691AD48A1D000E7EB6 /* BookInformation.m in Sources */,
 				CEC5AF5E1AAB34800068B400 /* LoginViewController.m in Sources */,
 				07329FE91ABBC9200069B235 /* AncillaryServicesHomePage.m in Sources */,
 				EDA12B7C1ABF87BB00D1DDD0 /* GTMNSString+HTML.m in Sources */,
