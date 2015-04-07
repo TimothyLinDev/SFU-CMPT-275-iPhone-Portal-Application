@@ -1411,12 +1411,12 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AQ" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Iv-kz-pEB">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Iv-kz-pEB">
                                                 <rect key="frame" x="81" y="5" width="54" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AQ" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CCR-He-l5i">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CCR-He-l5i">
                                                 <rect key="frame" x="81" y="43" width="54" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -1508,8 +1508,10 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="btnDown" destination="WBM-hv-uUe" id="fA9-ag-UKU"/>
+                        <outlet property="build" destination="CCR-He-l5i" id="x7b-5e-mTS"/>
                         <outlet property="mapView" destination="ZOI-4z-kyR" id="tBO-rb-Wti"/>
                         <outlet property="room" destination="cB5-ja-OVG" id="OAa-Vz-Bqe"/>
+                        <outlet property="sbuild" destination="8Iv-kz-pEB" id="Xbv-PP-XF1"/>
                         <outlet property="sroom" destination="nTM-Z2-qN2" id="cHb-lB-gkl"/>
                         <outlet property="viewSlide" destination="lHE-hw-ZSx" id="Kwa-Ff-sqU"/>
                     </connections>
