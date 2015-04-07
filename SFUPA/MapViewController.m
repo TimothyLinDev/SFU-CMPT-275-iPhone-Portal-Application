@@ -63,8 +63,9 @@
 
 -(IBAction)pressedBtnMarker:(id)sender{
     bool exist = false;
+    NSString *input = [build.text uppercaseString];
     for (int j=0 ; j< 50 ; j++){
-        if([building[j] isEqualToString:build.text] == 1){
+        if([building[j] isEqualToString:input] == 1){
             exist = true;
         }
     }
@@ -77,14 +78,13 @@
                                               otherButtonTitles:nil];
         [alert show];
     }
-    else if ([build.text isEqualToString:@"AQ"])
+    else if ([input isEqualToString:@"AQ"])
     {
         recordbuilding = 3;
         [self AQMarker];
     }
     else
     {
-        NSString *input = build.text;
         for (int j=0 ; j< 50 ; j++)
         {
             if ([building[j] isEqualToString:input] == 1){
@@ -154,7 +154,7 @@
 }
 
 -(IBAction)pressedBtnSelfMarker:(id)sender{
-    NSString *input = sbuild.text;
+    NSString *input = [sbuild.text uppercaseString];
     int recordsbuilding = 0;
     bool exist = false;
     for (int j=0 ; j< 50 ; j++){
@@ -839,6 +839,8 @@
     mapView.delegate = self;
     
     //UiTextField
+    build.placeholder = @"BLDG";
+    sbuild.placeholder = @"BLDG";
     room.placeholder=@"Room#:";
     sroom.placeholder=@"Room#:";
 
