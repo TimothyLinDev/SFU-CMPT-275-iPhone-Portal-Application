@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -106,6 +106,12 @@
                                     <segue destination="IzZ-Gx-A7k" kind="modal" id="pnk-7S-ttz"/>
                                 </connections>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OtW-jh-ncr">
+                                <rect key="frame" x="16" y="114" width="277" height="178"/>
+                                <connections>
+                                    <segue destination="H46-cT-XjJ" kind="embed" id="DDg-Aq-iLl"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -116,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="256" y="310"/>
+            <point key="canvasLocation" x="260" y="322"/>
         </scene>
         <!--Search Controller-->
         <scene sceneID="CRF-OD-mQ9">
@@ -1752,7 +1758,7 @@
                         <viewControllerLayoutGuide type="bottom" id="aBM-jY-7JP"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FKm-MY-5bb" userLabel="iCarousel" customClass="iCarousel">
-                        <rect key="frame" x="0.0" y="0.0" width="288" height="176"/>
+                        <rect key="frame" x="0.0" y="0.0" width="277" height="178"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <connections>
@@ -1767,7 +1773,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hfe-nI-tVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="374" y="-155"/>
+            <point key="canvasLocation" x="409.5" y="-185"/>
         </scene>
         <!--Available Laptop-->
         <scene sceneID="XMi-Vy-Gjn">
@@ -2461,6 +2467,24 @@
             </objects>
             <point key="canvasLocation" x="-446" y="449"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Q7n-a7-nS5">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="EkU-OE-8TP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PLo-Qa-EPF"/>
+                        <viewControllerLayoutGuide type="bottom" id="xpS-4J-n89"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hMw-DU-07C">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w2H-YP-p2r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="135.png" width="488" height="7261"/>
@@ -2488,15 +2512,16 @@
         <image name="transit icon.png" width="120" height="163"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rXa-hB-y8k"/>
+        <segue reference="weN-XG-1jf"/>
         <segue reference="ZeW-br-VSu"/>
         <segue reference="w8h-Ke-7hX"/>
         <segue reference="9G1-cf-B8V"/>
-        <segue reference="weN-XG-1jf"/>
+        <segue reference="rXa-hB-y8k"/>
         <segue reference="pnk-7S-ttz"/>
-        <segue reference="2xs-gB-W9v"/>
+        <segue reference="wMs-5g-Vkg"/>
         <segue reference="5lu-wZ-mSb"/>
         <segue reference="y5I-wX-1cC"/>
         <segue reference="TLs-gW-YoR"/>
+        <segue reference="2xs-gB-W9v"/>
     </inferredMetricsTieBreakers>
 </document>
