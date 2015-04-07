@@ -126,7 +126,7 @@
     NSInteger count = 0;
     
     NSInteger wfIndex = 0;
-    NSInteger tempIndex;
+   // NSInteger tempIndex;
     NSInteger begIndex1 = 0;
     NSInteger begIndex2 = 0;
     NSInteger numEle = 0;
@@ -147,8 +147,18 @@
         }
     }
     
-    if (floorFrom == 3){
+   else if (floorFrom == 3){
         NSString *wayfindFile = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"wayfindAQ3" ofType:@"txt"] encoding:NSUTF8StringEncoding error:NULL];
+        NSArray *wayfindLines = [wayfindFile componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+        for (NSString *wfLines in wayfindLines){
+            CGFloat nse2 = [wfLines floatValue];
+            wayfind[wfIndex] = nse2;
+            wfIndex++;
+        }
+    }
+    
+   else if (floorFrom == 4){
+        NSString *wayfindFile = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"wayfindAQ4" ofType:@"txt"] encoding:NSUTF8StringEncoding error:NULL];
         NSArray *wayfindLines = [wayfindFile componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
         for (NSString *wfLines in wayfindLines){
             CGFloat nse2 = [wfLines floatValue];
@@ -181,14 +191,21 @@
         wfIndex = wfIndex + 3;
     }
     
-    wfIndex = numEle/3 - 1;
+    if((floorFrom == 2) || (floorFrom == 4)){
+        wfIndex = 0;
+    }
+    
+   else if((floorFrom == 3) || (floorFrom == 5) || (floorFrom == 6)){
+        wfIndex = numEle/3 - 1;
+    }
+    
     
     //compare user input in "From" search bar with wayfinding path coordinates
     while(wfIndex <2000){
         if (wayfind[wfIndex] == from){
             begLat = wayfind[wfIndex+1];
             begLong = wayfind[wfIndex+2];
-            tempIndex = wfIndex;
+            //tempIndex = wfIndex;
             begIndex1 = wfIndex;
             begIndex2 = wfIndex;
             break;
@@ -202,9 +219,9 @@
         latitude=num[count+1];
         longtitude=num[count+2];
 
-        if (floorFrom == floorTo == 2){
+       /* if ((floorFrom == floorTo) && (floorFrom == 2 || floorFrom == 4)){
             //condition for when room number to > from and rooms are on the same floor
-            if (to > from){
+           /* if (to > from){
                 while(readLat != endLat && readLong != endLong){
                     readLat = wayfind[wfIndex + 1];
                     readLong = wayfind[wfIndex + 2];
@@ -214,18 +231,40 @@
             }
             
             //Condition for when room number From > to and rooms are on the same floor
-            if (from > to){
+            else if (from > to){
                 while(readLat != endLat && readLong != endLong){
                     readLat = wayfind[wfIndex +1];
                     readLong = wayfind[wfIndex +2];
                     [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
                     wfIndex = wfIndex - 3;
                 }
+            }*/
+            /*for(int i = 0; i<numEle; i++){
+                if (wayfind[begIndex1] == to){
+                    while(readLat != endLat && readLong != endLong){
+                        readLat = wayfind[wfIndex + 1];
+                        readLong = wayfind[wfIndex + 2];
+                        [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                        wfIndex = wfIndex + 3;
+                    }
+                    break;
+                }
+                if(wayfind[begIndex2] == to){
+                    while(readLat != endLat && readLong != endLong){
+                        readLat = wayfind[wfIndex +1];
+                        readLong = wayfind[wfIndex +2];
+                        [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                        wfIndex = wfIndex - 3;
+                    }
+                    break;
+                }
+                begIndex1 = begIndex1 + 3;
+                begIndex2 = begIndex2 - 3;
             }
-        }
+        }*/
         
-        if(floorFrom == floorTo  && floorFrom != 2){
-            for(int i; i<numEle; i++){
+       // if((floorFrom == floorTo)  && (floorFrom == 3 || floorFrom == 5)){
+            for(int i = 0; i<numEle; i++){
                 if (wayfind[begIndex1] == to){
                     while(readLat != endLat && readLong != endLong){
                         readLat = wayfind[wfIndex + 1];
@@ -247,29 +286,7 @@
                 begIndex1 = begIndex1 + 3;
                 begIndex2 = begIndex2 - 3;
             }
-        }
-        
-   /*     //condition for when room number to > from and rooms are on the same floor
-        if ((to > from) && (floorFrom == floorTo)){
-            while(readLat != endLat && readLong != endLong){
-            readLat = wayfind[wfIndex + 1];
-            readLong = wayfind[wfIndex + 2];
-            [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
-            wfIndex = wfIndex + 3;
-            }
-        }
-        
-        //Condition for when room number From > to and rooms are on the same floor
-        if ((from > to) && (floorFrom == floorTo)){
-            while(readLat != endLat && readLong != endLong){
-            readLat = wayfind[wfIndex +1];
-            readLong = wayfind[wfIndex +2];
-            [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
-            wfIndex = wfIndex - 3;
-            }
-        }*/
-        
-        
+        //}
 
         GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
         camera = [GMSCameraPosition cameraWithLatitude:latitude
