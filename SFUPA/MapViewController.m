@@ -36,6 +36,8 @@
     //variables declaration
     double num[2000];
     double wayfind[2000];
+    NSString *building[50];
+    int recordbuilding;
     GMSMarker *marker;
     GMSCameraPosition *camera;
     CGFloat endLat;
@@ -45,6 +47,8 @@
     long to;
     long from;
     IBOutlet GMSMapView *mapView;
+    __weak IBOutlet UITextField *build;
+    __weak IBOutlet UITextField *sbuild;
     __weak IBOutlet UITextField *room;
     __weak IBOutlet UITextField *sroom;
 }
@@ -58,6 +62,34 @@
 }
 
 -(IBAction)pressedBtnMarker:(id)sender{
+    if ([build.text isEqualToString:@"AQ"])
+    {
+        [self AQMarker];
+    }
+    else
+    {
+        NSString *input = build.text;
+        for (int j=0 ; j< 50 ; j++)
+        {
+            if ([building[j] isEqualToString:input] == 1){
+                recordbuilding = j;
+                float la = [building[j+1] floatValue];
+                float lon = [building[j+2] floatValue];
+                camera = [GMSCameraPosition cameraWithLatitude:la
+                    longitude:lon
+                    zoom:18];
+                //NSLog(@"A");
+                [mapView animateToCameraPosition:camera];
+                    CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(la, lon);
+                marker = [GMSMarker markerWithPosition:positon];
+                marker.title = @"Destination";
+                marker.map =mapView;
+                }
+            }
+    }
+}
+
+-(void)AQMarker{
     CGFloat latitude=0;
     CGFloat longtitude=0;
     bool exist = NO;
@@ -498,6 +530,15 @@
         CGFloat nse = [line floatValue];
         num[index]=nse;
         index++;
+        
+    NSString *content = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"building" ofType:@"txt"] encoding:NSUTF8StringEncoding error:NULL];
+    NSArray *l = [content componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+        NSInteger i = 0;
+    for (NSString *ls in l) {
+        NSString *nse = ls;
+        building[i]=nse;
+        i++;
+        }
         
     }
 }
