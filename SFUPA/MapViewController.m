@@ -34,7 +34,7 @@
 @interface MapViewController (){
     
     //variables declaration
-    double num[1000];
+    double num[2000];
     double wayfind[2000];
     GMSMarker *marker;
     GMSCameraPosition *camera;
@@ -69,7 +69,7 @@
     //NSInteger wfIndex = 0;
     
     //compare user input in "To" search bar with room location coordinates
-    while(index<1000){
+    while(index<2000){
         if (num[index] == to){
             count=index;
             exist=YES;
@@ -167,13 +167,23 @@
         }
     }
     
-  //  CGFloat z;
-  //  z = wayfind[118];
+   else if (floorFrom == 5){
+       NSString *wayfindFile = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"wayfindAQ5" ofType:@"txt"] encoding:NSUTF8StringEncoding error:NULL];
+       NSArray *wayfindLines = [wayfindFile componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+       for (NSString *wfLines in wayfindLines){
+           CGFloat nse2 = [wfLines floatValue];
+           wayfind[wfIndex] = nse2;
+           wfIndex++;
+       }
+   }
+    
+   // CGFloat z;
+   // z = wayfind[195];
     numEle = wfIndex;
     wfIndex = 0;
     
     //compare user input in "From" search bar with room location coordinates
-    while(index<1000){
+    while(index<2000){
         if (num[index] == from){
             count=index;
             exist=YES;
@@ -191,12 +201,14 @@
         wfIndex = wfIndex + 3;
     }
     
+    
+    
     if((floorFrom == 2) || (floorFrom == 4)){
         wfIndex = 0;
     }
     
-   else if((floorFrom == 3) || (floorFrom == 5) || (floorFrom == 6)){
-        wfIndex = numEle/3 - 1;
+   else if((floorFrom == 3) || (floorFrom == 5)){
+       wfIndex = numEle/3 - 1;
     }
     
     

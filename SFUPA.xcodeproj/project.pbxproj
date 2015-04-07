@@ -60,6 +60,7 @@
 		0FF7F31C1AACFE60004CF1F6 /* online.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7F31B1AACFE60004CF1F6 /* online.png */; };
 		5765E1671AD1426F003BB21B /* wayfindAQ2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5765E1661AD1426F003BB21B /* wayfindAQ2.txt */; };
 		57E2E3221AD36DED003DE10A /* wayfindAQ4.txt in Resources */ = {isa = PBXBuildFile; fileRef = 57E2E3211AD36DED003DE10A /* wayfindAQ4.txt */; };
+		57EBD54F1AD3842D006313B7 /* wayfindAQ5.txt in Resources */ = {isa = PBXBuildFile; fileRef = 57EBD54E1AD3842D006313B7 /* wayfindAQ5.txt */; };
 		57F7E1871AAD72E300264795 /* wayfindAQ3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 57F7E1861AAD72E300264795 /* wayfindAQ3.txt */; };
 		CE1CD6EC1ABD3B7D0075FD1C /* CourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CD6EB1ABD3B7D0075FD1C /* CourseViewController.m */; };
 		CE1CD6EF1ABD3BF40075FD1C /* CourseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CD6EE1ABD3BF40075FD1C /* CourseManager.m */; };
@@ -169,6 +170,7 @@
 		0FF7F31B1AACFE60004CF1F6 /* online.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = online.png; sourceTree = "<group>"; };
 		5765E1661AD1426F003BB21B /* wayfindAQ2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wayfindAQ2.txt; sourceTree = "<group>"; };
 		57E2E3211AD36DED003DE10A /* wayfindAQ4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wayfindAQ4.txt; sourceTree = "<group>"; };
+		57EBD54E1AD3842D006313B7 /* wayfindAQ5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wayfindAQ5.txt; sourceTree = "<group>"; };
 		57F7E1861AAD72E300264795 /* wayfindAQ3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wayfindAQ3.txt; sourceTree = "<group>"; };
 		CE1CD6EA1ABD3B7D0075FD1C /* CourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseViewController.h; sourceTree = "<group>"; };
 		CE1CD6EB1ABD3B7D0075FD1C /* CourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseViewController.m; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 				5765E1661AD1426F003BB21B /* wayfindAQ2.txt */,
 				57F7E1861AAD72E300264795 /* wayfindAQ3.txt */,
 				57E2E3211AD36DED003DE10A /* wayfindAQ4.txt */,
+				57EBD54E1AD3842D006313B7 /* wayfindAQ5.txt */,
 				07655F1E1AA92C64003BB634 /* AQ.txt */,
 				077C0C8B1AA9088E000449D0 /* Images */,
 				0741D8BD1AA66E0200370808 /* Info.plist */,
@@ -586,6 +589,7 @@
 				0F34D4871ABD5D9300846A0C /* 135.png in Resources */,
 				0741D8C81AA66E0200370808 /* Main.storyboard in Resources */,
 				CE5BEDF31AD1F1D200BE606F /* transit icon.png in Resources */,
+				57EBD54F1AD3842D006313B7 /* wayfindAQ5.txt in Resources */,
 				0FF7F3141AACF989004CF1F6 /* cancel.png in Resources */,
 				0FF7F31A1AACFADA004CF1F6 /* previous.png in Resources */,
 				0F34D48A1ABD5D9300846A0C /* 145.png in Resources */,
