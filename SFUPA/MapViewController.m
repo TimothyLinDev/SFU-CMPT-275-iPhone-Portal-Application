@@ -62,7 +62,22 @@
 }
 
 -(IBAction)pressedBtnMarker:(id)sender{
-    if ([build.text isEqualToString:@"AQ"])
+    bool exist = false;
+    for (int j=0 ; j< 50 ; j++){
+        if([building[j] isEqualToString:build.text] == 1){
+            exist = true;
+        }
+    }
+    if (exist == false)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No such Building"
+                                                        message:@"Please Try Again."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+    else if ([build.text isEqualToString:@"AQ"])
     {
         recordbuilding = 3;
         [self AQMarker];
@@ -141,7 +156,22 @@
 -(IBAction)pressedBtnSelfMarker:(id)sender{
     NSString *input = sbuild.text;
     int recordsbuilding = 0;
-    if ([build.text isEqualToString:@"AQ"] && [sbuild.text isEqualToString:@"AQ"]){
+    bool exist = false;
+    for (int j=0 ; j< 50 ; j++){
+        if([building[j] isEqualToString:input] == 1){
+            exist = true;
+        }
+    }
+    if (exist == false)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No such Building"
+                                                        message:@"Please Try Again."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+    else if ([build.text isEqualToString:@"AQ"] && [sbuild.text isEqualToString:@"AQ"]){
         [self AQSelfMarker];
     }
     else if ([sbuild.text isEqualToString:@"AQ"] && [build.text isEqualToString:@"AQ"] == 0){
