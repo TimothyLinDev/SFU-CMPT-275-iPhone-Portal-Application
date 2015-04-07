@@ -127,9 +127,9 @@
     
     NSInteger wfIndex = 0;
     NSInteger tempIndex;
-    NSInteger begIndex1;
-    NSInteger begIndex2;
-    NSInteger numEle;
+    NSInteger begIndex1 = 0;
+    NSInteger begIndex2 = 0;
+    NSInteger numEle = 0;
     
     floorFrom = from/1000;
     floorTo = to/1000;
@@ -157,6 +157,8 @@
         }
     }
     
+  //  CGFloat z;
+  //  z = wayfind[118];
     numEle = wfIndex;
     wfIndex = 0;
     
@@ -170,7 +172,7 @@
     }
     
     //compare user input in "To" search bar with wayfinding path coordinates
-    while(wfIndex < 1000){
+    while(wfIndex < 2000){
         if (wayfind[wfIndex] == to){
             endLat = wayfind[wfIndex+1];
             endLong = wayfind[wfIndex+2];
@@ -179,10 +181,10 @@
         wfIndex = wfIndex + 3;
     }
     
-    wfIndex = 0;
+    wfIndex = numEle/3 - 1;
     
     //compare user input in "From" search bar with wayfinding path coordinates
-    while(wfIndex <1000){
+    while(wfIndex <2000){
         if (wayfind[wfIndex] == from){
             begLat = wayfind[wfIndex+1];
             begLong = wayfind[wfIndex+2];
@@ -222,8 +224,8 @@
             }
         }
         
-        if(floorFrom == floorTo != 2){
-            for(int i; i<numEle/2; i++){
+        if(floorFrom == floorTo  && floorFrom != 2){
+            for(int i; i<numEle; i++){
                 if (wayfind[begIndex1] == to){
                     while(readLat != endLat && readLong != endLong){
                         readLat = wayfind[wfIndex + 1];
