@@ -36,6 +36,8 @@
     //variables declaration
     double num[2000];
     double wayfind[2000];
+    NSString *building[50];
+    int recordbuilding;
     GMSMarker *marker;
     GMSCameraPosition *camera;
     CGFloat endLat;
@@ -45,6 +47,8 @@
     long to;
     long from;
     IBOutlet GMSMapView *mapView;
+    __weak IBOutlet UITextField *build;
+    __weak IBOutlet UITextField *sbuild;
     __weak IBOutlet UITextField *room;
     __weak IBOutlet UITextField *sroom;
 }
@@ -58,6 +62,49 @@
 }
 
 -(IBAction)pressedBtnMarker:(id)sender{
+    bool exist = false;
+    for (int j=0 ; j< 50 ; j++){
+        if([building[j] isEqualToString:build.text] == 1){
+            exist = true;
+        }
+    }
+    if (exist == false)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No such Building"
+                                                        message:@"Please Try Again."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+    else if ([build.text isEqualToString:@"AQ"])
+    {
+        recordbuilding = 3;
+        [self AQMarker];
+    }
+    else
+    {
+        NSString *input = build.text;
+        for (int j=0 ; j< 50 ; j++)
+        {
+            if ([building[j] isEqualToString:input] == 1){
+                recordbuilding = j;
+                float la = [building[j+1] floatValue];
+                float lon = [building[j+2] floatValue];
+                camera = [GMSCameraPosition cameraWithLatitude:la
+                    longitude:lon
+                    zoom:18];
+                [mapView animateToCameraPosition:camera];
+                    CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(la, lon);
+                marker = [GMSMarker markerWithPosition:positon];
+                marker.title = @"Destination";
+                marker.map =mapView;
+            }
+        }
+    }
+}
+
+-(void)AQMarker{
     CGFloat latitude=0;
     CGFloat longtitude=0;
     bool exist = NO;
@@ -107,7 +154,313 @@
 }
 
 -(IBAction)pressedBtnSelfMarker:(id)sender{
-  
+    NSString *input = sbuild.text;
+    int recordsbuilding = 0;
+    bool exist = false;
+    for (int j=0 ; j< 50 ; j++){
+        if([building[j] isEqualToString:input] == 1){
+            exist = true;
+        }
+    }
+    if (exist == false)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No such Building"
+                                                        message:@"Please Try Again."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+    else if ([build.text isEqualToString:@"AQ"] && [sbuild.text isEqualToString:@"AQ"]){
+        [self AQSelfMarker];
+    }
+    else if ([sbuild.text isEqualToString:@"AQ"] && [build.text isEqualToString:@"AQ"] == 0){
+        GMSMutablePath *path = [GMSMutablePath path];
+        for (int j=0 ; j< 50 ; j++){
+            if ([building[j] isEqualToString:input] == 1){
+                recordsbuilding = j;
+                float la = [building[j+1] floatValue];
+                float lon = [building[j+2] floatValue];
+                camera = [GMSCameraPosition cameraWithLatitude:la
+                                                     longitude:lon
+                                                          zoom:16];
+                [mapView animateToCameraPosition:camera];
+                CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(la, lon);
+                marker = [GMSMarker markerWithPosition:positon];
+                marker.title = @"Begin";
+                marker.map =mapView;
+            }
+        }
+        if (recordsbuilding > recordbuilding)
+        {
+            int i=0;
+            while (i<=recordsbuilding)
+            {
+                float lati = [building[i+1] floatValue];
+                float lonti = [building[i+2] floatValue];
+                [path addCoordinate:CLLocationCoordinate2DMake(lati, lonti)];
+                i=i+3;
+            }
+        }
+        else
+        {
+            int i=3;
+            while (i<=recordbuilding)
+            {
+                float lati = [building[i+1] floatValue];
+                float lonti = [building[i+2] floatValue];
+                [path addCoordinate:CLLocationCoordinate2DMake(lati, lonti)];
+                i=i+3;
+            }
+        }
+        GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+        polyline.strokeWidth = 5;
+        polyline.strokeColor = [UIColor redColor];
+        polyline.map = mapView;
+        [path removeAllCoordinates];
+    }
+    else if ([sbuild.text isEqualToString:@"AQ"] == 0 && [build.text isEqualToString:@"AQ"]){
+        GMSMutablePath *path = [GMSMutablePath path];
+        for (int j=0 ; j< 50 ; j++){
+            if ([building[j] isEqualToString:input] == 1){
+                recordsbuilding = j;
+                float la = [building[j+1] floatValue];
+                float lon = [building[j+2] floatValue];
+                camera = [GMSCameraPosition cameraWithLatitude:la
+                                                     longitude:lon
+                                                          zoom:16];
+                [mapView animateToCameraPosition:camera];
+                CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(la, lon);
+                marker = [GMSMarker markerWithPosition:positon];
+                marker.title = @"Begin";
+                marker.map =mapView;
+            }
+        }
+        if (recordbuilding > recordsbuilding)
+        {
+            int i=0;
+            while (i<=recordbuilding)
+            {
+                float lati = [building[i+1] floatValue];
+                float lonti = [building[i+2] floatValue];
+                [path addCoordinate:CLLocationCoordinate2DMake(lati, lonti)];
+                i=i+3;
+            }
+        }
+        else
+        {
+            int i=3;
+            while (i<=recordsbuilding)
+            {
+                float lati = [building[i+1] floatValue];
+                float lonti = [building[i+2] floatValue];
+                [path addCoordinate:CLLocationCoordinate2DMake(lati, lonti)];
+                i=i+3;
+            }
+        }
+        GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+        polyline.strokeWidth = 5;
+        polyline.strokeColor = [UIColor redColor];
+        polyline.map = mapView;
+        [path removeAllCoordinates];
+    }
+    
+    else if (([sbuild.text isEqualToString:@"BLU"] && [build.text isEqualToString:@"SEC"]) || ([sbuild.text isEqualToString:@"SEC"] && [build.text isEqualToString:@"BLU"]))
+    {
+        GMSMutablePath *path = [GMSMutablePath path];
+        for (int j=0 ; j< 50 ; j++){
+            if ([building[j] isEqualToString:input] == 1){
+                recordsbuilding = j;
+                float la = [building[j+1] floatValue];
+                float lon = [building[j+2] floatValue];
+                camera = [GMSCameraPosition cameraWithLatitude:la
+                                                     longitude:lon
+                                                          zoom:16];
+                [mapView animateToCameraPosition:camera];
+                CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(la, lon);
+                marker = [GMSMarker markerWithPosition:positon];
+                marker.title = @"Begin";
+                marker.map =mapView;
+            }
+        }
+        [path addCoordinate:CLLocationCoordinate2DMake(49.279043, -122.913094)];
+        [path addCoordinate:CLLocationCoordinate2DMake(49.277008, -122.912742)];
+        GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+        polyline.strokeWidth = 5;
+        polyline.strokeColor = [UIColor redColor];
+        polyline.map = mapView;
+        [path removeAllCoordinates];
+    }
+    else{
+        GMSMutablePath *path = [GMSMutablePath path];
+        for (int j=0 ; j< 50 ; j++){
+            if ([building[j] isEqualToString:input] == 1){
+                recordsbuilding = j;
+                float la = [building[j+1] floatValue];
+                float lon = [building[j+2] floatValue];
+                camera = [GMSCameraPosition cameraWithLatitude:la
+                                                     longitude:lon
+                                                          zoom:16];
+                [mapView animateToCameraPosition:camera];
+                CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(la, lon);
+                marker = [GMSMarker markerWithPosition:positon];
+                marker.title = @"Begin";
+                marker.map =mapView;
+            }
+        }
+        if (recordsbuilding > recordbuilding)
+        {
+            if((recordsbuilding < 20 && recordbuilding < 20) || (recordsbuilding >= 20 && recordbuilding >= 20))
+            {
+                int i = recordbuilding;
+                while (i <= recordsbuilding)
+                {
+                    float lati = [building[i+1] floatValue];
+                    float lonti = [building[i+2] floatValue];
+                    [path addCoordinate:CLLocationCoordinate2DMake(lati, lonti)];
+                    i=i+3;
+                }
+            }
+            else if (recordsbuilding >= 20 && recordbuilding < 20)
+            {
+                if (recordbuilding < 5)
+                {
+                    int i = recordbuilding;
+                    while (i <= 3)
+                    {
+                        float lati = [building[i+1] floatValue];
+                        float lonti = [building[i+2] floatValue];
+                        [path addCoordinate:CLLocationCoordinate2DMake(lati, lonti)];
+                        i=i+3;
+                    }
+                }
+                else if (recordbuilding >=5 && recordbuilding < 12)
+                {
+                    int i = recordbuilding;
+                    while (i <= 12)
+                    {
+                        float lati = [building[i+1] floatValue];
+                        float lonti = [building[i+2] floatValue];
+                        [path addCoordinate:CLLocationCoordinate2DMake(lati, lonti)];
+                        i=i+3;
+                    }
+                }
+                else
+                {
+                    int i = 18;
+                    while (i >= 12)
+                    {
+                        float lati = [building[i+1] floatValue];
+                        float lonti = [building[i+2] floatValue];
+                        [path addCoordinate:CLLocationCoordinate2DMake(lati, lonti)];
+                        i=i-3;
+                    }
+                }
+                if (recordsbuilding < 30)
+                {
+                    int i = 30;
+                    while (i >= recordsbuilding)
+                    {
+                        float lati = [building[i+1] floatValue];
+                        float lonti = [building[i+2] floatValue];
+                        [path addCoordinate:CLLocationCoordinate2DMake(lati, lonti)];
+                        i=i-3;
+                    }
+                }
+                else
+                {
+                    int i = 30;
+                    while (i <=recordsbuilding)
+                    {
+                        float lati = [building[i+1] floatValue];
+                        float lonti = [building[i+2] floatValue];
+                        [path addCoordinate:CLLocationCoordinate2DMake(lati, lonti)];
+                        i=i+3;
+                    }
+                }
+            }
+        }
+        else if (recordbuilding > recordsbuilding)
+        {
+            if((recordsbuilding < 20 && recordbuilding < 20) || (recordsbuilding >= 20 && recordbuilding >= 20))
+            {
+                int i = recordsbuilding;
+                while (i <= recordbuilding)
+                {
+                    float lati = [building[i+1] floatValue];
+                    float lonti = [building[i+2] floatValue];
+                    [path addCoordinate:CLLocationCoordinate2DMake(lati, lonti)];
+                    i=i+3;
+                }
+            }
+            else if (recordbuilding >= 20 && recordsbuilding < 20)
+            {
+                if (recordsbuilding < 5)
+                {
+                    int i = recordsbuilding;
+                    while (i <= 3)
+                    {
+                        float lati = [building[i+1] floatValue];
+                        float lonti = [building[i+2] floatValue];
+                        [path addCoordinate:CLLocationCoordinate2DMake(lati, lonti)];
+                        i=i+3;
+                    }
+                }
+                else if (recordsbuilding >=5 && recordsbuilding < 12)
+                {
+                    int i = recordsbuilding;
+                    while (i <= 12)
+                    {
+                        float lati = [building[i+1] floatValue];
+                        float lonti = [building[i+2] floatValue];
+                        [path addCoordinate:CLLocationCoordinate2DMake(lati, lonti)];
+                        i=i+3;
+                    }
+                }
+                else
+                {
+                    int i = 18;
+                    while (i >= 12)
+                    {
+                        float lati = [building[i+1] floatValue];
+                        float lonti = [building[i+2] floatValue];
+                        [path addCoordinate:CLLocationCoordinate2DMake(lati, lonti)];
+                        i=i-3;
+                    }
+                }
+                if (recordbuilding < 30)
+                {
+                    int i = 30;
+                    while (i >= recordbuilding)
+                    {
+                        float lati = [building[i+1] floatValue];
+                        float lonti = [building[i+2] floatValue];
+                        [path addCoordinate:CLLocationCoordinate2DMake(lati, lonti)];
+                        i=i-3;
+                    }
+                }
+                else
+                {
+                    int i = 30;
+                    while (i <=recordbuilding)
+                    {
+                        float lati = [building[i+1] floatValue];
+                        float lonti = [building[i+2] floatValue];
+                        [path addCoordinate:CLLocationCoordinate2DMake(lati, lonti)];
+                        i=i+3;
+                    }
+                }
+            }
+        }
+        GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+        polyline.strokeWidth = 5;
+        polyline.strokeColor = [UIColor redColor];
+        polyline.map = mapView;
+        [path removeAllCoordinates];
+    }
+}
+
+-(void)AQSelfMarker{
     GMSMutablePath *path = [GMSMutablePath path];
     CGFloat latitude=0;
     CGFloat longtitude=0;
@@ -498,6 +851,15 @@
         CGFloat nse = [line floatValue];
         num[index]=nse;
         index++;
+        
+    NSString *content = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"building" ofType:@"txt"] encoding:NSUTF8StringEncoding error:NULL];
+    NSArray *l = [content componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+        NSInteger i = 0;
+    for (NSString *ls in l) {
+        NSString *nse = ls;
+        building[i]=nse;
+        i++;
+        }
         
     }
 }

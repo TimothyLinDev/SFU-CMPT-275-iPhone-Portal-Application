@@ -31,6 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.webView.scalesPageToFit = YES;
 
     if (!self.segueData){
         return;

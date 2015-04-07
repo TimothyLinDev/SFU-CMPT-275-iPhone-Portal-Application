@@ -40,6 +40,8 @@
     __weak IBOutlet UIButton *btnRemove;
 }
 
+-(void)AQMarker;
+-(void)AQSelfMarker;
 -(IBAction)pressedBtnClean:(id)sender;
 -(IBAction)pressedBtnSelfMarker:(id)sender;
 -(IBAction)pressedBtnMarker:(id)sender;
