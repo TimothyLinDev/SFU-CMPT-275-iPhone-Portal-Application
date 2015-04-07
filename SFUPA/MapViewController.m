@@ -350,7 +350,40 @@
                 i=i+3;
             }
         }
+        GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+        polyline.strokeWidth = 5;
+        polyline.strokeColor = [UIColor redColor];
+        polyline.map = mapView;
+        [path removeAllCoordinates];
     }
+    // STILL MODIFIED ON THIS
+    
+//    else if (([sbuild.text isEqualToString:@"BLU"] && [build.text isEqualToString:@"SEC"]) || ([sbuild.text isEqualToString:@"SEC"] && [build.text isEqualToString:@"BLU"] == 0))
+//    {
+//        GMSMutablePath *path = [GMSMutablePath path];
+//        for (int j=0 ; j< 50 ; j++){
+//            if ([building[j] isEqualToString:input] == 1){
+//                recordsbuilding = j;
+//                float la = [building[j+1] floatValue];
+//                float lon = [building[j+2] floatValue];
+//                camera = [GMSCameraPosition cameraWithLatitude:la
+//                                                     longitude:lon
+//                                                          zoom:16];
+//                [mapView animateToCameraPosition:camera];
+//                CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(la, lon);
+//                marker = [GMSMarker markerWithPosition:positon];
+//                marker.title = @"Begin";
+//                marker.map =mapView;
+//            }
+//        }
+//        [path addCoordinate:CLLocationCoordinate2DMake(49.279043, -122.913094)];
+//        [path addCoordinate:CLLocationCoordinate2DMake(49.277008, -122.912742)];
+//        GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+//        polyline.strokeWidth = 5;
+//        polyline.strokeColor = [UIColor redColor];
+//        polyline.map = mapView;
+//        [path removeAllCoordinates];
+//    }
 }
 
 -(void)AQSelfMarker{
