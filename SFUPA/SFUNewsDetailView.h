@@ -17,9 +17,10 @@
 #import <UIKit/UIKit.h>
 #import "MWFeedItem.h"
 
-@interface SFUNewsDetailView:UIViewController
+@interface SFUNewsDetailView:UIViewController<UINavigationBarDelegate>
 
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 @property (copy, nonatomic) NSString *url;
-
+@property (copy,nonatomic) NSString *atitle;
+@property (weak, nonatomic) IBOutlet UINavigationItem *thetitle;
 @end
