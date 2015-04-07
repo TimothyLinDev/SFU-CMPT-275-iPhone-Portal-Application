@@ -61,6 +61,7 @@
 		5765E1671AD1426F003BB21B /* wayfindAQ2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5765E1661AD1426F003BB21B /* wayfindAQ2.txt */; };
 		57E2E3221AD36DED003DE10A /* wayfindAQ4.txt in Resources */ = {isa = PBXBuildFile; fileRef = 57E2E3211AD36DED003DE10A /* wayfindAQ4.txt */; };
 		57EBD54F1AD3842D006313B7 /* wayfindAQ5.txt in Resources */ = {isa = PBXBuildFile; fileRef = 57EBD54E1AD3842D006313B7 /* wayfindAQ5.txt */; };
+		57EBD5511AD3EDFE006313B7 /* stairs.png in Resources */ = {isa = PBXBuildFile; fileRef = 57EBD5501AD3EDFE006313B7 /* stairs.png */; };
 		57F7E1871AAD72E300264795 /* wayfindAQ3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 57F7E1861AAD72E300264795 /* wayfindAQ3.txt */; };
 		CE1CD6EC1ABD3B7D0075FD1C /* CourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CD6EB1ABD3B7D0075FD1C /* CourseViewController.m */; };
 		CE1CD6EF1ABD3BF40075FD1C /* CourseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CD6EE1ABD3BF40075FD1C /* CourseManager.m */; };
@@ -171,6 +172,7 @@
 		5765E1661AD1426F003BB21B /* wayfindAQ2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wayfindAQ2.txt; sourceTree = "<group>"; };
 		57E2E3211AD36DED003DE10A /* wayfindAQ4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wayfindAQ4.txt; sourceTree = "<group>"; };
 		57EBD54E1AD3842D006313B7 /* wayfindAQ5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wayfindAQ5.txt; sourceTree = "<group>"; };
+		57EBD5501AD3EDFE006313B7 /* stairs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stairs.png; sourceTree = "<group>"; };
 		57F7E1861AAD72E300264795 /* wayfindAQ3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wayfindAQ3.txt; sourceTree = "<group>"; };
 		CE1CD6EA1ABD3B7D0075FD1C /* CourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseViewController.h; sourceTree = "<group>"; };
 		CE1CD6EB1ABD3B7D0075FD1C /* CourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseViewController.m; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 				CE5BEDEC1AD1F1D200BE606F /* map icon.png */,
 				CE5BEDED1AD1F1D200BE606F /* news icon.png */,
 				CE5BEDEE1AD1F1D200BE606F /* transit icon.png */,
+				57EBD5501AD3EDFE006313B7 /* stairs.png */,
 				0F34D4831ABD5D9300846A0C /* 135.png */,
 				0F34D4841ABD5D9300846A0C /* 143.png */,
 				0F34D4851ABD5D9300846A0C /* 144.png */,
@@ -597,6 +600,7 @@
 				07655F1B1AA91430003BB634 /* GoogleMaps.bundle in Resources */,
 				0F7D97DC1AB35B2200681B5F /* info-2.png in Resources */,
 				EDD2DD621AAC58000045A485 /* Default-568h@2x.png in Resources */,
+				57EBD5511AD3EDFE006313B7 /* stairs.png in Resources */,
 				CE5BEDF01AD1F1D200BE606F /* campus information icon.png in Resources */,
 				07655F1D1AA91B36003BB634 /* ic_refresh_48px-128.png in Resources */,
 				0FF7F3031AAA2F8F004CF1F6 /* arrow-down-01-128.png in Resources */,

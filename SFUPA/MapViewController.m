@@ -115,7 +115,7 @@
     CGFloat readLong=0;
     CGFloat floorFrom=0;
     CGFloat floorTo=0;
-    //NSString *tempTo;
+    long tempTo=0;
    // NSString *tempFrom;
     bool exist = NO;
 
@@ -192,16 +192,28 @@
     }
     
     //compare user input in "To" search bar with wayfinding path coordinates
-    while(wfIndex < 2000){
-        if (wayfind[wfIndex] == to){
-            endLat = wayfind[wfIndex+1];
-            endLong = wayfind[wfIndex+2];
-            break;
+    if(floorFrom == floorTo){
+        while(wfIndex < 2000){
+            if (wayfind[wfIndex] == to){
+                endLat = wayfind[wfIndex+1];
+                endLong = wayfind[wfIndex+2];
+                break;
+            }
+            wfIndex = wfIndex + 3;
         }
-        wfIndex = wfIndex + 3;
     }
     
-    
+    else if(floorFrom != floorTo){
+        tempTo = to;
+        to = 99999;
+        while(wfIndex < 2000){
+            if (wayfind[wfIndex] == to){
+                endLat = wayfind[wfIndex+1];
+                endLong = wayfind[wfIndex+2];
+                break;
+            }
+            wfIndex = wfIndex + 3;
+        }    }
     
     if((floorFrom == 2) || (floorFrom == 4)){
         wfIndex = 0;
@@ -275,7 +287,56 @@
             }
         }*/
         
-       // if((floorFrom == floorTo)  && (floorFrom == 3 || floorFrom == 5)){
+        if(floorFrom == 2 || floorFrom == 3 || floorFrom == 4){
+            if(floorFrom != floorTo){
+                for(int i = 0; i<numEle; i++){
+                    if (wayfind[begIndex1] == to){
+                        while(readLat != endLat && readLong != endLong){
+                            readLat = wayfind[wfIndex + 1];
+                            readLong = wayfind[wfIndex + 2];
+                            [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                            wfIndex = wfIndex + 3;
+                        }
+                        GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+                        camera = [GMSCameraPosition cameraWithLatitude:latitude
+                                                             longitude:longtitude
+                                                                  zoom:20];
+                        [mapView animateToCameraPosition:camera];
+                        CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(readLat, readLong);
+                        marker = [GMSMarker markerWithPosition:positon];
+                        marker.title = @"Please go to floor";
+                        marker.icon = [UIImage imageNamed:@"stairs"];
+                        marker.map =mapView;
+                        polyline.strokeWidth = 5;
+                        polyline.strokeColor = [UIColor blueColor];
+                        polyline.map = mapView;                         break;
+                    }
+                    if(wayfind[begIndex2] == to){
+                        while(readLat != endLat && readLong != endLong){
+                            readLat = wayfind[wfIndex +1];
+                            readLong = wayfind[wfIndex +2];
+                            [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                            wfIndex = wfIndex - 3;
+                        }
+                        GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+                        camera = [GMSCameraPosition cameraWithLatitude:latitude
+                                                             longitude:longtitude
+                                                                  zoom:20];
+                        [mapView animateToCameraPosition:camera];
+                        CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(readLat, readLong);
+                        marker = [GMSMarker markerWithPosition:positon];
+                        marker.title = @"Please change floors";
+                        marker.icon = [UIImage imageNamed:@"stairs"];
+                        marker.map =mapView;
+                        polyline.strokeWidth = 5;
+                        polyline.strokeColor = [UIColor blueColor];
+                        polyline.map = mapView;                        break;
+                    }
+                    begIndex1 = begIndex1 + 3;
+                    begIndex2 = begIndex2 - 3;
+                }
+            }
+            else{
             for(int i = 0; i<numEle; i++){
                 if (wayfind[begIndex1] == to){
                     while(readLat != endLat && readLong != endLong){
@@ -284,6 +345,18 @@
                         [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
                         wfIndex = wfIndex + 3;
                     }
+                    GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+                    camera = [GMSCameraPosition cameraWithLatitude:latitude
+                                                         longitude:longtitude
+                                                              zoom:20];
+                    [mapView animateToCameraPosition:camera];
+                    CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(latitude, longtitude);
+                    marker = [GMSMarker markerWithPosition:positon];
+                    marker.title = @"Begin";
+                    marker.map =mapView;
+                    polyline.strokeWidth = 5;
+                    polyline.strokeColor = [UIColor greenColor];
+                    polyline.map = mapView;
                     break;
                 }
                 if(wayfind[begIndex2] == to){
@@ -293,14 +366,76 @@
                         [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
                         wfIndex = wfIndex - 3;
                         }
-                    break;
+                    GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+                    camera = [GMSCameraPosition cameraWithLatitude:latitude
+                                                         longitude:longtitude
+                                                              zoom:20];
+                    [mapView animateToCameraPosition:camera];
+                    CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(latitude, longtitude);
+                    marker = [GMSMarker markerWithPosition:positon];
+                    marker.title = @"Begin";
+                    marker.map =mapView;
+                    polyline.strokeWidth = 5;
+                    polyline.strokeColor = [UIColor greenColor];
+                    polyline.map = mapView;                    break;
                 }
                 begIndex1 = begIndex1 + 3;
                 begIndex2 = begIndex2 - 3;
             }
-        //}
+            }
+        }
+        
+        else if(floorFrom == 5 || floorFrom == 6){
+            for(int i = 0; i<numEle; i++){
+                if (wayfind[begIndex1] == to){
+                    while(readLat != endLat && readLong != endLong){
+                        readLat = wayfind[wfIndex + 1];
+                        readLong = wayfind[wfIndex + 2];
+                        [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                        wfIndex = wfIndex + 3;
+                    }
+                    GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+                    camera = [GMSCameraPosition cameraWithLatitude:latitude
+                                                         longitude:longtitude
+                                                              zoom:20];
+                    [mapView animateToCameraPosition:camera];
+                    CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(latitude, longtitude);
+                    marker = [GMSMarker markerWithPosition:positon];
+                    marker.title = @"Begin";
+                    marker.map =mapView;
+                    polyline.strokeWidth = 5;
+                    polyline.strokeColor = [UIColor greenColor];
+                    polyline.map = mapView;
+                    break;
+                }
+                if(wayfind[begIndex2] == to){
+                    while(readLat != endLat && readLong != endLong){
+                        readLat = wayfind[wfIndex +1];
+                        readLong = wayfind[wfIndex +2];
+                        [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                        wfIndex = wfIndex - 3;
+                    }
+                    GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+                    camera = [GMSCameraPosition cameraWithLatitude:latitude
+                                                         longitude:longtitude
+                                                              zoom:20];
+                    [mapView animateToCameraPosition:camera];
+                    CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(latitude, longtitude);
+                    marker = [GMSMarker markerWithPosition:positon];
+                    marker.title = @"Begin";
+                    marker.map =mapView;
+                    polyline.strokeWidth = 5;
+                    polyline.strokeColor = [UIColor greenColor];
+                    polyline.map = mapView;                    break;
+                }
+                begIndex1 = begIndex1 + 3;
+                begIndex2 = begIndex2 - 3;
+            }
+        
+        }
 
-        GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+
+    /*    GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
         camera = [GMSCameraPosition cameraWithLatitude:latitude
                                              longitude:longtitude
                                                   zoom:20];
@@ -311,7 +446,7 @@
         marker.map =mapView;
         polyline.strokeWidth = 5;
         polyline.strokeColor = [UIColor greenColor];
-        polyline.map = mapView;
+        polyline.map = mapView;*/
     }
 
     
