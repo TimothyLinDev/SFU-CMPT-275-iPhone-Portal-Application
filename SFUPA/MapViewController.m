@@ -358,13 +358,26 @@
                 }
                 if (recordsbuilding < 30)
                 {
-                    int i = 30;
-                    while (i >= recordsbuilding)
+                    if (recordbuilding < 6)
                     {
-                        float lati = [building[i+1] floatValue];
-                        float lonti = [building[i+2] floatValue];
-                        [path addCoordinate:CLLocationCoordinate2DMake(lati, lonti)];
-                        i=i-3;
+                        int i = 21;
+                        while (i <= recordsbuilding)
+                        {
+                            float lati = [building[i+1] floatValue];
+                            float lonti = [building[i+2] floatValue];
+                            [path addCoordinate:CLLocationCoordinate2DMake(lati, lonti)];
+                            i=i+3;
+                        }
+                    }
+                    else{
+                        int i = 30;
+                        while (i >= recordsbuilding)
+                        {
+                            float lati = [building[i+1] floatValue];
+                            float lonti = [building[i+2] floatValue];
+                            [path addCoordinate:CLLocationCoordinate2DMake(lati, lonti)];
+                            i=i-3;
+                        }
                     }
                 }
                 else
@@ -430,13 +443,26 @@
                 }
                 if (recordbuilding < 30)
                 {
-                    int i = 30;
-                    while (i >= recordbuilding)
+                    if (recordsbuilding < 6){
+                        int i = 21;
+                        while (i <= recordbuilding)
+                        {
+                            float lati = [building[i+1] floatValue];
+                            float lonti = [building[i+2] floatValue];
+                            [path addCoordinate:CLLocationCoordinate2DMake(lati, lonti)];
+                            i=i+3;
+                        }
+                    }
+                    else
                     {
-                        float lati = [building[i+1] floatValue];
-                        float lonti = [building[i+2] floatValue];
-                        [path addCoordinate:CLLocationCoordinate2DMake(lati, lonti)];
-                        i=i-3;
+                        int i = 30;
+                        while (i >= recordbuilding)
+                        {
+                            float lati = [building[i+1] floatValue];
+                            float lonti = [building[i+2] floatValue];
+                            [path addCoordinate:CLLocationCoordinate2DMake(lati, lonti)];
+                            i=i-3;
+                        }
                     }
                 }
                 else
