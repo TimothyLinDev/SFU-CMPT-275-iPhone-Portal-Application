@@ -83,8 +83,6 @@
     
     bookName = [reserved valueForKey:@"title"];
     NSLog(@"BOOK NAME: %@",bookName);
-    
-    //tableData = [NSArray arrayWithObjects:bookName, nil];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -106,10 +104,7 @@
 
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // If we are at the top level
-        if (indexPath.row >= 0) {
-            [self performSegueWithIdentifier:@"BookInfo" sender:self];
-            return;
-    }
+    [self performSegueWithIdentifier:@"BookInfo" sender:self];
+    NSLog(@"Heeeelllo: %@",[bookName objectAtIndex:indexPath.row]);
 }
 @end

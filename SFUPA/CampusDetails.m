@@ -109,15 +109,15 @@
         }
         else if ([[currentWeather objectForKey:@"icon"]  isEqual: @"partly-cloudy-night"])
         {
-            _UICurrentImage.image = [UIImage imageNamed:@"partly-cloudy-night.png"];
+            _UICurrentImage.image = [UIImage imageNamed:@"partlycloudynight.png"];
         }
         else if ([[currentWeather objectForKey:@"icon"]  isEqual: @"partly-cloudy-day"])
         {
-            _UICurrentImage.image = [UIImage imageNamed:@"partly-cloudy-day.png"];
+            _UICurrentImage.image = [UIImage imageNamed:@"partlycloudyday.png"];
         }
         else if ([[currentWeather objectForKey:@"icon"]  isEqual: @"clear-day"])
         {
-            _UICurrentImage.image = [UIImage imageNamed:@"clear-day.png"];
+            _UICurrentImage.image = [UIImage imageNamed:@"clearday.png"];
         }
         
         _lblCurrentStatus.text = [currentWeather objectForKey:@"summary"];
