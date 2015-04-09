@@ -1118,17 +1118,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="H62-UV-Fm3">
-                                <rect key="frame" x="-6" y="67" width="332" height="501"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SFU Computing ID" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="riv-yu-9mz">
-                                <rect key="frame" x="108" y="231" width="143" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SFU Computing ID" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="riv-yu-9mz">
+                                <rect key="frame" x="108" y="231" width="196" height="30"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ba2-bw-C7w">
-                                <rect key="frame" x="108" y="269" width="143" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ba2-bw-C7w">
+                                <rect key="frame" x="108" y="269" width="196" height="30"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -1162,8 +1159,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBN-um-Lit">
                                 <rect key="frame" x="0.0" y="20" width="320" height="52"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpu-z2-BOH">
-                                        <rect key="frame" x="129" y="15" width="63" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpu-z2-BOH">
+                                        <rect key="frame" x="136" y="15" width="48" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="63" id="a5s-Ky-IzB"/>
                                         </constraints>
@@ -1205,6 +1202,9 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="H62-UV-Fm3">
+                                <rect key="frame" x="-6" y="67" width="332" height="501"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1257,7 +1257,6 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Manager:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Srs-Rw-Gda">
                                 <rect key="frame" x="89" y="153" width="143" height="22"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amandeep Saini" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFJ-2b-mNd">
@@ -1269,13 +1268,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Programmer:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oV0-9U-eB7">
                                 <rect key="frame" x="106" y="252" width="109" height="22"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Documentation:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FhU-t4-VCP">
                                 <rect key="frame" x="94" y="354" width="133" height="22"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timothy Lin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xul-Rx-pDT">
@@ -1299,7 +1296,6 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quality Assurance:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZw-Vw-548">
                                 <rect key="frame" x="82" y="448" width="156" height="22"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Y5-uc-eGc">
@@ -1325,6 +1321,15 @@
                                             <segue destination="BYZ-38-t0r" kind="presentation" id="sqN-Dk-vyW"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Developer's Information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ws1-Vb-xFw">
+                                        <rect key="frame" x="57" y="15" width="207" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="63" id="xz1-lO-sJE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1629,7 +1634,7 @@
                         <viewControllerLayoutGuide type="bottom" id="PTc-Ne-G78"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="X8R-n1-pAs">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fts-LB-AIw">
@@ -1676,6 +1681,7 @@
                             <constraint firstItem="fts-LB-AIw" firstAttribute="leading" secondItem="X8R-n1-pAs" secondAttribute="leadingMargin" constant="-16" id="y58-sX-Eqr"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="tableView" destination="HIt-mx-IQ5" id="ljy-UP-2p5"/>
                         <segue destination="jWg-ak-em3" kind="presentation" identifier="parkingToWeb" id="O14-Fz-YHf"/>
@@ -1969,7 +1975,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Iu7-u2-wQO" kind="modal" id="7pK-8F-Ocy"/>
+                                            <segue destination="Iu7-u2-wQO" kind="presentation" id="7pK-8F-Ocy"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -2946,7 +2952,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Zt5-gV-5gu" kind="modal" id="9pL-2g-yYD"/>
+                                            <segue destination="Zt5-gV-5gu" kind="presentation" id="9pL-2g-yYD"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -3009,7 +3015,7 @@
                                 </state>
                                 <connections>
                                     <action selector="btnSubmit:" destination="Iu7-u2-wQO" eventType="touchUpInside" id="aRF-V8-Gc5"/>
-                                    <segue destination="ubF-4d-ekp" kind="modal" identifier="BookDetail" id="Td6-uV-y4w"/>
+                                    <segue destination="ubF-4d-ekp" kind="presentation" identifier="BookDetail" id="Td6-uV-y4w"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z9K-9J-CaW">
@@ -3060,7 +3066,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Iu7-u2-wQO" kind="modal" id="fxl-He-OWM"/>
+                                            <segue destination="Iu7-u2-wQO" kind="presentation" id="fxl-He-OWM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -3087,10 +3093,10 @@
             </objects>
             <point key="canvasLocation" x="-867" y="2072"/>
         </scene>
-        <!--View Controller-->
+        <!--Book Information-->
         <scene sceneID="zbW-Ho-lCx">
             <objects>
-                <viewController id="EwR-pz-hxj" sceneMemberID="viewController">
+                <viewController id="EwR-pz-hxj" customClass="BookInformation" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c7o-Rr-wSa"/>
                         <viewControllerLayoutGuide type="bottom" id="bCn-wl-7o0"/>
@@ -3098,9 +3104,95 @@
                     <view key="view" contentMode="scaleToFill" id="tRt-aH-RAl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kO3-6D-wQd">
+                                <rect key="frame" x="0.0" y="20" width="320" height="52"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Book Information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQY-nQ-Grz">
+                                        <rect key="frame" x="88" y="15" width="144" height="22"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XT1-fd-ve7">
+                                        <rect key="frame" x="0.0" y="9" width="35" height="35"/>
+                                        <state key="normal" image="arrow-left-01-128.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="ubF-4d-ekp" kind="presentation" id="ZkT-hq-KN5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="54u-vi-Yxw">
+                                <rect key="frame" x="0.0" y="72" width="320" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieL-Wq-nXe">
+                                        <rect key="frame" x="0.0" y="13" width="320" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Book Name">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.82884291899999996" blue="0.80136388940000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uax-Za-mJF">
+                                <rect key="frame" x="0.0" y="204" width="320" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEQ-s1-yse">
+                                        <rect key="frame" x="0.0" y="13" width="320" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Author's Name">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.82884291899999996" blue="0.80136388940000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ll7-rW-U35">
+                                <rect key="frame" x="0.0" y="332" width="320" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAC-J9-oey">
+                                        <rect key="frame" x="0.0" y="13" width="320" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Book Cover">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.82884291899999996" blue="0.80136388940000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKA-VF-8Tr">
+                                <rect key="frame" x="16" y="140" width="288" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceW-rM-ElJ">
+                                <rect key="frame" x="16" y="272" width="288" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sWi-8V-wqE">
+                                <rect key="frame" x="64" y="397" width="193" height="163"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="CoverUrlWebView" destination="sWi-8V-wqE" id="mO8-n0-w0h"/>
+                        <outlet property="lblAuthorName" destination="ceW-rM-ElJ" id="sUo-KN-Trb"/>
+                        <outlet property="lblBookName" destination="VKA-VF-8Tr" id="aJD-Wv-ZO1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gCT-U7-Fpe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3133,18 +3225,19 @@
         <image name="transit icon.png" width="120" height="163"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fxl-He-OWM"/>
-        <segue reference="9pL-2g-yYD"/>
-        <segue reference="KVB-3y-Z2s"/>
-        <segue reference="O14-Fz-YHf"/>
-        <segue reference="5lu-wZ-mSb"/>
-        <segue reference="y5I-wX-1cC"/>
-        <segue reference="vld-6d-zWt"/>
-        <segue reference="TLs-gW-YoR"/>
-        <segue reference="TQA-CP-wxU"/>
+        <segue reference="sqN-Dk-vyW"/>
         <segue reference="w8h-Ke-7hX"/>
         <segue reference="rXa-hB-y8k"/>
         <segue reference="9G1-cf-B8V"/>
+        <segue reference="y5I-wX-1cC"/>
+        <segue reference="3dq-Bk-5Uh"/>
+        <segue reference="Iy1-Jw-8iH"/>
+        <segue reference="C9F-NI-eJs"/>
+        <segue reference="O14-Fz-YHf"/>
+        <segue reference="5lu-wZ-mSb"/>
+        <segue reference="dUh-6p-oy8"/>
+        <segue reference="7pK-8F-Ocy"/>
+        <segue reference="ZkT-hq-KN5"/>
         <segue reference="MLd-Lu-NTA"/>
         <segue reference="n6T-Yg-20A"/>
     </inferredMetricsTieBreakers>

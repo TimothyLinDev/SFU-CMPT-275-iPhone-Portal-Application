@@ -16,6 +16,11 @@
 #import <Foundation/Foundation.h>
 #import "BookInformation.h"
 @interface BookInformation ()
+{
+    NSString *bookNameValue;
+    NSString *bookAuthorNameValue;
+    NSString *bookCoverUrlValue;
+}
 
 @end
 
@@ -23,10 +28,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self displayData];
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) displayData
+{
+    bookNameValue = self.nameBook;
+    bookAuthorNameValue = self.nameAuthor;
+    bookCoverUrlValue = self.bookCoverUrl;
+    
+    _lblBookName.text = bookNameValue;
+    _lblAuthorName.text = bookAuthorNameValue;
+    
+    NSURL *URL = [NSURL URLWithString:bookCoverUrlValue];
+    _CoverUrlWebView.delegate = self;
+    //Requesting to URL
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    [_CoverUrlWebView loadRequest:request];
 }
 
 @end
