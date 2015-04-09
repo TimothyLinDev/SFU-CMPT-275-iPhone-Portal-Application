@@ -17,5 +17,13 @@
 
 @interface BookInformation : UIViewController <UIWebViewDelegate>
 
+//Getting data
+@property (retain, nonatomic) NSString *nameBook;
+@property (retain, nonatomic) NSString *nameAuthor;
+@property (retain, nonatomic) NSString *bookCoverUrl;
+@property (weak, nonatomic) IBOutlet UILabel *lblBookName;
+@property (weak, nonatomic) IBOutlet UILabel *lblAuthorName;
+@property (weak, nonatomic) IBOutlet UIWebView *CoverUrlWebView;
+
 
 @end
