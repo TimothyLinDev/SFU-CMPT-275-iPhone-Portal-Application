@@ -21,6 +21,7 @@
 #import "SFUNewsMasterView.h"
 #import "NSString+HTML.h"
 #import "SFUNewsDetailView.h"
+#import "Reachability.h"
 
 @interface SFUNewsMasterView()
 
@@ -74,6 +75,31 @@
     
     //Parse
     currentIndex = 0;
+    
+    //Detects Wifi
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    [reachability startNotifier];
+    
+    NetworkStatus status = [reachability currentReachabilityStatus];
+    
+    if(status == NotReachable)
+    {
+        [[[UIAlertView alloc] initWithTitle:@"No Internet Access"
+                                   message:@"No Internet Access detected. SFU News will not load the latest articles without access to the internet."
+                                  delegate:self
+                         cancelButtonTitle:@"OK"
+                         otherButtonTitles:nil] show];
+
+    }
+    else if (status == ReachableViaWiFi)
+    {
+        [self parseNextURL];
+    }
+    else if (status == ReachableViaWWAN)
+    {
+        [self parseNextURL];
+    }
+
 
     [self parseNextURL];
     
