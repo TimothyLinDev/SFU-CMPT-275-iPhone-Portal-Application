@@ -153,6 +153,350 @@
     }
 }
 
+-(void)AQSelfMarker{
+    GMSMutablePath *path = [GMSMutablePath path];
+    CGFloat latitude=0;
+    CGFloat longtitude=0;
+    CGFloat readLat=0;
+    CGFloat readLong=0;
+    CGFloat floorFrom=0;
+    CGFloat floorTo=0;
+    long tempTo=0;
+    // NSString *tempFrom;
+    bool exist = NO;
+    
+    from=[sroom.text integerValue];
+    
+    
+    NSInteger index = 0;
+    NSInteger count = 0;
+    
+    NSInteger wfIndex = 0;
+    // NSInteger tempIndex;
+    NSInteger begIndex1 = 0;
+    NSInteger begIndex2 = 0;
+    NSInteger numEle = 0;
+    
+    floorFrom = from/1000;
+    floorTo = to/1000;
+    [NSString stringWithFormat:@" %.0f", (floorFrom)];
+    [NSString stringWithFormat:@" %.0f", (floorTo)];
+    
+    
+    if (floorFrom == 2){
+        NSString *wayfindFile = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"wayfindAQ2" ofType:@"txt"] encoding:NSUTF8StringEncoding error:NULL];
+        NSArray *wayfindLines = [wayfindFile componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+        for (NSString *wfLines in wayfindLines){
+            CGFloat nse2 = [wfLines floatValue];
+            wayfind[wfIndex] = nse2;
+            wfIndex++;
+        }
+    }
+    
+    else if (floorFrom == 3){
+        NSString *wayfindFile = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"wayfindAQ3" ofType:@"txt"] encoding:NSUTF8StringEncoding error:NULL];
+        NSArray *wayfindLines = [wayfindFile componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+        for (NSString *wfLines in wayfindLines){
+            CGFloat nse2 = [wfLines floatValue];
+            wayfind[wfIndex] = nse2;
+            wfIndex++;
+        }
+    }
+    
+    else if (floorFrom == 4){
+        NSString *wayfindFile = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"wayfindAQ4" ofType:@"txt"] encoding:NSUTF8StringEncoding error:NULL];
+        NSArray *wayfindLines = [wayfindFile componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+        for (NSString *wfLines in wayfindLines){
+            CGFloat nse2 = [wfLines floatValue];
+            wayfind[wfIndex] = nse2;
+            wfIndex++;
+        }
+    }
+    
+    else if (floorFrom == 5){
+        NSString *wayfindFile = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"wayfindAQ5" ofType:@"txt"] encoding:NSUTF8StringEncoding error:NULL];
+        NSArray *wayfindLines = [wayfindFile componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+        for (NSString *wfLines in wayfindLines){
+            CGFloat nse2 = [wfLines floatValue];
+            wayfind[wfIndex] = nse2;
+            wfIndex++;
+        }
+    }
+    
+    // CGFloat z;
+    // z = wayfind[195];
+    numEle = wfIndex;
+    wfIndex = 0;
+    
+    //compare user input in "From" search bar with room location coordinates
+    while(index<2000){
+        if (num[index] == from){
+            count=index;
+            exist=YES;
+        }
+        index++;
+    }
+    
+    //compare user input in "To" search bar with wayfinding path coordinates
+    if(floorFrom == floorTo){
+        while(wfIndex < 2000){
+            if (wayfind[wfIndex] == to){
+                endLat = wayfind[wfIndex+1];
+                endLong = wayfind[wfIndex+2];
+                break;
+            }
+            wfIndex = wfIndex + 3;
+        }
+    }
+    
+    else if(floorFrom != floorTo){
+        tempTo = to;
+        to = 99999;
+        while(wfIndex < 2000){
+            if (wayfind[wfIndex] == to){
+                endLat = wayfind[wfIndex+1];
+                endLong = wayfind[wfIndex+2];
+                break;
+            }
+            wfIndex = wfIndex + 3;
+        }    }
+    
+    if((floorFrom == 2) || (floorFrom == 4)){
+        wfIndex = 0;
+    }
+    
+    else if((floorFrom == 3) || (floorFrom == 5)){
+        wfIndex = numEle/3 - 1;
+    }
+    
+    
+    //compare user input in "From" search bar with wayfinding path coordinates
+    while(wfIndex <2000){
+        if (wayfind[wfIndex] == from){
+            begLat = wayfind[wfIndex+1];
+            begLong = wayfind[wfIndex+2];
+            //tempIndex = wfIndex;
+            begIndex1 = wfIndex;
+            begIndex2 = wfIndex;
+            break;
+        }
+        wfIndex = wfIndex + 3;
+    }
+    
+    
+    //if room found, set a marker at room location and draw path from "From" to "To" coordinates
+    if (exist == YES){
+        latitude=num[count+1];
+        longtitude=num[count+2];
+        
+        if(floorFrom == 2 || floorFrom == 3 || floorFrom == 4){
+            if(floorFrom != floorTo){
+                for(int i = 0; i<numEle; i++){
+                    if (wayfind[begIndex1] == to){
+                        while(readLat != endLat && readLong != endLong){
+                            readLat = wayfind[wfIndex + 1];
+                            readLong = wayfind[wfIndex + 2];
+                            [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                            wfIndex = wfIndex + 3;
+                        }
+                        GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+                        camera = [GMSCameraPosition cameraWithLatitude:latitude
+                                                             longitude:longtitude
+                                                                  zoom:20];
+                        [mapView animateToCameraPosition:camera];
+                        CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(readLat, readLong);
+                        marker = [GMSMarker markerWithPosition:positon];
+                        marker.title = @"Please go to floor";
+                        marker.icon = [UIImage imageNamed:@"stairs"];
+                        marker.map =mapView;
+                        polyline.strokeWidth = 5;
+                        polyline.strokeColor = [UIColor blueColor];
+                        polyline.map = mapView;                         break;
+                    }
+                    if(wayfind[begIndex2] == to){
+                        while(readLat != endLat && readLong != endLong){
+                            readLat = wayfind[wfIndex +1];
+                            readLong = wayfind[wfIndex +2];
+                            [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                            wfIndex = wfIndex - 3;
+                        }
+                        GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+                        camera = [GMSCameraPosition cameraWithLatitude:latitude
+                                                             longitude:longtitude
+                                                                  zoom:20];
+                        [mapView animateToCameraPosition:camera];
+                        CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(readLat, readLong);
+                        marker = [GMSMarker markerWithPosition:positon];
+                        marker.title = @"Please change floors";
+                        marker.icon = [UIImage imageNamed:@"stairs"];
+                        marker.map =mapView;
+                        polyline.strokeWidth = 5;
+                        polyline.strokeColor = [UIColor blueColor];
+                        polyline.map = mapView;                        break;
+                    }
+                    begIndex1 = begIndex1 + 3;
+                    begIndex2 = begIndex2 - 3;
+                }
+            }
+            else{
+                for(int i = 0; i<numEle; i++){
+                    if (wayfind[begIndex1] == to){
+                        while(readLat != endLat && readLong != endLong){
+                            readLat = wayfind[wfIndex + 1];
+                            readLong = wayfind[wfIndex + 2];
+                            [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                            wfIndex = wfIndex + 3;
+                        }
+                        GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+                        camera = [GMSCameraPosition cameraWithLatitude:latitude
+                                                             longitude:longtitude
+                                                                  zoom:20];
+                        [mapView animateToCameraPosition:camera];
+                        CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(latitude, longtitude);
+                        marker = [GMSMarker markerWithPosition:positon];
+                        marker.title = @"Begin";
+                        marker.map =mapView;
+                        polyline.strokeWidth = 5;
+                        polyline.strokeColor = [UIColor greenColor];
+                        polyline.map = mapView;
+                        break;
+                    }
+                    if(wayfind[begIndex2] == to){
+                        while(readLat != endLat && readLong != endLong){
+                            readLat = wayfind[wfIndex +1];
+                            readLong = wayfind[wfIndex +2];
+                            [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                            wfIndex = wfIndex - 3;
+                        }
+                        GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+                        camera = [GMSCameraPosition cameraWithLatitude:latitude
+                                                             longitude:longtitude
+                                                                  zoom:20];
+                        [mapView animateToCameraPosition:camera];
+                        CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(latitude, longtitude);
+                        marker = [GMSMarker markerWithPosition:positon];
+                        marker.title = @"Begin";
+                        marker.map =mapView;
+                        polyline.strokeWidth = 5;
+                        polyline.strokeColor = [UIColor greenColor];
+                        polyline.map = mapView;                    break;
+                    }
+                    begIndex1 = begIndex1 + 3;
+                    begIndex2 = begIndex2 - 3;
+                }
+            }
+        }
+        
+        else if(floorFrom == 5 || floorFrom == 6){
+            if(5037 < from < 5050){
+                if(5037 < to < 5050){
+                    for(int i = 0; i<numEle; i++){
+                        if (wayfind[begIndex1] == to){
+                            while(readLat != endLat && readLong != endLong){
+                                readLat = wayfind[wfIndex + 1];
+                                readLong = wayfind[wfIndex + 2];
+                                [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                                wfIndex = wfIndex + 3;
+                            }
+                            break;
+                        }
+                        if(wayfind[begIndex2] == to){
+                            while(readLat != endLat && readLong != endLong){
+                                readLat = wayfind[wfIndex +1];
+                                readLong = wayfind[wfIndex +2];
+                                [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                                wfIndex = wfIndex - 3;
+                            }
+                            break;
+                        }
+                    }
+                }
+                
+                else if(5048 < to < 5068){
+                    while(readLat != endLat && readLong != endLong){
+                        readLat = wayfind[wfIndex + 1];
+                        readLong = wayfind[wfIndex + 2];
+                        [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                        wfIndex = wfIndex + 3;
+                    }
+                }
+                else if(5066 < to < 5094){
+                    while(readLat != endLat && readLong != endLong){
+                        readLat = wayfind[wfIndex + 1];
+                        readLong = wayfind[wfIndex + 2];
+                        [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                        wfIndex = wfIndex + 3;
+                    }
+                }
+                else if(5092 < to < 5124){
+                    while(readLat != endLat && readLong != endLong){
+                        readLat = wayfind[wfIndex + 1];
+                        readLong = wayfind[wfIndex + 2];
+                        [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                        wfIndex = wfIndex + 3;
+                    }
+                }
+                else if(5007 < to < 5123){
+                    while(readLat != endLat && readLong != endLong){
+                        readLat = wayfind[wfIndex + 1];
+                        readLong = wayfind[wfIndex + 2];
+                        [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                        wfIndex = wfIndex + 3;
+                    }
+                }
+                else if(5005 < to < 5018){
+                    while(readLat != endLat && readLong != endLong){
+                        readLat = wayfind[wfIndex + 1];
+                        readLong = wayfind[wfIndex + 2];
+                        [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                        wfIndex = wfIndex - 3;
+                    }
+                }
+                else if(5016 < to < 5029){
+                    while(readLat != endLat && readLong != endLong){
+                        readLat = wayfind[wfIndex + 1];
+                        readLong = wayfind[wfIndex + 2];
+                        [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                        wfIndex = wfIndex - 3;
+                    }
+                }
+                else if(5027 < to < 5039){
+                    while(readLat != endLat && readLong != endLong){
+                        readLat = wayfind[wfIndex + 1];
+                        readLong = wayfind[wfIndex + 2];
+                        [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
+                        wfIndex = wfIndex - 3;
+                    }
+                }
+                GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+                camera = [GMSCameraPosition cameraWithLatitude:latitude
+                                                     longitude:longtitude
+                                                          zoom:20];
+                [mapView animateToCameraPosition:camera];
+                CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(latitude, longtitude);
+                marker = [GMSMarker markerWithPosition:positon];
+                marker.title = @"Begin";
+                marker.map =mapView;
+                polyline.strokeWidth = 5;
+                polyline.strokeColor = [UIColor greenColor];
+                polyline.map = mapView;
+            }
+        }
+    }
+    
+    
+    
+    //if room not found, ask user try again
+    else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No such Room"
+                                                        message:@"Please Try Again."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+}
+
 -(IBAction)pressedBtnSelfMarker:(id)sender{
     NSString *input = [sbuild.text uppercaseString];
     int recordsbuilding = 0;
@@ -486,359 +830,6 @@
     }
 }
 
--(void)AQSelfMarker{
-    GMSMutablePath *path = [GMSMutablePath path];
-    CGFloat latitude=0;
-    CGFloat longtitude=0;
-    CGFloat readLat=0;
-    CGFloat readLong=0;
-    CGFloat floorFrom=0;
-    CGFloat floorTo=0;
-    long tempTo=0;
-   // NSString *tempFrom;
-    bool exist = NO;
-
-    from=[sroom.text integerValue];
-    
- 
-    NSInteger index = 0;
-    NSInteger count = 0;
-    
-    NSInteger wfIndex = 0;
-   // NSInteger tempIndex;
-    NSInteger begIndex1 = 0;
-    NSInteger begIndex2 = 0;
-    NSInteger numEle = 0;
-    
-    floorFrom = from/1000;
-    floorTo = to/1000;
-    [NSString stringWithFormat:@" %.0f", (floorFrom)];
-    [NSString stringWithFormat:@" %.0f", (floorTo)];
-    
-    
-    if (floorFrom == 2){
-        NSString *wayfindFile = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"wayfindAQ2" ofType:@"txt"] encoding:NSUTF8StringEncoding error:NULL];
-        NSArray *wayfindLines = [wayfindFile componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-        for (NSString *wfLines in wayfindLines){
-            CGFloat nse2 = [wfLines floatValue];
-            wayfind[wfIndex] = nse2;
-            wfIndex++;
-        }
-    }
-    
-   else if (floorFrom == 3){
-        NSString *wayfindFile = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"wayfindAQ3" ofType:@"txt"] encoding:NSUTF8StringEncoding error:NULL];
-        NSArray *wayfindLines = [wayfindFile componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-        for (NSString *wfLines in wayfindLines){
-            CGFloat nse2 = [wfLines floatValue];
-            wayfind[wfIndex] = nse2;
-            wfIndex++;
-        }
-    }
-    
-   else if (floorFrom == 4){
-        NSString *wayfindFile = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"wayfindAQ4" ofType:@"txt"] encoding:NSUTF8StringEncoding error:NULL];
-        NSArray *wayfindLines = [wayfindFile componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-        for (NSString *wfLines in wayfindLines){
-            CGFloat nse2 = [wfLines floatValue];
-            wayfind[wfIndex] = nse2;
-            wfIndex++;
-        }
-    }
-    
-   else if (floorFrom == 5){
-       NSString *wayfindFile = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"wayfindAQ5" ofType:@"txt"] encoding:NSUTF8StringEncoding error:NULL];
-       NSArray *wayfindLines = [wayfindFile componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-       for (NSString *wfLines in wayfindLines){
-           CGFloat nse2 = [wfLines floatValue];
-           wayfind[wfIndex] = nse2;
-           wfIndex++;
-       }
-   }
-    
-   // CGFloat z;
-   // z = wayfind[195];
-    numEle = wfIndex;
-    wfIndex = 0;
-    
-    //compare user input in "From" search bar with room location coordinates
-    while(index<2000){
-        if (num[index] == from){
-            count=index;
-            exist=YES;
-        }
-        index++;
-    }
-    
-    //compare user input in "To" search bar with wayfinding path coordinates
-    if(floorFrom == floorTo){
-        while(wfIndex < 2000){
-            if (wayfind[wfIndex] == to){
-                endLat = wayfind[wfIndex+1];
-                endLong = wayfind[wfIndex+2];
-                break;
-            }
-            wfIndex = wfIndex + 3;
-        }
-    }
-    
-    else if(floorFrom != floorTo){
-        tempTo = to;
-        to = 99999;
-        while(wfIndex < 2000){
-            if (wayfind[wfIndex] == to){
-                endLat = wayfind[wfIndex+1];
-                endLong = wayfind[wfIndex+2];
-                break;
-            }
-            wfIndex = wfIndex + 3;
-        }    }
-    
-    if((floorFrom == 2) || (floorFrom == 4)){
-        wfIndex = 0;
-    }
-    
-   else if((floorFrom == 3) || (floorFrom == 5)){
-       wfIndex = numEle/3 - 1;
-    }
-    
-    
-    //compare user input in "From" search bar with wayfinding path coordinates
-    while(wfIndex <2000){
-        if (wayfind[wfIndex] == from){
-            begLat = wayfind[wfIndex+1];
-            begLong = wayfind[wfIndex+2];
-            //tempIndex = wfIndex;
-            begIndex1 = wfIndex;
-            begIndex2 = wfIndex;
-            break;
-        }
-        wfIndex = wfIndex + 3;
-    }
-    
-    
-    //if room found, set a marker at room location and draw path from "From" to "To" coordinates
-    if (exist == YES){
-        latitude=num[count+1];
-        longtitude=num[count+2];
-
-       /* if ((floorFrom == floorTo) && (floorFrom == 2 || floorFrom == 4)){
-            //condition for when room number to > from and rooms are on the same floor
-           /* if (to > from){
-                while(readLat != endLat && readLong != endLong){
-                    readLat = wayfind[wfIndex + 1];
-                    readLong = wayfind[wfIndex + 2];
-                    [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
-                    wfIndex = wfIndex + 3;
-                }
-            }
-            
-            //Condition for when room number From > to and rooms are on the same floor
-            else if (from > to){
-                while(readLat != endLat && readLong != endLong){
-                    readLat = wayfind[wfIndex +1];
-                    readLong = wayfind[wfIndex +2];
-                    [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
-                    wfIndex = wfIndex - 3;
-                }
-            }*/
-            /*for(int i = 0; i<numEle; i++){
-                if (wayfind[begIndex1] == to){
-                    while(readLat != endLat && readLong != endLong){
-                        readLat = wayfind[wfIndex + 1];
-                        readLong = wayfind[wfIndex + 2];
-                        [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
-                        wfIndex = wfIndex + 3;
-                    }
-                    break;
-                }
-                if(wayfind[begIndex2] == to){
-                    while(readLat != endLat && readLong != endLong){
-                        readLat = wayfind[wfIndex +1];
-                        readLong = wayfind[wfIndex +2];
-                        [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
-                        wfIndex = wfIndex - 3;
-                    }
-                    break;
-                }
-                begIndex1 = begIndex1 + 3;
-                begIndex2 = begIndex2 - 3;
-            }
-        }*/
-        
-        if(floorFrom == 2 || floorFrom == 3 || floorFrom == 4){
-            if(floorFrom != floorTo){
-                for(int i = 0; i<numEle; i++){
-                    if (wayfind[begIndex1] == to){
-                        while(readLat != endLat && readLong != endLong){
-                            readLat = wayfind[wfIndex + 1];
-                            readLong = wayfind[wfIndex + 2];
-                            [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
-                            wfIndex = wfIndex + 3;
-                        }
-                        GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
-                        camera = [GMSCameraPosition cameraWithLatitude:latitude
-                                                             longitude:longtitude
-                                                                  zoom:20];
-                        [mapView animateToCameraPosition:camera];
-                        CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(readLat, readLong);
-                        marker = [GMSMarker markerWithPosition:positon];
-                        marker.title = @"Please go to floor";
-                        marker.icon = [UIImage imageNamed:@"stairs"];
-                        marker.map =mapView;
-                        polyline.strokeWidth = 5;
-                        polyline.strokeColor = [UIColor blueColor];
-                        polyline.map = mapView;                         break;
-                    }
-                    if(wayfind[begIndex2] == to){
-                        while(readLat != endLat && readLong != endLong){
-                            readLat = wayfind[wfIndex +1];
-                            readLong = wayfind[wfIndex +2];
-                            [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
-                            wfIndex = wfIndex - 3;
-                        }
-                        GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
-                        camera = [GMSCameraPosition cameraWithLatitude:latitude
-                                                             longitude:longtitude
-                                                                  zoom:20];
-                        [mapView animateToCameraPosition:camera];
-                        CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(readLat, readLong);
-                        marker = [GMSMarker markerWithPosition:positon];
-                        marker.title = @"Please change floors";
-                        marker.icon = [UIImage imageNamed:@"stairs"];
-                        marker.map =mapView;
-                        polyline.strokeWidth = 5;
-                        polyline.strokeColor = [UIColor blueColor];
-                        polyline.map = mapView;                        break;
-                    }
-                    begIndex1 = begIndex1 + 3;
-                    begIndex2 = begIndex2 - 3;
-                }
-            }
-            else{
-            for(int i = 0; i<numEle; i++){
-                if (wayfind[begIndex1] == to){
-                    while(readLat != endLat && readLong != endLong){
-                        readLat = wayfind[wfIndex + 1];
-                        readLong = wayfind[wfIndex + 2];
-                        [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
-                        wfIndex = wfIndex + 3;
-                    }
-                    GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
-                    camera = [GMSCameraPosition cameraWithLatitude:latitude
-                                                         longitude:longtitude
-                                                              zoom:20];
-                    [mapView animateToCameraPosition:camera];
-                    CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(latitude, longtitude);
-                    marker = [GMSMarker markerWithPosition:positon];
-                    marker.title = @"Begin";
-                    marker.map =mapView;
-                    polyline.strokeWidth = 5;
-                    polyline.strokeColor = [UIColor greenColor];
-                    polyline.map = mapView;
-                    break;
-                }
-                if(wayfind[begIndex2] == to){
-                    while(readLat != endLat && readLong != endLong){
-                        readLat = wayfind[wfIndex +1];
-                        readLong = wayfind[wfIndex +2];
-                        [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
-                        wfIndex = wfIndex - 3;
-                        }
-                    GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
-                    camera = [GMSCameraPosition cameraWithLatitude:latitude
-                                                         longitude:longtitude
-                                                              zoom:20];
-                    [mapView animateToCameraPosition:camera];
-                    CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(latitude, longtitude);
-                    marker = [GMSMarker markerWithPosition:positon];
-                    marker.title = @"Begin";
-                    marker.map =mapView;
-                    polyline.strokeWidth = 5;
-                    polyline.strokeColor = [UIColor greenColor];
-                    polyline.map = mapView;                    break;
-                }
-                begIndex1 = begIndex1 + 3;
-                begIndex2 = begIndex2 - 3;
-            }
-            }
-        }
-        
-        else if(floorFrom == 5 || floorFrom == 6){
-            for(int i = 0; i<numEle; i++){
-                if (wayfind[begIndex1] == to){
-                    while(readLat != endLat && readLong != endLong){
-                        readLat = wayfind[wfIndex + 1];
-                        readLong = wayfind[wfIndex + 2];
-                        [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
-                        wfIndex = wfIndex + 3;
-                    }
-                    GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
-                    camera = [GMSCameraPosition cameraWithLatitude:latitude
-                                                         longitude:longtitude
-                                                              zoom:20];
-                    [mapView animateToCameraPosition:camera];
-                    CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(latitude, longtitude);
-                    marker = [GMSMarker markerWithPosition:positon];
-                    marker.title = @"Begin";
-                    marker.map =mapView;
-                    polyline.strokeWidth = 5;
-                    polyline.strokeColor = [UIColor greenColor];
-                    polyline.map = mapView;
-                    break;
-                }
-                if(wayfind[begIndex2] == to){
-                    while(readLat != endLat && readLong != endLong){
-                        readLat = wayfind[wfIndex +1];
-                        readLong = wayfind[wfIndex +2];
-                        [path addCoordinate:CLLocationCoordinate2DMake(readLat, readLong)];
-                        wfIndex = wfIndex - 3;
-                    }
-                    GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
-                    camera = [GMSCameraPosition cameraWithLatitude:latitude
-                                                         longitude:longtitude
-                                                              zoom:20];
-                    [mapView animateToCameraPosition:camera];
-                    CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(latitude, longtitude);
-                    marker = [GMSMarker markerWithPosition:positon];
-                    marker.title = @"Begin";
-                    marker.map =mapView;
-                    polyline.strokeWidth = 5;
-                    polyline.strokeColor = [UIColor greenColor];
-                    polyline.map = mapView;                    break;
-                }
-                begIndex1 = begIndex1 + 3;
-                begIndex2 = begIndex2 - 3;
-            }
-        
-        }
-
-
-    /*    GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
-        camera = [GMSCameraPosition cameraWithLatitude:latitude
-                                             longitude:longtitude
-                                                  zoom:20];
-        [mapView animateToCameraPosition:camera];
-        CLLocationCoordinate2D positon = CLLocationCoordinate2DMake(latitude, longtitude);
-        marker = [GMSMarker markerWithPosition:positon];
-        marker.title = @"Begin";
-        marker.map =mapView;
-        polyline.strokeWidth = 5;
-        polyline.strokeColor = [UIColor greenColor];
-        polyline.map = mapView;*/
-    }
-
-    
-    //if room not found, ask user try again
-    else{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No such Room"
-                                                        message:@"Please Try Again."
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
-    }
-}
 
 -(IBAction)pressedBtnDownward:(id)sender{
     viewSlide.center = CGPointMake(160, 100);
